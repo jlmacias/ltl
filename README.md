@@ -1,1 +1,1 @@
-# ltl
+# Linear Temporal Logic
