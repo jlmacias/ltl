@@ -1,0 +1,1830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+  <Styles>
+    <Style ss:ID="Default" ss:Name="Normal">
+      <Alignment ss:Vertical="Bottom"/>
+      <Borders/>
+      <Font ss:FontName="Verdana"/>
+      <Interior/>
+      <NumberFormat/>
+      <Protection/>
+    </Style>
+    <Style ss:ID="s21">
+      <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+      <Font ss:FontName="Verdana" ss:Size="12.0" ss:Bold="1"/>
+      <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="s22">
+      <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+      <Font ss:FontName="Verdana" ss:Size="14.0" ss:Bold="1"/>
+      <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="s23">
+      <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+      <Font ss:FontName="Verdana"/>
+    </Style>
+    <Style ss:ID="s24">
+      <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+      <Font ss:FontName="Verdana" ss:Italic="1" ss:Color="#4600A5"/>
+    </Style>
+    <Style ss:ID="s25">
+      <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+      <Font ss:FontName="Verdana"/>
+    </Style>
+    <Style ss:ID="s26">
+      <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
+      <Font ss:FontName="Verdana"/>
+    </Style>
+    <Style ss:ID="s32">
+      <Alignment ss:Vertical="Bottom"/>
+      <Font ss:FontName="Verdana" ss:Color="#0000D4" ss:Underline="Single"/>
+    </Style>
+    <Style ss:ID="s33">
+      <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+      <Font ss:FontName="Verdana"/>
+    </Style>
+    <Style ss:ID="s67">
+      <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+      <Font ss:FontName="Verdana" ss:Italic="1"/>
+    </Style>
+    <Style ss:ID="s76">
+      <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+      <Font ss:FontName="Verdana"/>
+      <NumberFormat ss:Format="@"/>
+    </Style>
+  </Styles>
+<Worksheet ss:Name="Table of Contents">
+  <Table ss:ExpandedColumnCount="1" x:FullColumns="1" x:FullRows="1">
+    <Column ss:Width="550.0"/>
+    <Row>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">Table of Contents</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">Test plan Response exported from Hexawise on Mar 28, 2015.</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">Different parts of the test plan are in different sheets in Excel.</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">Click the link to jump directly to the corresponding sheet.</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s32" ss:HRef="#Inputs!A1">
+        <Data ss:Type="String">Inputs</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s32" ss:HRef="#'2-way Tests'!A1">
+        <Data ss:Type="String">2-way Tests</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s32" ss:HRef="#'Test Plan Scorecard'!A1">
+        <Data ss:Type="String">Test Plan Scorecard</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell/>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s67">
+        <Data ss:Type="String">Important Notification on File Formats: Save this file in Excel using one of these two formats:</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s67">
+        <Data ss:Type="String">XML Spreadsheet 2003 or XML Spreadsheet 2004. Doing so will allow you to modify it and re-import it into Hexawise.</Data>
+      </Cell>
+    </Row>
+  </Table>
+</Worksheet>
+<Worksheet ss:Name="Inputs">
+  <Table ss:ExpandedColumnCount="4" x:FullColumns="1" x:FullRows="1">
+    <Column ss:Width="168.0"/>
+    <Column ss:Width="168.0"/>
+    <Column ss:Width="168.0"/>
+    <Column ss:Width="168.0"/>
+    <Row>
+      <Cell ss:StyleID="s32" ss:HRef="#'Table of Contents'!A1">
+        <Data ss:Type="String">Table of Contents</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">CP_P class</Data>
+      </Cell>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">CP_T class</Data>
+      </Cell>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">CP_L class</Data>
+      </Cell>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">CP_R class</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">P_Atomic</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">T_Atomic</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">L_Atomic</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">R_Atomic</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">P_AtLeastOne_c</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">T_AtLeastOne_c</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">L_AtLeastOne_c</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">R_AtLeastOne_c</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">P_AtLeastOne_e</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">T_AtLeastOne_e</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">L_AtLeastOne_e</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">R_AtLeastOne_e</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">P_Parallel_c</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">T_Parallel_c</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">L_Parallel_c</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">R_Parallel_c</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">P_Parallel_e</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">T_Parallel_e</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">L_Parallel_e</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">R_Parallel_e</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">P_Consecutive_c</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">T_Consecutive_c</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">L_Consecutive_c</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">R_Consecutive_c</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">P_Consecutive_e</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">T_Consecutive_e</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">L_Consecutive_e</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">R_Consecutive_e</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">P_Eventual_c</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">T_Eventual_c</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">L_Eventual_c</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">R_Eventual_c</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">P_Eventual_e</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">T_Eventual_e</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">L_Eventual_e</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+        <Data ss:Type="String">R_Eventual_e</Data>
+      </Cell>
+    </Row>
+  </Table>
+</Worksheet>
+<Worksheet ss:Name="2-way Tests">
+  <Table ss:ExpandedColumnCount="5" x:FullColumns="1" x:FullRows="1">
+    <Column ss:Width="108.0"/>
+    <Column ss:Width="168.0"/>
+    <Column ss:Width="168.0"/>
+    <Column ss:Width="168.0"/>
+    <Column ss:Width="168.0"/>
+    <Row>
+      <Cell ss:StyleID="s32" ss:HRef="#'Table of Contents'!A1">
+        <Data ss:Type="String">Table of Contents</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:MergeAcross="4" ss:StyleID="s26">
+<Data ss:Type="String">Values in<Font html:Color="#4600A5" xmlns="http://www.w3.org/TR/REC-html40"> </Font><I xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#4600A5">purple italics</Font></I><Font xmlns="http://www.w3.org/TR/REC-html40"> can be replaced with any valid value.</Font></Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">Test Number</Data>
+      </Cell>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">CP_P class</Data>
+      </Cell>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">CP_T class</Data>
+      </Cell>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">CP_L class</Data>
+      </Cell>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">CP_R class</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">1</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">2</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">3</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">4</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">5</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">6</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">7</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">8</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">9</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">10</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">11</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">12</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">13</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">14</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">15</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">16</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">17</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">18</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">19</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">20</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">21</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">22</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">23</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">24</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">25</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">26</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">27</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">28</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">29</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">30</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">31</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">32</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">33</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">34</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">35</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">36</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">37</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">38</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">39</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">40</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">41</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">42</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">43</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">44</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">45</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">46</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">47</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">48</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">49</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">50</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">51</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">52</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">53</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">54</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">55</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">56</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">57</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">58</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">59</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">60</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">61</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">62</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">63</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">64</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">65</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">66</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">67</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">68</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">69</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">70</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">71</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">72</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">73</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">74</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">75</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">76</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">77</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">78</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">79</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">80</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">81</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">82</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">83</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">84</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">85</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">86</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">87</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">88</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">89</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_AtLeastOne_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">90</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">91</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Parallel_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Parallel_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">92</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s24">
+<Data ss:Type='String'>L_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Eventual_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">93</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s24">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">94</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s24">
+<Data ss:Type='String'>T_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s24">
+<Data ss:Type='String'>L_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>R_Consecutive_e</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">95</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s24">
+<Data ss:Type='String'>T_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s24">
+<Data ss:Type='String'>R_AtLeastOne_c</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">96</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Consecutive_e</Data>      </Cell>
+      <Cell ss:StyleID="s24">
+<Data ss:Type='String'>T_AtLeastOne_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>L_Eventual_c</Data>      </Cell>
+      <Cell ss:StyleID="s24">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">97</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Parallel_e</Data>      </Cell>
+      <Cell ss:StyleID="s24">
+<Data ss:Type='String'>L_Consecutive_c</Data>      </Cell>
+      <Cell ss:StyleID="s24">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="Number">98</Data>
+      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>P_AtLeastOne_c</Data>      </Cell>
+      <Cell ss:StyleID="s23">
+<Data ss:Type='String'>T_Eventual_e</Data>      </Cell>
+      <Cell ss:StyleID="s24">
+<Data ss:Type='String'>L_Atomic</Data>      </Cell>
+      <Cell ss:StyleID="s24">
+<Data ss:Type='String'>R_Atomic</Data>      </Cell>
+    </Row>
+  </Table>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+     <Print>
+      <ValidPrinterInfo/>
+      <HorizontalResolution>-4</HorizontalResolution>
+      <VerticalResolution>-4</VerticalResolution>
+     </Print>
+     <PageLayoutZoom>0</PageLayoutZoom>
+     <Selected/>
+     <FreezePanes/>
+     <FrozenNoSplit/>
+     <SplitHorizontal>2</SplitHorizontal>
+     <TopRowBottomPane>2</TopRowBottomPane>
+     <ActivePane>2</ActivePane>
+     <Panes>
+      <Pane>
+       <Number>3</Number>
+      </Pane>
+      <Pane>
+       <Number>2</Number>
+      </Pane>
+     </Panes>
+     <ProtectObjects>False</ProtectObjects>
+     <ProtectScenarios>False</ProtectScenarios>
+    </WorksheetOptions></Worksheet>
+<Worksheet ss:Name="Test Plan Scorecard">
+  <Table ss:ExpandedColumnCount="4" x:FullColumns="1" x:FullRows="1">
+    <Column ss:Width="250.0"/>
+    <Column ss:Width="75.0"/>
+    <Column ss:Width="400.0"/>
+    <Column ss:Width="75.0"/>
+    <Row>
+      <Cell ss:StyleID="s32" ss:HRef="#'Table of Contents'!A1">
+        <Data ss:Type="String">Table of Contents</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">Considerations</Data>
+      </Cell>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">Status</Data>
+      </Cell>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">Explanation</Data>
+      </Cell>
+      <Cell ss:StyleID="s21"/>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+<Data ss:Type='String'>80% 2-way interaction coverage at test case <B xmlns="http://www.w3.org/TR/REC-html40">69</B></Data>      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">Informational</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+<Data ss:Type='String'>Consider the marginal costs and benefits of executing additional tests. After test case <B xmlns="http://www.w3.org/TR/REC-html40">69</B>, the additional <B xmlns="http://www.w3.org/TR/REC-html40">29</B> test cases only provide 20% of the 2-way interaction coverage.</Data>      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="http://help.hexawise.com/s/help/m/7438/l/73961-how-do-i-understand-the-testing-coverage-achieved-by-my-hexawise-generated-tests">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+<Data ss:Type='String'>The 2 largest parameters have <B xmlns="http://www.w3.org/TR/REC-html40">9</B> values.</Data>      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">Informational</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+<Data ss:Type='String'>This means a minimum of about <B xmlns="http://www.w3.org/TR/REC-html40">81</B> test cases. Reducing the number of values in these parameters may significantly reduce the number of generated tests.</Data>      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="http://training.hexawise.com/s/training/m/7455/l/74116-12-mistake-to-avoid-try-not-to-use-long-lists-of-values-instead-use-equivalence-classes-and-similar-strategies">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+<Data ss:Type='String'><B xmlns="http://www.w3.org/TR/REC-html40">4</B> parameters with lots of values.</Data>      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">Suboptimal</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">We define 'lots' as more than 8. Consider using value expansions to reduce the number of values in large parameters.</Data>
+      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="http://training.hexawise.com/s/training/m/7455/l/74116-12-mistake-to-avoid-try-not-to-use-long-lists-of-values-instead-use-equivalence-classes-and-similar-strategies">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+<Data ss:Type='String'><B xmlns="http://www.w3.org/TR/REC-html40">0</B> no possible  values.</Data>      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">Optimal</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Inconsistent or incomplete invalid and married pair logic can cause test cases with no possible values.</Data>
+      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="https://hexawise.com/posts/whaddya-mean-no-possible-value">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">Features</Data>
+      </Cell>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">Used?</Data>
+      </Cell>
+      <Cell ss:StyleID="s21">
+        <Data ss:Type="String">Explanation</Data>
+      </Cell>
+      <Cell ss:StyleID="s21"/>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Invalid Pairs</Data>
+      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">No</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Prevent "impossible to test for" combinations from appearing.</Data>
+      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="http://help.hexawise.com/s/help/m/7438/l/73968-how-do-i-create-an-invalid-pair-to-prevent-impossible-to-test-for-values-from-appearing-together">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Married Pairs</Data>
+      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">No</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Prevent those "impossible to test for" combinations even faster.</Data>
+      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="http://help.hexawise.com/s/help/m/7438/l/104307-how-do-i-prevent-certain-combinations-from-appearing-using-the-married-pair-feature">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Shared</Data>
+      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">No</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Collaborate with colleagues and get their input.</Data>
+      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="http://help.hexawise.com/s/help/m/7438/l/73972-how-do-i-share-a-project">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Notes</Data>
+      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">No</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Add notes (explanations, questions, etc.) to help collaborators and reviewers.</Data>
+      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="http://help.hexawise.com/s/help/m/7438/l/105680-how-can-i-make-notes-for-myself-and-my-colleagues">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Mixed-Strength</Data>
+      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">No</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Add focused additional thoroughness to high-priority parameters.</Data>
+      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="http://help.hexawise.com/s/help/m/7438/l/74184-how-do-i-create-a-risk-based-testing-plan-that-focuses-more-coverage-on-higher-priority-areas">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Auto-Scripts</Data>
+      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">No</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Go beyond just test case conditions by generating test scripts as complete sentences.</Data>
+      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="http://help.hexawise.com/s/help/m/7438/l/74185-how-do-i-auto-script-test-cases-to-quickly-include-detailed-written-tester-instructions-in-my-tests">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Value Expansions</Data>
+      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">No</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Add extra variation without adding more tests.</Data>
+      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="http://help.hexawise.com/s/help/m/7438/l/74183-how-can-i-maximize-variation-without-increasing-the-number-of-my-tests">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Requirements</Data>
+      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">No</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Force high-priority scenarios into the test cases.</Data>
+      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="http://help.hexawise.com/s/help/m/7438/l/82784-how-do-i-force-hexawise-to-include-required-scenarios-and-manage-requirements-traceability">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+    <Row>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Expected Results</Data>
+      </Cell>
+      <Cell ss:StyleID="s33">
+        <Data ss:Type="String">No</Data>
+      </Cell>
+      <Cell ss:StyleID="s26">
+        <Data ss:Type="String">Use simple rules to trigger checks for expected behavior.</Data>
+      </Cell>
+      <Cell ss:StyleID="s32" ss:HRef="http://help.hexawise.com/s/help/m/7438/l/74135-how-do-i-save-test-documentation-time-by-automatically-generating-expected-results-in-test-scripts">
+        <Data ss:Type="String">Learn More</Data>
+      </Cell>
+    </Row>
+  </Table>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+     <Print>
+      <ValidPrinterInfo/>
+      <HorizontalResolution>-4</HorizontalResolution>
+      <VerticalResolution>-4</VerticalResolution>
+     </Print>
+     <PageLayoutZoom>0</PageLayoutZoom>
+     <Selected/>
+     <FreezePanes/>
+     <FrozenNoSplit/>
+     <SplitHorizontal>2</SplitHorizontal>
+     <TopRowBottomPane>2</TopRowBottomPane>
+     <ActivePane>2</ActivePane>
+     <Panes>
+      <Pane>
+       <Number>3</Number>
+      </Pane>
+      <Pane>
+       <Number>2</Number>
+      </Pane>
+     </Panes>
+     <ProtectObjects>False</ProtectObjects>
+     <ProtectScenarios>False</ProtectScenarios>
+    </WorksheetOptions></Worksheet>
+</Workbook>

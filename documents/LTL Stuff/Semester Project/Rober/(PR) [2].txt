@@ -1,0 +1,16 @@
+(PR) [2]
+P_Parallel_c	R_Eventual_e		(P1P2P3)-R1-R2-R3
+P_Eventual_e	R_AtLeastOne_c		-P1-P2-(P3R1)		-P1-P2-(P3R3)
+P_Eventual_c	R_AtLeastOne_e		P1-P2-P3-R1			P1-P2-P3-R2
+P_Eventual_e	R_Consecutive_c		-P1-P2-(P3R1)R2R3
+P_Eventual_c	R_Consecutive_e		P1-P2-P3-R1R2R3
+P_Consecutive_e	R_Parallel_c		-P1P2(P3R1R2R3)
+P_Consecutive_c	R_Parallel_e		P1P2P3-(R1R2R3)
+P_Parallel_c	R_Eventual_c		(P1P2P3R1)-R2-R3
+P_AtLeastOne_c	R_Parallel_e		P1-(R1R2R3)			P3-(R1R2R3)
+P_Parallel_e	R_Eventual_e		-(P1P2P3)-R1-R2-R3	
+P_Eventual_c	R_Parallel_e		P1-P2-P3-(R1R2R3)
+P_Eventual_e	R_AtLeastOne_c		-P1-P2-(P3R1)		-P1-P2-(P3R2)
+P_AtLeastOne_e	R_AtLeastOne_e		-P1-Q1				-P3-Q2
+P_AtLeastOne_c	R_AtLeastOne_c		(P1R1)			(P3R2)
+P_AtLeastOne_e	R_AtLeastOne_c		-(P1R1)		-(P2R2)		-(P3R3)

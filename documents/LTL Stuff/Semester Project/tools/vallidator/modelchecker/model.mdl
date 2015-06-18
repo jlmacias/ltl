@@ -1,0 +1,20 @@
+MODULE main
+VAR 
+	Q : seq();
+	DEFINE
+			a := (Q.State = -999);
+			d := (Q.State = -999);
+			j := (Q.State = -999);
+			n := (Q.State = -999);
+			
+LTLSPEC	G(((!j)&((!j)U(j&!(n))))->((!j)&((!j)U(j&!((!(n))U(((!a)&((!a&!(n))U(a&!(n&((!((!d)&((!d&!(n))U(d&!(n)))))U(n))))))))))))
+
+MODULE seq() 
+VAR
+		State: 0..4;
+ASSIGN
+		init(State):= 0;
+		next(State):= case
+			(State != 4) : {State + 1};
+			(State = 4)  : {4};
+			esac;

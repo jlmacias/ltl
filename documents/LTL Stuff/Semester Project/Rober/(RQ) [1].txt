@@ -1,0 +1,16 @@
+(RQ) [1]
+R_Eventual_e	Q_AtLeastOne_c		-R1-R2-(R3Q1)	-R1-R2-(R3Q2)	-R1-R2-(R3Q3)
+R_AtLeastOne_c	Q_AtLeastOne_e		R1-Q1
+R_AtLeastOne_e	Q_AtLeastOne_c		-(R2Q2)
+R_Consecutive_c	Q_Parallel_e		R1R2R3-(Q1Q2Q3)
+R_Consecutive_e	Q_Parallel_c		-R1R2(R3Q1Q2Q3)
+R_Parallel_c	Q_AtLeastOne_e		(R1R2R3)-Q3
+R_Parallel_e	Q_Parallel_c		-(R1R2R3Q1Q2Q3)
+R_Eventual_c	Q_AtLeastOne_c		R1-R2-(R3Q2)
+R_Parallel_e	Q_Eventual_c		-(R1R2R3Q1)-Q2-Q3
+R_Eventual_e	Q_AtLeastOne_e		-R1-R2-R3-Q2
+R_Parallel_e	Q_AtLeastOne_e		-(R1R2R3)-Q1
+R_AtLeastOne_c	Q_AtLeastOne_c		(R3Q2)
+R_AtLeastOne_e	Q_AtLeastOne_c		-(R2Q1)
+R_AtLeastOne_c	Q_AtLeastOne_c		--
+R_AtLeastOne_c	Q_AtLeastOne_c		--

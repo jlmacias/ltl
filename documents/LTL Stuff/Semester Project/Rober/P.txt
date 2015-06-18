@@ -1,0 +1,60 @@
+P [56]
+-P1-P2-P3
+AtPeastOneC:
+	P1
+	P2
+	P3
+	NOT: -
+
+AtPeastOneE:
+	-P1
+	-P2
+	-P3
+	NOT:
+		-
+		P1P2P3P1P2P3
+
+ConsecutiveC:
+	P1P2P3
+	NOT:
+		-
+		P1-P2P3
+		P1P2-P3
+		P1-P2-P3
+		P1P3P2
+
+ConsecutiveE:
+	-P1P2P3
+	NOT:
+		-
+		-P1-P2P3
+		-P1P2-P3
+		-P1-P2-P3
+EventualC:
+	P1-P2-P3
+	NOT:
+		-
+		P1-P3-P2
+		P1-P2--
+
+EventualE:
+	-P1-P2-P3
+	NOT
+		-
+		-P1-P3-P2
+		-P1-P2
+		P1P2P3P1P2P3
+
+ParaPPePC
+	(P1P2P3)
+	NOT
+		(P2P3)
+		P1
+		-
+
+ParaPPePE
+	-(P1P2P3)
+	NOT
+		P1P2P3P1(P1P2P3)
+		-
+		-P1

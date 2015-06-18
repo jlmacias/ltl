@@ -1,0 +1,16 @@
+(LPQ) [1]
+L_Eventual_e	P_Parallel_c	Q_AtLeastOne_c	-L1-L2-(L3P1P2P3)Q1
+L_AtLeastOne_e	P_Eventual_e	Q_AtLeastOne_e	-L2-P1-P2-P3-Q1
+L_AtLeastOne_e	P_Eventual_c	Q_AtLeastOne_c	-(L3P1)-P2-(P3Q1)
+L_Parallel_c	P_Eventual_e	Q_Parallel_e	(L1L2L3)-P1-P2-P3-(Q1Q2Q3)
+L_Parallel_c	P_Eventual_c	Q_Parallel_c	(L1L2L3P1)-P2-(P3Q1Q2Q3)
+L_Eventual_e	P_Consecutive_e	Q_AtLeastOne_e	-L1-L2-L3-P1P2P3-Q2
+L_Eventual_e	P_Consecutive_c	Q_Parallel_c	-L1-L2-(L3P1)P2(P3Q1Q2Q3)
+L_Parallel_c	P_Parallel_c	Q_AtLeastOne_c	(L1L2L3P1P2P3Q1)
+L_Consecutive_e	P_AtLeastOne_c	Q_Eventual_c	-L1L2(L3P1Q1)-Q2-Q3
+L_Parallel_c	P_Parallel_e	Q_AtLeastOne_e	(L1L2L3)-(P1P2P3)-Q2
+L_Parallel_e	P_Eventual_c	Q_AtLeastOne_e	-(L1L2L3P1)-P2-P3-Q3
+L_Parallel_e	P_Eventual_e	Q_AtLeastOne_c	-(L1L2L3)-PP1-P2-(P3Q1)
+L_Consecutive_c	P_AtLeastOne_e	Q_AtLeastOne_c	L1L2L3-(P2Q2)
+L_Eventual_c	P_AtLeastOne_c	Q_AtLeastOne_c	L1-L2-(L3P3Q3)
+L_Eventual_c	P_AtLeastOne_e	Q_AtLeastOne_c	L1-L2-L3(P2Q1)

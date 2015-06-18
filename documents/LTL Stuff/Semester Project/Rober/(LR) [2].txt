@@ -1,0 +1,15 @@
+(LR) [2] 	
+64	L_Eventual_e	R_Eventual_e	-L1-L2-L3-R1-R2-R3
+65	L_AtLeastOne_e	R_AtLeastOne_c	-L1-R1-R2-R3	-L2-R1-R2-R3	-L3-R1-R2-R3
+66	L_AtLeastOne_e	R_AtLeastOne_e	-L1-R2			-L3-R3
+67	L_Parallel_c	R_Consecutive_c	(L1L2L3R1)R2R3
+68	L_Parallel_c	R_Consecutive_e	(L1L2L3)-R1-R2-R3
+69	L_Eventual_e	R_Parallel_c	-L1-L2-(L3R1R2R3)
+70	L_Eventual_e	R_Parallel_e	-L1-L2-L3-(R1R2R3)
+71	L_Parallel_c	R_Eventual_c	(L1L2L3R1)-R2-R3
+72	L_Consecutive_e	R_Parallel_e	-L1L2L3-(R1R2R3)
+73	L_Parallel_c	R_Eventual_e	(L1L2L3)-R1-R2-R3
+74	L_Parallel_e	R_Parallel_e	-(L1L2L3)-(R1R2R3)
+75	L_Parallel_e	R_AtLeastOne_c	-(L1L2L3R1)		-(L1L2L3R3)
+76	L_Consecutive_c	R_AtLeastOne_e	L1L2L3-R2		L1L2L3-R1
+77	L_Eventual_c	R_AtLeastOne_c	L1-L2-(L3R1)	L1-L2-(L3R3)
