@@ -1,0 +1,9 @@
+[Table 3] G!P
+FP
+G(P->(P andLeft F Q)))
+!((!(Q andRight !P)) U P)
+!((!(Q andRight !(!p1 &···&!pn &X Ph ))) U (!p1 &···&!pn &X Ph ))
+!((!Q) U (P &!Q))
+!((!(Q  andMinusLeft  !P)) U P)
+!((!(Q &!(!p1 &···&!pn &X Ph ))) U (!p1 &···&!pn &X Ph&!Q))
+!((!(Q andMinusLeft  !(!p1 &··· &!pn &X Ph ))) U (!p1 &···&!pn &X Ph ))

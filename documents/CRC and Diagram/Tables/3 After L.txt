@@ -1,0 +1,1 @@
+!((! L ) U (L andLeft ! P_Global ))  // P_Global can be any of the Global LTL's (1 - 9 List in the Excel File) depending on type

@@ -1,0 +1,1 @@
+G((L) -> (L andLeft ((P_BeforeR & ((! FR) -> P_Global )))))
