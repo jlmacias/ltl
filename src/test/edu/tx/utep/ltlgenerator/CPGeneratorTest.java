@@ -18,8 +18,8 @@ public class CPGeneratorTest {
 	
 	@Test
 	public void testAtLeastOneH() throws Exception {
-		String output = cpGenerator.getCompositeProposition("G_AtLeastOneH_4");
-		assertEquals("(g1 ^ g2 ^ g3 ^ g4)", output);
+		String output = cpGenerator.getCompositeProposition("P_AtLeastOneH_4");
+		assertEquals("(p1 ^ p2 ^ p3 ^ p4)", output);
 	}
 	
 	@Test
