@@ -55,7 +55,7 @@ public class CPGeneratorTest {
 	@Test
 	public void testConsecutiveH() throws Exception {
 		String output = cpGenerator.getCompositeProposition("P_ConsecutiveH_4");
-		assertEquals("(p1 ^ !p2 ^ !p3 ^ !p4 ^ X ( p2 ^ !p3 ^ !p4 ^ X ( p3 ^ !p4 ^ X p4)))", output);
+		assertEquals("(p1 ^ !p2 ^ !p3 ^ !p4 ^ X (p2 ^ !p3 ^ !p4 ^ X (p3 ^ !p4 ^ X p4)))", output);
 	}
 	
 	@Test
