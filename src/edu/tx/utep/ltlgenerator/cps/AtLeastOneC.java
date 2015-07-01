@@ -7,7 +7,7 @@ public class AtLeastOneC extends CompositeProposition {
 	@Override
 	public String generateLTL(String letter, int count) {
 		String formula = cpFormula;
-		String or = generateProposition(OR, letter, count);
+		String or = generateProposition(OR, letter, 1, count);
 
 		formula = formula.replace(OR, or);
 		return formula;

@@ -7,8 +7,8 @@ public class AtLeastOneE extends CompositeProposition {
 	@Override
 	public String generateLTL(String letter, int count) {
 		String formula = cpFormula;
-		String notAnd = generateProposition(NOT_AND, letter, count);
-		String or = generateProposition(OR, letter, count);
+		String notAnd = generateProposition(NOT_AND, letter, 1, count);
+		String or = generateProposition(OR, letter, 1, count);
 
 		formula = formula.replace(NOT_AND, notAnd);
 		formula = formula.replace(OR, or);

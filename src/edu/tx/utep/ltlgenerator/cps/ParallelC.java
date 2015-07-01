@@ -7,7 +7,7 @@ public class ParallelC extends CompositeProposition {
 	@Override
 	public String generateLTL(String letter, int count) {
 		String formula = cpFormula;
-		String and = generateProposition(AND, letter, count);
+		String and = generateProposition(AND, letter, 1, count);
 
 		formula = formula.replace(AND, and);
 		return formula;
