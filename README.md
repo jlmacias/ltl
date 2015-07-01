@@ -4,7 +4,9 @@ https://www.youtube.com/watch?v=DR7MLaAKcUk&index=1&list=PLfdtiltiRHWFEbt9V04Nrb
 # EventualC
 ###### p = 4 / ( !p3 U ( p3 ^ X ( !p4 U p4 ) ) )
 ( p1 ^ X ( !p2 U 
+
 ( p2 ^ X ) !p3 U
+
 ( p3 ^ X ( !p4 U p4 ) ) ) )
 
 ###### p = 5 / ( !p4 U ( p4 ^ X ( !p5 U p5 ) ) )
