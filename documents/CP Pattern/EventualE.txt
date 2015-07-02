@@ -1,17 +1,17 @@
-EventualE(4) --- LAST = ( p3 ^ !p4 ^ ( !p4 U p4 ) )
+EventualE(4)
 ( !p1 ^ !p2 ^ !p3 ^ !p4 ) ^ ( ( !p1 ^ !p2 ^ !p3 ^ !p4 ) U 
 ( p1 ^ !p2 ^ !p3 ^ !p4 ^ ( ( !p2 ^ !p3 ^ !p4 ) U 
 ( p2 ^ !p3 ^ !p4 ^ ( !p3 ^ !p4 ) U
 ( p3 ^ !p4 ^ ( !p4 U p4 ) ) ) ) ) )
 
-EventualE(5) --- LAST = ( p4 ^ !p5 ^ ( !p5 U p5 ) )
+EventualE(5)
 ( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ) ^ ( ( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ) U 
 ( p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ ( ( !p2 ^ !p3 ^ !p4 ^ !p5 ) U 
 ( p2 ^ !p3 ^ !p4 ^ !p5 ^ ( ( !p3 ^ !p4 ^ !p5 ) U 
 ( p3 ^ !p4 ^ !p5 ^ ( ( !p4 ^ !p5 ) U 
 ( p4 ^ !p5 ^ ( !p5 U p5 ) ) ) ) ) ) ) ) )
 
-EventualE(6) --- LAST = ( p5 ^ !p6 ^ ( !p6 U p6 ) )
+EventualE(6)
 ( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ) ^ ( ( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ) U 
 ( p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ^ ( ( !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ) U 
 ( p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ^ ( ( !p3 ^ !p4 ^ !p5 ^ !p6 ) U 
