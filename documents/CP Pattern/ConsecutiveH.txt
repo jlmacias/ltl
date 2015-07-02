@@ -1,17 +1,17 @@
-ConsecutiveH(4) --- LAST = ( p3 ^ !p4 ^ Xp4 )
+ConsecutiveH(4)
 ( p1 ^ !p2 ^ !p3 ^ !p4 ^ X 
 ( p2 ^ !p3 ^ !p4 ^ X 
 ( p3 ^ !p4 ^ Xp4 ) ) )
 
-ConsecutiveH(5) --- LAST = ( p4 ^ !p5 ^ Xp5 )
+ConsecutiveH(5)
 ( p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ X 
 ( p2 ^ !p3 ^ !p4 ^ !p5 ^ X 
 ( p3 ^ !p4 ^ !p5 ^ X 
 ( p4 ^ !p5 ^ Xp5 ) ) ) )
 
-ConsecutiveH(6) --- LAST = ( p5 ^ !p6 ^ Xp6 )
+ConsecutiveH(6)
 ( p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ^ X 
 ( p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ^ X 
 ( p3 ^ !p4 ^ !p5 ^ !p6 ^ X 
 ( p4 ^ !p5 ^ !p6 ^ X 
-( p5 ^ !p6 ^ Xp6 ) ) ) )
+( p5 ^ !p6 ^ Xp6 ) ) ) ) )
