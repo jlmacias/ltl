@@ -2,14 +2,16 @@ ConsecutiveE(4)
 ( !p1 ^ !p2 ^ !p3 ^ !p4 ) ^ ( ( !p1 ^ !p2 ^ !p3 ^ !p4 ) U 
 ( p1 ^ !p2 ^ !p3 ^ !p4 ^ X 
 ( p2 ^ !p3 ^ !p4 ^ X 
-( p3 ^ !p4 ^ Xp4 ) ) ) )
+( p3 ^ !p4 ^ X
+( p4 ) ) ) ) )
 
 ConsecutiveE(5)
 ( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ) ^ ( ( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ) U 
 ( p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ X 
 ( p2 ^ !p3 ^ !p4 ^ !p5 ^ X 
 ( p3 ^ !p4 ^ !p5 ^ X 
-( p4 ^ !p5 ^ Xp5 ) ) ) ) )
+( p4 ^ !p5 ^ X
+( p5 ) ) ) ) ) )
 
 ConsecutiveE(6)
 ( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ) ^ ( ( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ) U 
@@ -17,4 +19,5 @@ ConsecutiveE(6)
 ( p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ^ X 
 ( p3 ^ !p4 ^ !p5 ^ !p6 ^ X 
 ( p4 ^ !p5 ^ !p6 ^ X 
-( p5 ^ !p6 ^ Xp6 ) ) ) ) ) )
+( p5 ^ !p6 ^ X
+( p6 ) ) ) ) ) ) )
