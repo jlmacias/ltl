@@ -1,8 +1,20 @@
-ConsecutiveC(4) --- LAST = ( X ( p4 ) ) => ( Xp4 )
-( p1 ^ X ( p2 ^ X ( p3 ^ Xp4  ) ) )
+ConsecutiveC(4)
+( p1 ^ X 
+( p2 ^ X 
+( p3 ^ X 
+( p4 ) ) ) )
 
-ConsecutiveC(5) --- LAST = ( X ( p5 ) ) => ( Xp5 )
-( p1 ^ X ( p2 ^ X ( p3 ^ X ( p4 ^ Xp5 ) ) ) )
+ConsecutiveC(5)
+( p1 ^ X 
+( p2 ^ X 
+( p3 ^ X 
+( p4 ^ X 
+( p5 ) ) ) ) )
 
-ConsecutiveC(6) --- LAST = ( X ( p6 ) ) => ( Xp6 )
-( p1 ^ X ( p2 ^ X ( p3 ^ X ( p4 ^ X ( p5 ^ Xp6 ) ) ) ) )
+ConsecutiveC(6)
+( p1 ^ X 
+( p2 ^ X 
+( p3 ^ X 
+( p4 ^ X 
+( p5 ^ X 
+( p6 ) ) ) ) ) )
