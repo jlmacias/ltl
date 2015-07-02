@@ -11,33 +11,33 @@ public class ConsecutiveE extends CompositeProposition {
 		StringBuilder initialString = new StringBuilder();
 
 		// Initial String (Not Repetitive)
-		initialString.append("(");
+		initialString.append(OPEN_P);
 		for (int i = 1; i <= count; i++) {
-			initialString.append("!").append(letter).append(i);
+			initialString.append(NOT).append(letter).append(i);
 
 			if (i < count) {
-				initialString.append(" ^ ");
+				initialString.append(AND);
 			}
 		}
-		initialString.append(") ");
+		initialString.append(CLOSE_P);
 
 		// Repetitive Pattern
 		for (int i = 1; i < count; i++) {
-			intermediateString.append("(").append(letter).append(i).append(" ^ ").append(generateProposition(NOT_AND, letter, i+1, count));
+			intermediateString.append(OPEN_P).append(letter).append(i).append(AND).append(generateProposition(CPT_NOT_AND, letter, i+1, count));
 
 			if (i+1 < count) {
-				intermediateString.append(" ^ X");
+				intermediateString.append(AND).append(NEXT);
 			} else {
-				intermediateString.append(" ^ X").append(letter).append(i+1);
+				intermediateString.append(AND).append(NEXT).append(letter).append(i+1);
 			}
 		}
 
 		// Adding Parenthesis At The End
 		for (int i = 1; i < count; i++) {
-			intermediateString.append(")");
+			intermediateString.append(CLOSE_P);
 		}
 
-		formula.append(initialString).append("^ (").append(initialString).append("U ").append(intermediateString).append(")");
+		formula.append(initialString).append(AND).append(OPEN_P).append(initialString).append(UNTIL).append(intermediateString).append(CLOSE_P);
 
 		return formula.toString();
 	}

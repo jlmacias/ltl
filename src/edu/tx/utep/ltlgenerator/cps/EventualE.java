@@ -11,20 +11,20 @@ public class EventualE extends CompositeProposition {
 		StringBuilder intermediateString = new StringBuilder();
 
 		// Initial
-		initialString.append("(").append(generateProposition(NOT_AND, letter, 1, count)).append(") ^ ");
+		initialString.append(OPEN_P).append(generateProposition(CPT_NOT_AND, letter, 1, count)).append(CLOSE_P).append(AND);
 
 		// Repetitive Pattern
 		for (int i = 1; i < count; i++) {
-			intermediateString.append("((").append(generateProposition(NOT_AND, letter, i, count)).append(")").append(" U ").append("(").append(letter).append(i).append(" ^ ").append(generateProposition(NOT_AND, letter, i+1, count)).append(" ^ ");
+			intermediateString.append(OPEN_P).append(OPEN_P).append(generateProposition(CPT_NOT_AND, letter, i, count)).append(CLOSE_P).append(UNTIL).append(OPEN_P).append(letter).append(i).append(AND).append(generateProposition(CPT_NOT_AND, letter, i+1, count)).append(AND);
 
 			if (i + 1 >= count) {
-				intermediateString.append("(").append("!").append(letter).append(i + 1).append(" U ").append(letter).append(i + 1).append(")");
+				intermediateString.append(OPEN_P).append(NOT).append(letter).append(i + 1).append(UNTIL).append(letter).append(i + 1).append(CLOSE_P);
 			}
 		}
 
 		// Adding Parenthesis At The End
 		for (int i = 1; i < count; i++) {
-			intermediateString.append("))");
+			intermediateString.append(CLOSE_P).append(CLOSE_P);
 		}
 
 		formula.append(initialString).append(intermediateString);

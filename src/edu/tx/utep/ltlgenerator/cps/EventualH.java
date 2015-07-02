@@ -12,18 +12,18 @@ public class EventualH extends CompositeProposition {
 
 		// Repetitive Pattern
 		for (int i = 1; i < count; i++) {
-			intermediateString.append("(").append(letter).append(i).append(" ^ ").append(generateProposition(NOT_AND, letter, i+1, count)).append(" ^ ").append("(").append("(").append(generateProposition(NOT_AND, letter, i+1, count)).append(")");
+			intermediateString.append(OPEN_P).append(letter).append(i).append(AND).append(generateProposition(CPT_NOT_AND, letter, i+1, count)).append(AND).append(OPEN_P).append(OPEN_P).append(generateProposition(CPT_NOT_AND, letter, i+1, count)).append(CLOSE_P);
 
 			if (i+1 < count) {
-				intermediateString.append(" U ");
+				intermediateString.append(UNTIL);
 			} else {
-				intermediateString.append(" U ").append(letter).append(i+1);
+				intermediateString.append(UNTIL).append(letter).append(i+1);
 			}
 		}
 
 		// Adding Parenthesis At The End
 		for (int i = 1; i < count; i++) {
-			intermediateString.append("))");
+			intermediateString.append(CLOSE_P).append(CLOSE_P);
 		}
 
 		formula.append(intermediateString);

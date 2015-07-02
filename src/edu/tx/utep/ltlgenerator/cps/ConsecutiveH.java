@@ -11,14 +11,14 @@ public class ConsecutiveH extends CompositeProposition {
 
 		for (int i = count; i > 0; i--) {
 			if (i == count) {
-				formula.append("^ X").append(letter).append(i).append("");
+				formula.append(AND).append(NEXT).append(letter).append(i);
 			} else {
 				intermediateString.setLength(0);
-				intermediateString.append("(").append(letter).append(i).append(" ^ ").append(generateProposition(NOT_AND, letter, i+1, count)).append(" ");
-				formula.insert(0, intermediateString).append(")");
+				intermediateString.append(OPEN_P).append(letter).append(i).append(AND).append(generateProposition(CPT_NOT_AND, letter, i+1, count));
+				formula.insert(0, intermediateString).append(CLOSE_P);
 
 				if (i > 1) {
-					formula.insert(0, "^ X");
+					formula.insert(0, AND + NEXT);
 				}
 			}
 		}

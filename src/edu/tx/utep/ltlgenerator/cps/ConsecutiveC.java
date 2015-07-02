@@ -11,14 +11,14 @@ public class ConsecutiveC extends CompositeProposition {
 
 		for (int i = count; i > 0; i--) {
 			if (i == count) {
-				formula.append("X(").append(letter).append(i).append(")");
+				formula.append(NEXT).append(OPEN_P).append(letter).append(i).append(CLOSE_P);
 			} else {
 				intermediateString.setLength(0);
-				intermediateString.append("(").append(letter).append(i).append(" ^ ");
-				formula.insert(0, intermediateString).append(")");
+				intermediateString.append(OPEN_P).append(letter).append(i).append(AND);
+				formula.insert(0, intermediateString).append(CLOSE_P);
 
 				if (i > 1) {
-					formula.insert(0, "X");
+					formula.insert(0, NEXT);
 				}
 			}
 		}
