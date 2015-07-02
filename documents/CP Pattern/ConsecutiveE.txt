@@ -1,14 +1,20 @@
-ConsecutiveE(4) --- LAST = ( p3 ^ !p4 ^ Xp4 )
-( !p1 ^ !p2 ^ !p3 ^ !p4 ) ^ ( ( !p1 ^ !p2 ^ !p3 ^ !p4 ) U ( p1 ^ !p2 ^ !p3 ^ !p4 ^ X ( p2 ^ !p3 ^ !p4 ^ X 
+ConsecutiveE(4)
+( !p1 ^ !p2 ^ !p3 ^ !p4 ) ^ ( ( !p1 ^ !p2 ^ !p3 ^ !p4 ) U 
+( p1 ^ !p2 ^ !p3 ^ !p4 ^ X 
+( p2 ^ !p3 ^ !p4 ^ X 
 ( p3 ^ !p4 ^ Xp4 ) ) ) )
 
-ConsecutiveE(5) --- LAST = ( p4 ^ !p5 ^ Xp5 )
-( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ) ^ ( ( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ) U ( p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ X 
+ConsecutiveE(5)
+( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ) ^ ( ( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ) U 
+( p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ X 
 ( p2 ^ !p3 ^ !p4 ^ !p5 ^ X 
-( ( p4 ^ !p5 ^ Xp5 ) ) ) ) )
+( p3 ^ !p4 ^ !p5 ^ X 
+( p4 ^ !p5 ^ Xp5 ) ) ) ) )
 
-ConsecutiveE(6) --- LAST = ( p5 ^ !p6 ^ Xp6 )
-( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ) ^ ( ( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ) U ( p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ^ X 
+ConsecutiveE(6)
+( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ) ^ ( ( !p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ) U 
+( p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ^ X 
 ( p2 ^ !p3 ^ !p4 ^ !p5 ^ !p6 ^ X 
 ( p3 ^ !p4 ^ !p5 ^ !p6 ^ X 
-( ( p5 ^ !p6 ^ Xp6 ) ) ) ) ) )
+( p4 ^ !p5 ^ !p6 ^ X 
+( p5 ^ !p6 ^ Xp6 ) ) ) ) ) )
