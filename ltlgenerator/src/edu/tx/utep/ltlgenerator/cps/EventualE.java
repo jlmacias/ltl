@@ -15,7 +15,7 @@ public class EventualE extends CompositeProposition {
 
 		// Repetitive Pattern
 		for (int i = 1; i < count; i++) {
-			intermediateString.append(OPEN_P).append(OPEN_P).append(generateProposition(CPT_NOT_AND, letter, i, count)).append(CLOSE_P).append(UNTIL).append(OPEN_P).append(letter).append(i).append(AND).append(generateProposition(CPT_NOT_AND, letter, i+1, count)).append(AND);
+			intermediateString.append(OPEN_P).append(OPEN_P).append(generateProposition(CPT_NOT_AND, letter, i, count)).append(CLOSE_P).append(UNTIL).append(OPEN_P).append(letter).append(i).append(AND).append(generateProposition(CPT_NOT_AND, letter, i + 1, count)).append(AND);
 
 			if (i + 1 >= count) {
 				intermediateString.append(OPEN_P).append(NOT).append(letter).append(i + 1).append(UNTIL).append(letter).append(i + 1).append(CLOSE_P);

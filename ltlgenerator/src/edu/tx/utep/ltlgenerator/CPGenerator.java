@@ -15,9 +15,11 @@ import edu.tx.utep.ltlgenerator.cps.ParallelE;
 public class CPGenerator {
 
 	public String getCompositeProposition(String cp) {
-		String letter = cp.substring(0, 1).toLowerCase();
-		String cpName = cp.substring(2, cp.lastIndexOf("_"));
-		String countS = cp.substring(cp.lastIndexOf("_") + 1, cp.length());
+		String [] splitCP = cp.split("_");
+		String letter = splitCP[0];
+		String cpName = splitCP[1];
+		String countS = splitCP[2];
+		
 		int count = Integer.parseInt(countS);
 
 		CompositeProposition cpClass = getCPClass(cpName);

@@ -12,12 +12,12 @@ public class EventualH extends CompositeProposition {
 
 		// Repetitive Pattern
 		for (int i = 1; i < count; i++) {
-			intermediateString.append(OPEN_P).append(letter).append(i).append(AND).append(generateProposition(CPT_NOT_AND, letter, i+1, count)).append(AND).append(OPEN_P).append(OPEN_P).append(generateProposition(CPT_NOT_AND, letter, i+1, count)).append(CLOSE_P);
+			intermediateString.append(OPEN_P).append(letter).append(i).append(AND).append(generateProposition(CPT_NOT_AND, letter, i + 1, count)).append(AND).append(OPEN_P).append(OPEN_P).append(generateProposition(CPT_NOT_AND, letter, i + 1, count)).append(CLOSE_P);
 
-			if (i+1 < count) {
+			if (i + 1 < count) {
 				intermediateString.append(UNTIL);
 			} else {
-				intermediateString.append(UNTIL).append(letter).append(i+1);
+				intermediateString.append(UNTIL).append(letter).append(i + 1);
 			}
 		}
 
