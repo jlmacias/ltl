@@ -6,7 +6,21 @@ public class EventualC extends CompositeProposition {
 
 	@Override
 	public String generateLTL(String letter, int count) {
-		return "";
+		StringBuilder formula = new StringBuilder();
+
+		for (int stringCurrentPosition = 1; stringCurrentPosition <= count; stringCurrentPosition++) {
+			if (stringCurrentPosition == count) {
+				formula.append(letter).append(stringCurrentPosition);
+				for (int OpenParentesisCount = 1; OpenParentesisCount <= count - 1; OpenParentesisCount++) {
+					formula.append("))");
+				}
+			} else {
+				formula.append(OPEN_P).append(letter).append(stringCurrentPosition).append(AND).append(NEXT).
+						append(OPEN_P).append(NOT).append(letter).append(stringCurrentPosition + 1).append(UNTIL);
+			}
+		}
+
+		return formula.toString();
 	}
 
 }
