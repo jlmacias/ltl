@@ -16,7 +16,7 @@ public class CPGenerator {
 
 	public String getCompositeProposition(String cp) {
 		String [] splitCP = cp.split("_");
-		String letter = splitCP[0];
+		String letter = splitCP[0].toLowerCase();
 		String cpName = splitCP[1];
 		String countS = splitCP[2];
 		
