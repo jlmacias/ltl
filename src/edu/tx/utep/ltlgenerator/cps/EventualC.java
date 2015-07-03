@@ -11,8 +11,8 @@ public class EventualC extends CompositeProposition {
 		for (int stringCurrentPosition = 1; stringCurrentPosition <= count; stringCurrentPosition++) {
 			if (stringCurrentPosition == count) {
 				formula.append(letter).append(stringCurrentPosition);
-				for (int OpenParentesisCount = 1; OpenParentesisCount <= count - 1; OpenParentesisCount++) {
-					formula.append("))");
+				for (int openParentesisCount = 1; openParentesisCount <= count - 1; openParentesisCount++) {
+					formula.append(CLOSE_P).append(CLOSE_P);
 				}
 			} else {
 				formula.append(OPEN_P).append(letter).append(stringCurrentPosition).append(AND).append(NEXT).

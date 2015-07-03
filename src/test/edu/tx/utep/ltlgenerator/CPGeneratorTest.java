@@ -79,7 +79,7 @@ public class CPGeneratorTest {
 	@Test
 	public void testEventualE() throws Exception {
 		String output = cpGenerator.getCompositeProposition("L_EventualE_4");
-		assertEquals("(!l1 ^ !l2 ^ !l3 ^ !l4) ^ ((!l1 ^ !l2 ^ !l3 ^ !l4) U (l1 ^ !l2 ^ !l3 ^ !l4 ^ ((!l2 ^ !l3 ^ !l4) U (l2 ^ !l3 ^ !l4 ^ (l3 ^ !l4 ^ (!l4 U l4))))))", output);
+		assertEquals("(!l1 ^ !l2 ^ !l3 ^ !l4) ^ ((!l1 ^ !l2 ^ !l3 ^ !l4) U (l1 ^ !l2 ^ !l3 ^ !l4 ^ ((!l2 ^ !l3 ^ !l4) U (l2 ^ !l3 ^ !l4 ^ ((!l3 ^ !l4) U (l3 ^ !l4 ^ (!l4 U l4)))))))", output);
 	}
 	
 }
