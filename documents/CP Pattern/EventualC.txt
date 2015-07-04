@@ -1,17 +1,17 @@
 EventualC(4)
 ( p1 ^ X ( !p2 U 
-( p2 ^ X ) !p3 U
-( p3 ^ X ( !p4 U p4 ) ) ) )
+( p2 ^ X ( !p3 U 
+( p3 ^ X ( !p4 U p4 ) ) ) ) ) )
 
 EventualC(5)
 ( p1 ^ X ( !p2 U 
-( p2 ^ X ) !p3 U
-( p3 ^ X ) !p4 U
-( p4 ^ X ( !p5 U p5 ) ) ) )
+( p2 ^ X ( !p3 U 
+( p3 ^ X ( !p4 U 
+( p4 ^ X ( !p5 U p5 ) ) ) ) ) ) ) )
 
 EventualC(6)
 ( p1 ^ X ( !p2 U 
-( p2 ^ X ) !p3 U
-( p3 ^ X ) !p4 U
-( p5 ^ X ) !p5 U
-( p5 ^ X ( !p6 U p6 ) ) ) )
+( p2 ^ X ( !p3 U 
+( p3 ^ X ( !p4 U 
+( p5 ^ X ( !p5 U 
+( p5 ^ X ( !p6 U p6 ) ) ) ) ) ) ) ) ) )
