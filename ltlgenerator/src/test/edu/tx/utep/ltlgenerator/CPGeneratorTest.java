@@ -65,9 +65,15 @@ public class CPGeneratorTest {
 	}
 
 	@Test
-	public void testConsecutiveE() throws Exception {
-		String output = cpGenerator.getCompositeProposition("L_ConsecutiveE_4");
-		assertEquals("(!l1 ^ !l2 ^ !l3 ^ !l4) ^ ((!l1 ^ !l2 ^ !l3 ^ !l4) U (l1 ^ !l2 ^ !l3 ^ !l4 ^ X(l2 ^ !l3 ^ !l4 ^ X(l3 ^ !l4 ^ Xl4))))", output);
+	public void testConsecutiveE_3() throws Exception {
+		String output = String.join("", cpGenerator.getCompositeProposition2("L_ConsecutiveE_3"));
+		assertEquals("(!l1 ^ !l2 ^ !l3) ^ ((!l1 ^ !l2 ^ !l3) U (l1 ^ !l2 ^ !l3 ^ X(l2 ^ !l3 ^ X(l3))))", output);
+	}
+	
+	@Test
+	public void testConsecutiveE_4() throws Exception {
+		String output = String.join("", cpGenerator.getCompositeProposition2("L_ConsecutiveE_4"));
+		assertEquals("(!l1 ^ !l2 ^ !l3 ^ !l4) ^ ((!l1 ^ !l2 ^ !l3 ^ !l4) U (l1 ^ !l2 ^ !l3 ^ !l4 ^ X(l2 ^ !l3 ^ !l4 ^ X(l3 ^ !l4 ^ X(l4)))))", output);
 	}
 	
 	@Test
