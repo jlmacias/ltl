@@ -1,11 +1,13 @@
 package edu.tx.utep.ltlgenerator.cps;
 
+import java.util.List;
+
 public class EventualE extends CompositeProposition {
 
 	// (!p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5) ^ ((!p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5) U (p1 ^ !p2 ^ !p3 ^ !p4 ^ !p5 ^ ((!p2 ^ !p3 ^ !p4 ^ !p5) U (p2 ^ !p3 ^ !p4 ^ !p5 ^ ((!p3 ^ !p4 ^ !p5) U (p3 ^ !p4 ^ !p5 ^ ((!p4 ^ !p5) U (p4 ^ !p5 ^ (!p5 U p5)))))))))
 
 	@Override
-	public String generateLTL(String letter, int count) {
+	public String generateLTLString(String letter, int count) {
 		StringBuilder formula = new StringBuilder();
 		StringBuilder initialString = new StringBuilder();
 		StringBuilder intermediateString = new StringBuilder();
@@ -32,4 +34,8 @@ public class EventualE extends CompositeProposition {
 		return formula.toString();
 	}
 
+	@Override
+	public List<String> generateLTLArray(String letter, int count) {
+		return null;
+	}
 }

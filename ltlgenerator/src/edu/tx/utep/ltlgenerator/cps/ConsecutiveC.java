@@ -1,29 +1,54 @@
 package edu.tx.utep.ltlgenerator.cps;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ConsecutiveC extends CompositeProposition {
 
-	// private static String cpFormula = "(p1 ^ X(p2 ^ X(p3)))";
+	//"(p1 ^ X(p2 ^ X(p3)))";
 
 	@Override
-	public String generateLTL(String letter, int count) {
+	public String generateLTLString(String letter, int count) {
 		StringBuilder formula = new StringBuilder();
 		StringBuilder intermediateString = new StringBuilder();
+		String closingParens = "";
 
-		for (int i = count; i > 0; i--) {
-			if (i == count) {
-				formula.append(NEXT).append(OPEN_P).append(letter).append(i).append(CLOSE_P);
-			} else {
-				intermediateString.setLength(0);
-				intermediateString.append(OPEN_P).append(letter).append(i).append(AND);
-				formula.insert(0, intermediateString).append(CLOSE_P);
+		for (int i = 1; i <= count; i++) {
+			intermediateString.setLength(0);
+			intermediateString.append(OPEN_P).append(letter).append(i);
+			formula.append(intermediateString);
 
-				if (i > 1) {
-					formula.insert(0, NEXT);
-				}
+			if (i < count) {
+				formula.append(AND).append(NEXT);
 			}
+
+			closingParens = closingParens + CLOSE_P;
 		}
 
-		return formula.toString();
+		return formula.append(closingParens).toString();
+	}
+
+	@Override
+	public List<String> generateLTLArray(String letter, int count) {
+		List<String> output = new ArrayList<String>();
+		StringBuilder intermediateString = new StringBuilder();
+		String closingParens = "";
+
+		for (int i = 1; i <= count; i++) {
+			intermediateString.setLength(0);
+			intermediateString.append(OPEN_P).append(letter).append(i);
+			output.add(intermediateString.toString());
+
+			if (i < count) {
+				output.add(AND);
+				output.add(NEXT);
+			}
+
+			closingParens = closingParens + CLOSE_P;
+		}
+
+		output.add(closingParens);
+		return output;
 	}
 
 }

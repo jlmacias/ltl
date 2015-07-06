@@ -1,11 +1,13 @@
 package edu.tx.utep.ltlgenerator.cps;
 
+import java.util.List;
+
 public class ConsecutiveE extends CompositeProposition {
 
 	// private static String cpFormula = "(!l1 ^ !l2 ^ !l3 ^ !l4) ^ ((!l1 ^ !l2 ^ !l3 ^ !l4) U (l1 ^ !l2 ^ !l3 ^ !l4 ^ X(l2 ^ !l3 ^ !l4 ^ X(l3 ^ !l4 ^ Xl4))))";
 
 	@Override
-	public String generateLTL(String letter, int count) {
+	public String generateLTLString(String letter, int count) {
 		StringBuilder formula = new StringBuilder();
 		StringBuilder intermediateString = new StringBuilder();
 		StringBuilder initialString = new StringBuilder();
@@ -42,4 +44,8 @@ public class ConsecutiveE extends CompositeProposition {
 		return formula.toString();
 	}
 
+	@Override
+	public List<String> generateLTLArray(String letter, int count) {
+		return null;
+	}
 }

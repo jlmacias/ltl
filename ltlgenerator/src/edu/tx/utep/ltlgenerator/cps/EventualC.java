@@ -1,11 +1,13 @@
 package edu.tx.utep.ltlgenerator.cps;
 
+import java.util.List;
+
 public class EventualC extends CompositeProposition {
 
 	// private static String cpFormula = "(q1 ^ X(!q2 U (q2 ^ X(!q3 U (q3 ^ X(!q4 U q4))))))";
 
 	@Override
-	public String generateLTL(String letter, int count) {
+	public String generateLTLString(String letter, int count) {
 		StringBuilder formula = new StringBuilder();
 
 		for (int stringCurrentPosition = 1; stringCurrentPosition <= count; stringCurrentPosition++) {
@@ -22,4 +24,9 @@ public class EventualC extends CompositeProposition {
 		return formula.toString();
 	}
 
+
+	@Override
+	public List<String> generateLTLArray(String letter, int count) {
+		return null;
+	}
 }

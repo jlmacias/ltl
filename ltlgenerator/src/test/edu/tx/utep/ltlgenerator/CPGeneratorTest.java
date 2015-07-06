@@ -12,43 +12,49 @@ public class CPGeneratorTest {
 
 	@Test
 	public void testAtLeastOneC() throws Exception {
-		String output = cpGenerator.getCompositeProposition("L_AtLeastOneC_4");
+		String output = String.join("", cpGenerator.getCompositeProposition2("L_AtLeastOneC_4"));
 		assertEquals("(l1 v l2 v l3 v l4)", output);
 	}
 	
 	@Test
 	public void testAtLeastOneH() throws Exception {
-		String output = cpGenerator.getCompositeProposition("P_AtLeastOneH_4");
+		String output = String.join("", cpGenerator.getCompositeProposition2("P_AtLeastOneH_4"));
 		assertEquals("(p1 v p2 v p3 v p4)", output);
 	}
 	
 	@Test
 	public void testAtLeastOneE() throws Exception {
-		String output = cpGenerator.getCompositeProposition("L_AtLeastOneE_3");
+		String output = String.join("", cpGenerator.getCompositeProposition2("L_AtLeastOneE_3"));
 		assertEquals("(!l1 ^ !l2 ^ !l3) ^ ((!l1 ^ !l2 ^ !l3) U (l1 v l2 v l3))", output);
 	}
 	
 	@Test
-	public void testParallelC() throws Exception {
-		String output = cpGenerator.getCompositeProposition("R_ParallelC_4");
-		assertEquals("(r1 ^ r2 ^ r3 ^ r4)", output);
+	public void testParallelInverse() throws Exception {
+		String output = String.join("", cpGenerator.getCompositeProposition2("R_ParallelInverse_4"));
+		assertEquals("(!r1 ^ !r2 ^ !r3 ^ !r4)", output);
 	}
 	
 	@Test
+	public void testParallelC() throws Exception {
+		String output = String.join("", cpGenerator.getCompositeProposition2("R_ParallelC_4"));
+		assertEquals("(r1 ^ r2 ^ r3 ^ r4)", output);
+	}
+	 
+	@Test
 	public void testParallelH() throws Exception {
-		String output = cpGenerator.getCompositeProposition("L_ParallelH_4");
+		String output = String.join("", cpGenerator.getCompositeProposition2("L_ParallelH_4"));
 		assertEquals("(l1 ^ l2 ^ l3 ^ l4)", output);
 	}
 	
 	@Test
 	public void testParallelE() throws Exception {
-		String output = cpGenerator.getCompositeProposition("R_ParallelE_3");
+		String output = String.join("", cpGenerator.getCompositeProposition2("R_ParallelE_3"));
 		assertEquals("(!r1 ^ !r2 ^ !r3) ^ ((!r1 ^ !r2 ^ !r3) U (r1 ^ r2 ^ r3))", output);
 	}
 	
 	@Test
 	public void testConsecutiveC() throws Exception {
-		String output = cpGenerator.getCompositeProposition("Q_ConsecutiveC_4");
+		String output = String.join("", cpGenerator.getCompositeProposition2("Q_ConsecutiveC_4"));
 		assertEquals("(q1 ^ X(q2 ^ X(q3 ^ X(q4))))", output);
 	}
 
