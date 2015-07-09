@@ -1,5 +1,6 @@
 package edu.tx.utep.ltlgenerator.cps;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EventualC extends CompositeProposition {
@@ -24,9 +25,26 @@ public class EventualC extends CompositeProposition {
 		return formula.toString();
 	}
 
-
 	@Override
 	public List<String> generateLTLArray(String letter, int count) {
-		return null;
+		List<String> output = new ArrayList<String>();
+
+		for (int n = 1; n <= count; n++) {
+			if (n == count) {
+				output.add(letter);
+				output.add(String.valueOf(n));
+
+				for (int openParenthesisCount = 1; openParenthesisCount <= count -1; openParenthesisCount++) {
+					output.add(CLOSE_P);
+					output.add(CLOSE_P);
+				}
+			} else {
+				output.add(OPEN_P + letter + n++ + AND + NEXT);
+				output.add(OPEN_P + NOT + letter + n + UNTIL);
+				n--;
+			}
+		}
+
+		return output;
 	}
 }

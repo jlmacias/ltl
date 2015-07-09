@@ -1,5 +1,6 @@
 package edu.tx.utep.ltlgenerator.cps;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ConsecutiveH extends CompositeProposition {
@@ -31,6 +32,23 @@ public class ConsecutiveH extends CompositeProposition {
 
 	@Override
 	public List<String> generateLTLArray(String letter, int count) {
-		return null;
+		List<String> output = new ArrayList<String>();
+
+		for (int n = 1; n < count; n++) {
+			output.add(OPEN_P + generateProposition(CPT_NOT_AND, letter, n, count, false));
+			output.add(AND + NEXT);
+
+			if (n + 1 == count) {
+				output.add(letter + ++n);
+				n--;
+			}
+		}
+
+		// Adding Closing Parenthesis
+		for (int n = 1; n < count; n++) {
+			output.add(CLOSE_P);
+		}
+
+		return output;
 	}
 }

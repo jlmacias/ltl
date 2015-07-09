@@ -1,5 +1,6 @@
 package edu.tx.utep.ltlgenerator.cps;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EventualE extends CompositeProposition {
@@ -36,6 +37,26 @@ public class EventualE extends CompositeProposition {
 
 	@Override
 	public List<String> generateLTLArray(String letter, int count) {
-		return null;
+		List<String> output = new ArrayList<String>();
+
+		output.add(OPEN_P + generateProposition(CPT_NOT_AND, letter, 1, count) + CLOSE_P + AND);
+
+		for (int n = 1; n < count; n++) {
+			output.add(OPEN_P + OPEN_P + generateProposition(CPT_NOT_AND, letter, n, count) + CLOSE_P);
+			output.add(UNTIL);
+			output.add(OPEN_P + letter + n + AND + generateProposition(CPT_NOT_AND, letter, n + 1, count) + AND);
+
+			if (n + 1 >= count) {
+				output.add(OPEN_P + NOT + letter + ++n + UNTIL + letter + n + CLOSE_P);
+				n--;
+			}
+		}
+
+		for (int i = 1; i < count; i++) {
+			output.add(CLOSE_P);
+			output.add(CLOSE_P);
+		}
+
+		return output;
 	}
 }
