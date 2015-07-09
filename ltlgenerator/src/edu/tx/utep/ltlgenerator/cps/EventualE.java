@@ -53,8 +53,7 @@ public class EventualE extends CompositeProposition {
 		}
 
 		for (int i = 1; i < count; i++) {
-			output.add(CLOSE_P);
-			output.add(CLOSE_P);
+			output.add(CLOSE_P + CLOSE_P);
 		}
 
 		return output;

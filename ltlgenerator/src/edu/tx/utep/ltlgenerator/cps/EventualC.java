@@ -31,12 +31,11 @@ public class EventualC extends CompositeProposition {
 
 		for (int n = 1; n <= count; n++) {
 			if (n == count) {
-				output.add(letter);
-				output.add(String.valueOf(n));
+				output.add(letter + n);
 
-				for (int openParenthesisCount = 1; openParenthesisCount <= count -1; openParenthesisCount++) {
-					output.add(CLOSE_P);
-					output.add(CLOSE_P);
+				// Closing Parenthesis
+				for (int i = 1; i < count; i++) {
+					output.add(CLOSE_P + CLOSE_P);
 				}
 			} else {
 				output.add(OPEN_P + letter + n++ + AND + NEXT);
