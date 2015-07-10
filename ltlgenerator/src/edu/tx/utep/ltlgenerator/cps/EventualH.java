@@ -37,22 +37,26 @@ public class EventualH extends CompositeProposition {
 	@Override
 	public List<String> generateLTLArray(String letter, int count) {
 		List<String> output = new ArrayList<String>();
+		String closingParentheses = "";
 
 		for (int n = 1; n < count; n++) {
-			output.add(OPEN_P + letter + n + AND + generateProposition(CPT_NOT_AND, letter, n + 1, count) + AND);
-			output.add(OPEN_P + OPEN_P + generateProposition(CPT_NOT_AND, letter, n + 1, count) + CLOSE_P);
+			output.add(OPEN_P + letter + n + AND + generateProposition(CPT_NOT_AND, letter, n + 1, count));
+			output.add(AND);
+			output.add(OPEN_P);
+			output.add(OPEN_P + generateProposition(CPT_NOT_AND, letter, n + 1, count) + CLOSE_P);
 
 			if (n + 1 < count) {
 				output.add(UNTIL);
 			} else {
 				output.add(UNTIL + letter + ++n);
 
-				// Closing Parenthesis
 				for (int i = 1; i < count; i++) {
-					output.add(CLOSE_P + CLOSE_P);
+					closingParentheses += (CLOSE_P + CLOSE_P);
 				}
 			}
 		}
+
+		output.add(closingParentheses);
 
 		return output;
 	}

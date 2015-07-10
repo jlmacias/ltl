@@ -33,10 +33,12 @@ public class ConsecutiveH extends CompositeProposition {
 	@Override
 	public List<String> generateLTLArray(String letter, int count) {
 		List<String> output = new ArrayList<String>();
+		String closingParentheses = "";
 
 		for (int n = 1; n < count; n++) {
 			output.add(OPEN_P + generateProposition(CPT_NOT_AND, letter, n, count, false));
-			output.add(AND + NEXT);
+			output.add(AND);
+			output.add(NEXT);
 
 			if (n + 1 == count) {
 				output.add(letter + ++n);
@@ -44,10 +46,11 @@ public class ConsecutiveH extends CompositeProposition {
 			}
 		}
 
-		// Adding Closing Parenthesis
 		for (int n = 1; n < count; n++) {
-			output.add(CLOSE_P);
+			closingParentheses += CLOSE_P;
 		}
+
+		output.add(closingParentheses);
 
 		return output;
 	}

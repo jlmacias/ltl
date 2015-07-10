@@ -38,13 +38,17 @@ public class EventualE extends CompositeProposition {
 	@Override
 	public List<String> generateLTLArray(String letter, int count) {
 		List<String> output = new ArrayList<String>();
+		String closingParentheses = "";
 
-		output.add(OPEN_P + generateProposition(CPT_NOT_AND, letter, 1, count) + CLOSE_P + AND);
+		output.add(OPEN_P + generateProposition(CPT_NOT_AND, letter, 1, count) + CLOSE_P);
+		output.add(AND);
 
 		for (int n = 1; n < count; n++) {
-			output.add(OPEN_P + OPEN_P + generateProposition(CPT_NOT_AND, letter, n, count) + CLOSE_P);
+			output.add(OPEN_P);
+			output.add(OPEN_P + generateProposition(CPT_NOT_AND, letter, n, count) + CLOSE_P);
 			output.add(UNTIL);
-			output.add(OPEN_P + letter + n + AND + generateProposition(CPT_NOT_AND, letter, n + 1, count) + AND);
+			output.add(OPEN_P + letter + n + AND + generateProposition(CPT_NOT_AND, letter, n + 1, count));
+			output.add(AND);
 
 			if (n + 1 >= count) {
 				output.add(OPEN_P + NOT + letter + ++n + UNTIL + letter + n + CLOSE_P);
@@ -53,8 +57,10 @@ public class EventualE extends CompositeProposition {
 		}
 
 		for (int i = 1; i < count; i++) {
-			output.add(CLOSE_P + CLOSE_P);
+			closingParentheses += (CLOSE_P + CLOSE_P);
 		}
+
+		output.add(closingParentheses);
 
 		return output;
 	}
