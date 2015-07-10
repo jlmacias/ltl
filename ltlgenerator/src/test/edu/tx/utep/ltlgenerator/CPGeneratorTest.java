@@ -79,7 +79,6 @@ public class CPGeneratorTest {
 	@Test
 	public void testEventualC() throws Exception {
 		String output = String.join("", cpGenerator.getCompositeProposition2("Q_EventualC_4"));
-					//(q1 ^ X(!q2 U (q2 ^ X(!q3 U (q3 ^ X(!q4 U (q4)))))))
 		assertEquals("(q1 ^ X(!q2 U (q2 ^ X(!q3 U (q3 ^ X(!q4 U (q4)))))))", output);
 	}
 	
