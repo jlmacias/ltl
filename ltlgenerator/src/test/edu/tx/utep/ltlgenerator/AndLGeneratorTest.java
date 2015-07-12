@@ -82,35 +82,35 @@ public class AndLGeneratorTest {
 	}
 	
 	@Test
-    public void testConsecutiveH() throws Exception {
-        List<String> leftSides = cpGenerator.getCompositeProposition2("L_ConsecutiveH_3");
-        List<String> rightSides = cpGenerator.getCompositeProposition2("P_ParallelH_3");
-        String output = operatorGenerator.getAndedPropositions(ANDL, leftSides, rightSides);
-        assertEquals("(l1 ^ !l2 ^ !l3 ^ X(l2 ^ !l3 ^ X[l3 & [(p1 ^ p2 ^ p3)]]))", output);
-    }
-
-    @Test
-    public void testEventualC() throws Exception {
-        List<String> leftSides = cpGenerator.getCompositeProposition2("L_EventualC_3");
-        List<String> rightSides = cpGenerator.getCompositeProposition2("P_ParallelH_3");
-        String output = operatorGenerator.getAndedPropositions(ANDL, leftSides, rightSides);
-        assertEquals("(l1 ^ X(!l2 U (l2 ^ X(!l3 U [l3 & [(p1 ^ p2 ^ p3)]]))))", output);
-    }
-
-    @Test
-    public void testEventualH() throws Exception {
-        List<String> leftSides = cpGenerator.getCompositeProposition2("L_EventualH_3");
-        List<String> rightSides = cpGenerator.getCompositeProposition2("P_ParallelH_3");
-        String output = operatorGenerator.getAndedPropositions(ANDL, leftSides, rightSides);
-        assertEquals("(l1 ^ !l2 ^ !l3 ^ ((!l2 ^ !l3) U (l2 ^ !l3 ^ ((!l3) U [l3 & [(p1 ^ p2 ^ p3)]]))))", output);
-    }
-
-    @Test
-    public void testEventualE() throws Exception {
-        List<String> leftSides = cpGenerator.getCompositeProposition2("L_EventualE_3");
-        List<String> rightSides = cpGenerator.getCompositeProposition2("P_ParallelH_3");
-        String output = operatorGenerator.getAndedPropositions(ANDL, leftSides, rightSides);
-        assertEquals("(!l1 ^ !l2 ^ !l3) ^ ((!l1 ^ !l2 ^ !l3) U (l1 ^ !l2 ^ !l3 ^ ((!l2 ^ !l3) U (l2 ^ !l3 ^ (!l3 U [l3 & [(p1 ^ p2 ^ p3)]])))))", output);
-    }
+	public void testConsecutiveH() throws Exception {
+		List<String> leftSides = cpGenerator.getCompositeProposition2("L_ConsecutiveH_3");
+		List<String> rightSides = cpGenerator.getCompositeProposition2("P_ParallelH_3");
+		String output = operatorGenerator.getAndedPropositions(ANDL, leftSides, rightSides);
+		assertEquals("(l1 ^ !l2 ^ !l3 ^ X(l2 ^ !l3 ^ X[l3 & [(p1 ^ p2 ^ p3)]]))", output);
+	}
+	
+	@Test
+	public void testEventualC() throws Exception {
+		List<String> leftSides = cpGenerator.getCompositeProposition2("L_EventualC_3");
+		List<String> rightSides = cpGenerator.getCompositeProposition2("P_ParallelH_3");
+		String output = operatorGenerator.getAndedPropositions(ANDL, leftSides, rightSides);
+		assertEquals("(l1 ^ X(!l2 U (l2 ^ X(!l3 U [l3 & [(p1 ^ p2 ^ p3)]]))))", output);
+	}
+	
+	@Test
+	public void testEventualH() throws Exception {
+		List<String> leftSides = cpGenerator.getCompositeProposition2("L_EventualH_3");
+		List<String> rightSides = cpGenerator.getCompositeProposition2("P_ParallelH_3");
+		String output = operatorGenerator.getAndedPropositions(ANDL, leftSides, rightSides);
+		assertEquals("(l1 ^ !l2 ^ !l3 ^ ((!l2 ^ !l3) U (l2 ^ !l3 ^ ((!l3) U [l3 & [(p1 ^ p2 ^ p3)]]))))", output);
+	}
+	
+	@Test
+	public void testEventualE() throws Exception {
+		List<String> leftSides = cpGenerator.getCompositeProposition2("L_EventualE_3");
+		List<String> rightSides = cpGenerator.getCompositeProposition2("P_ParallelH_3");
+		String output = operatorGenerator.getAndedPropositions(ANDL, leftSides, rightSides);
+		assertEquals("(!l1 ^ !l2 ^ !l3) ^ ((!l1 ^ !l2 ^ !l3) U (l1 ^ !l2 ^ !l3 ^ ((!l2 ^ !l3) U (l2 ^ !l3 ^ (!l3 U [l3 & [(p1 ^ p2 ^ p3)]])))))", output);
+	}
 
 }
