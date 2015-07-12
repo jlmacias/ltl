@@ -61,7 +61,7 @@ public class CPGeneratorTest {
 	@Test
 	public void testConsecutiveH() throws Exception {
 		String output = String.join("", cpGenerator.getCompositeProposition2("P_ConsecutiveH_4"));
-		assertEquals("(p1 ^ !p2 ^ !p3 ^ !p4 ^ X(p2 ^ !p3 ^ !p4 ^ X(p3 ^ !p4 ^ Xp4)))", output);
+		assertEquals("(p1 ^ !p2 ^ !p3 ^ !p4 ^ X(p2 ^ !p3 ^ !p4 ^ X(p3 ^ !p4 ^ X(p4))))", output);
 	}
 
 	@Test
@@ -85,12 +85,13 @@ public class CPGeneratorTest {
 	@Test
 	public void testEventualH() throws Exception {
 		String output = String.join("", cpGenerator.getCompositeProposition2("P_EventualH_4"));
-		assertEquals("(p1 ^ !p2 ^ !p3 ^ !p4 ^ ((!p2 ^ !p3 ^ !p4) U (p2 ^ !p3 ^ !p4 ^ ((!p3 ^ !p4) U (p3 ^ !p4 ^ ((!p4) U p4))))))", output);
+		assertEquals("(p1 ^ !p2 ^ !p3 ^ !p4 ^ ((!p2 ^ !p3 ^ !p4) U (p2 ^ !p3 ^ !p4 ^ ((!p3 ^ !p4) U (p3 ^ !p4 ^ ((!p4) U (p4)))))))", output);
 	}
 	
 	@Test
 	public void testEventualE() throws Exception {
 		String output = String.join("", cpGenerator.getCompositeProposition2("L_EventualE_4"));
-		assertEquals("(!l1 ^ !l2 ^ !l3 ^ !l4) ^ ((!l1 ^ !l2 ^ !l3 ^ !l4) U (l1 ^ !l2 ^ !l3 ^ !l4 ^ ((!l2 ^ !l3 ^ !l4) U (l2 ^ !l3 ^ !l4 ^ ((!l3 ^ !l4) U (l3 ^ !l4 ^ (!l4 U l4)))))))", output);
+		assertEquals("(!l1 ^ !l2 ^ !l3 ^ !l4) ^ ((!l1 ^ !l2 ^ !l3 ^ !l4) U (l1 ^ !l2 ^ !l3 ^ !l4 ^ ((!l2 ^ !l3 ^ !l4) U (l2 ^ !l3 ^ !l4 ^ ((!l3 ^ !l4) U (l3 ^ !l4 ^ ((!l4) U (l4))))))))", output);
 	}
+	
 }

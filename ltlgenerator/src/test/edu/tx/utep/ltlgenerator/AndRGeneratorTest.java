@@ -62,7 +62,7 @@ public class AndRGeneratorTest {
 		List<String> leftSides = cpGenerator.getCompositeProposition2("L_ConsecutiveH_3");
 		List<String> rightSides = cpGenerator.getCompositeProposition2("P_ParallelC_3");
 		String output = operatorGenerator.getAndedPropositions(ANDR, leftSides, rightSides);
-		assertEquals("([l1 & !l2 & !l3 & [(p1 ^ p2 ^ p3)]] ^ X([l2 & !l3 & [(p1 ^ p2 ^ p3)]] ^ X([l3 & [(p1 ^ p2 ^ p3)]])))", output);
+		assertEquals("([l1 ^ !l2 ^ !l3 & [(p1 ^ p2 ^ p3)]] ^ X([l2 ^ !l3 & [(p1 ^ p2 ^ p3)]] ^ X([l3 & [(p1 ^ p2 ^ p3)]])))", output);
 	}
 	
 	@Test
@@ -78,7 +78,7 @@ public class AndRGeneratorTest {
 		List<String> leftSides = cpGenerator.getCompositeProposition2("L_EventualC_3");
 		List<String> rightSides = cpGenerator.getCompositeProposition2("P_ParallelC_3");
 		String output = operatorGenerator.getAndedPropositions(ANDR, leftSides, rightSides);
-		assertEquals("([l1 & [(p1 ^ p2 ^ p3)]] ^ X([!l2 & [(p1 ^ p2 ^ p3)]] U ([l2 & [(p1 ^ p2 ^ p3)]] ^ X([!l3 & [(p1 ^ p2 ^ p3)]] U ([l3 & [(p1 ^ p2 ^ p3)]])))", output);
+		assertEquals("([l1 & [(p1 ^ p2 ^ p3)]] ^ X([!l2 & [(p1 ^ p2 ^ p3)]] U ([l2 & [(p1 ^ p2 ^ p3)]] ^ X([!l3 & [(p1 ^ p2 ^ p3)]] U ([l3 & [(p1 ^ p2 ^ p3)]])))))", output);
 	}
 
 	@Test                    //need eventual h array list code to test
@@ -86,7 +86,7 @@ public class AndRGeneratorTest {
 		List<String> leftSides = cpGenerator.getCompositeProposition2("L_EventualH_3");
 		List<String> rightSides = cpGenerator.getCompositeProposition2("P_ParallelC_3");
 		String output = operatorGenerator.getAndedPropositions(ANDR, leftSides, rightSides);
-		assertEquals("([l1 & !l2 & !l3 & [(p1 ^ p2 ^ p3)]] ^ ([(!l2 & !l3) & [(p1 ^ p2 ^ p3)]] U [(r2 & !r3) & [(p1 ^ p2 ^ p3)]] & ([!r3 & [(p1 ^ p2 ^ p3)]] U [r3 & [(p1 ^ p2 ^ p3)]]))", output);
+		assertEquals("([l1 ^ !l2 ^ !l3 & [(p1 ^ p2 ^ p3)]] ^ ([(!l2 ^ !l3) & [(p1 ^ p2 ^ p3)]] U ([l2 ^ !l3 & [(p1 ^ p2 ^ p3)]] ^ ([(!l3) & [(p1 ^ p2 ^ p3)]] U ([l3 & [(p1 ^ p2 ^ p3)]])))))", output);
 	}
 
 	@Test                   //need eventual e array list code to test
@@ -94,7 +94,7 @@ public class AndRGeneratorTest {
 		List<String> leftSides = cpGenerator.getCompositeProposition2("R_EventualE_3");
 		List<String> rightSides = cpGenerator.getCompositeProposition2("P_ParallelC_3");
 		String output = operatorGenerator.getAndedPropositions(ANDR, leftSides, rightSides);
-		assertEquals("[(!r1 ^ !r2 ^ !r3) & [(p1 ^ p2 ^ p3)]] ^ ([(!r1 ^ !r2 ^ !r3) & [(p1 ^ p2 ^ p3)]] U [(r1 ^ !r2 ^ !r3) & [(p1 ^ p2 ^ p3)]] & ([(!r2 & !r3) & [(p1 ^ p2 ^ p3)]] U ([r2 & !r3 & [(p1 ^ p2 ^ p3)]] & ([!r3 & [(p1 ^ p2 ^ p3)]] U [r3 [(p1 ^ p2 ^ p3)]]))", output);
+		assertEquals("[(!r1 ^ !r2 ^ !r3) & [(p1 ^ p2 ^ p3)]] ^ ([(!r1 ^ !r2 ^ !r3) & [(p1 ^ p2 ^ p3)]] U ([r1 ^ !r2 ^ !r3 & [(p1 ^ p2 ^ p3)]] ^ ([(!r2 ^ !r3) & [(p1 ^ p2 ^ p3)]] U ([r2 ^ !r3 & [(p1 ^ p2 ^ p3)]] ^ ([(!r3) & [(p1 ^ p2 ^ p3)]] U ([r3 & [(p1 ^ p2 ^ p3)]]))))))", output);
 
 	}
 
