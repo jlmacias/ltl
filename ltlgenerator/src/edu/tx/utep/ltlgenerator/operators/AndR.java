@@ -22,6 +22,8 @@ public class AndR extends Operator {
 				}
 				newLeftSides.set(i, newCpPart);
 			}
+			
+			
 		}
 		return String.join("", newLeftSides);
 	}
