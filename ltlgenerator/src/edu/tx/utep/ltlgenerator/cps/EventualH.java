@@ -48,8 +48,9 @@ public class EventualH extends CompositeProposition {
 			if (n + 1 < count) {
 				output.add(UNTIL);
 			} else {
-				output.add(UNTIL + letter + ++n);
-
+				output.add(UNTIL);
+				output.add(OPEN_P + letter + ++n);
+                closingParentheses += CLOSE_P;
 				for (int i = 1; i < count; i++) {
 					closingParentheses += (CLOSE_P + CLOSE_P);
 				}

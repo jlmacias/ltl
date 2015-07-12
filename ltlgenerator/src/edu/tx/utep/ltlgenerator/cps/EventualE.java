@@ -51,7 +51,11 @@ public class EventualE extends CompositeProposition {
 			output.add(AND);
 
 			if (n + 1 >= count) {
-				output.add(OPEN_P + NOT + letter + ++n + UNTIL + letter + n + CLOSE_P);
+				output.add(OPEN_P);
+				output.add(OPEN_P + NOT + letter + ++n + CLOSE_P);
+				output.add(UNTIL);
+				output.add(OPEN_P + letter + n);
+				closingParentheses += (CLOSE_P + CLOSE_P);
 				n--;
 			}
 		}

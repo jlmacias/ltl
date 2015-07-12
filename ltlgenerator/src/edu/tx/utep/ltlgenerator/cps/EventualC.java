@@ -32,8 +32,8 @@ public class EventualC extends CompositeProposition {
 		
 		for (int n = 1; n <= count; n++) {
 			if (n == count) {
-				output.add(OPEN_P + letter + n + CLOSE_P);
-				
+				output.add(OPEN_P + letter + n );
+				closingParentheses += CLOSE_P;
 				for (int i = 1; i < count; i++) {
 					closingParentheses += (CLOSE_P + CLOSE_P);
 				}

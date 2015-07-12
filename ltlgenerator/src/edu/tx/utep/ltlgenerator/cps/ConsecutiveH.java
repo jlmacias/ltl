@@ -41,7 +41,8 @@ public class ConsecutiveH extends CompositeProposition {
 			output.add(NEXT);
 
 			if (n + 1 == count) {
-				output.add(letter + ++n);
+				output.add(OPEN_P + letter + ++n);
+			    closingParentheses += CLOSE_P;
 				n--;
 			}
 		}
