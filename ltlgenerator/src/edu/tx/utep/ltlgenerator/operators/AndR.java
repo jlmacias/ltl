@@ -22,9 +22,16 @@ public class AndR extends Operator {
 				}
 				newLeftSides.set(i, newCpPart);
 			}
-			
-			
 		}
 		return String.join("", newLeftSides);
 	}
+	
+	
+	public String andCPsLessVerbose(List<String> leftSides, String rightSide) {
+		String leftSide = String.join("", leftSides);
+		StringBuilder generatedString = new StringBuilder();
+		generatedString.append(OPEN_P).append(OPEN_P).append(leftSide).append(CLOSE_P).append(AND).append(rightSide).append(CLOSE_P);
+		return generatedString.toString();
+	}
+
 }
