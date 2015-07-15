@@ -23,6 +23,9 @@ public class CPGenerator {
 	}
 
 	public List<String> getCompositeProposition2(String cp) {
+		if(cp == null || cp.length() == 0)
+			return null;
+		
 		String[] splitCP = cp.split("_");
 		String letter = splitCP[0].toLowerCase();
 		String cpName = splitCP[1];
