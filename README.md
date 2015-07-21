@@ -1,6 +1,3 @@
-# How To Use Github
-https://www.youtube.com/watch?v=DR7MLaAKcUk&index=1&list=PLfdtiltiRHWFEbt9V04NrbmksLV4Pdf3j
-
 # Refactoring
 
 ### Organizing Data (starts on page 162)
@@ -20,3 +17,6 @@ https://www.youtube.com/watch?v=DR7MLaAKcUk&index=1&list=PLfdtiltiRHWFEbt9V04Nrb
 10. Form Template Method
 11. Replace Inheritance with Delegation
 12. Replace Delegation with Inheritance
+
+# How To Use Github
+https://www.youtube.com/watch?v=DR7MLaAKcUk&index=1&list=PLfdtiltiRHWFEbt9V04NrbmksLV4Pdf3j
