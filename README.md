@@ -12,8 +12,8 @@ https://www.youtube.com/watch?v=DR7MLaAKcUk&index=1&list=PLfdtiltiRHWFEbt9V04Nrb
 6. (Jose) Replace Type Code with Class
 
 ### Making Method Calls Simpler (starts on page 249)
-7. Encapsulate Downcast
-8. Replace Error Code with Exception
+7. (Robert) Encapsulate Downcast
+8. (Robert) Replace Error Code with Exception
 9. Replace Exception with Test 
 
 ### Dealing with Generalization (starts on page 280)
