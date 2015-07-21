@@ -6,8 +6,8 @@ https://www.youtube.com/watch?v=DR7MLaAKcUk&index=1&list=PLfdtiltiRHWFEbt9V04Nrb
 ### Organizing Data (starts on page 162)
 1. Change Bidirectional Association to Unidirectional
 2. Replace Magic Number with Symbolic Constant
-3. Encapsulate Field								
-4. Encapsulate Collection
+3. (Elvijs) Encapsulate Field
+4. (Elvijs) Encapsulate Collection
 5. Replace Record with Data Class
 6. Replace Type Code with Class
 
