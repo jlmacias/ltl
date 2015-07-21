@@ -11,12 +11,12 @@
 ### Making Method Calls Simpler (starts on page 249)
 7. (Robert) Encapsulate Downcast
 8. (Robert) Replace Error Code with Exception
-9. Replace Exception with Test 
+9. (Juan) Replace Exception with Test 
 
 ### Dealing with Generalization (starts on page 280)
-10. Form Template Method
-11. Replace Inheritance with Delegation
-12. Replace Delegation with Inheritance
+10. (Juan) Form Template Method
+11. (Oscar) Replace Inheritance with Delegation
+12. (Oscar) Replace Delegation with Inheritance
 
 # How To Use Github
 https://www.youtube.com/watch?v=DR7MLaAKcUk&index=1&list=PLfdtiltiRHWFEbt9V04NrbmksLV4Pdf3j
