@@ -4,12 +4,12 @@ https://www.youtube.com/watch?v=DR7MLaAKcUk&index=1&list=PLfdtiltiRHWFEbt9V04Nrb
 # Refactoring
 
 ### Organizing Data (starts on page 162)
-1. Change Bidirectional Association to Unidirectional
-2. Replace Magic Number with Symbolic Constant
+1. (Jennifer) Change Bidirectional Association to Unidirectional
+2. (Jennifer) Replace Magic Number with Symbolic Constant
 3. (Elvijs) Encapsulate Field
 4. (Elvijs) Encapsulate Collection
-5. Replace Record with Data Class
-6. Replace Type Code with Class
+5. (Jose) Replace Record with Data Class
+6. (Jose) Replace Type Code with Class
 
 ### Making Method Calls Simpler (starts on page 249)
 7. Encapsulate Downcast
