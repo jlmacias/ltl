@@ -1,17 +1,6 @@
 package edu.tx.utep.ltlgenerator.factories;
 
-import edu.tx.utep.ltlgenerator.cps.AtLeastOneC;
-import edu.tx.utep.ltlgenerator.cps.AtLeastOneE;
-import edu.tx.utep.ltlgenerator.cps.CompositeProposition;
-import edu.tx.utep.ltlgenerator.cps.ConsecutiveC;
-import edu.tx.utep.ltlgenerator.cps.ConsecutiveE;
-import edu.tx.utep.ltlgenerator.cps.ConsecutiveH;
-import edu.tx.utep.ltlgenerator.cps.EventualC;
-import edu.tx.utep.ltlgenerator.cps.EventualE;
-import edu.tx.utep.ltlgenerator.cps.EventualH;
-import edu.tx.utep.ltlgenerator.cps.ParallelC;
-import edu.tx.utep.ltlgenerator.cps.ParallelE;
-import edu.tx.utep.ltlgenerator.cps.ParallelInverse;
+import edu.tx.utep.ltlgenerator.cps.*;
 
 // Factory Pattern
 public class CPFactory {
@@ -21,7 +10,7 @@ public class CPFactory {
 			return new AtLeastOneC();
 
 		if (cpName.equals("AtLeastOneH"))
-			return new AtLeastOneC();
+			return new AtLeastOneH();
 
 		if (cpName.equals("AtLeastOneE"))
 			return new AtLeastOneE();
@@ -30,13 +19,10 @@ public class CPFactory {
 			return new ParallelC();
 
 		if (cpName.equals("ParallelH"))
-			return new ParallelC();
+			return new ParallelH();
 
 		if (cpName.equals("ParallelE"))
 			return new ParallelE();
-
-		if (cpName.equals("ParallelInverse"))
-			return new ParallelInverse();
 
 		if (cpName.equals("ConsecutiveC"))
 			return new ConsecutiveC();
@@ -55,6 +41,9 @@ public class CPFactory {
 
 		if (cpName.equals("EventualE"))
 			return new EventualE();
+
+		if (cpName.equals("ParallelInverse"))
+			return new ParallelInverse();
 
 		return null;
 	}

@@ -15,10 +15,10 @@ public class LTLGenerator {
 /**/	if (templateName.equals("GlobalQStrictlyPrecedesPE")){       
 /**/       pProposition= change_P_PropositionEnding(pProposition);   //change input pProposition ending from 'E' to 'H' 
         }                                                            //because P(LTL)H is asked in the pattern formula
-        List<String> p = cpGenerator.getCompositeProposition2(pProposition);
-        List<String> q = cpGenerator.getCompositeProposition2(qProposition);
-		List<String> r = cpGenerator.getCompositeProposition2(rProposition);
-		List<String> l = cpGenerator.getCompositeProposition2(lProposition);
+        List<String> p = cpGenerator.getCompositeProposition(pProposition);
+        List<String> q = cpGenerator.getCompositeProposition(qProposition);
+		List<String> r = cpGenerator.getCompositeProposition(rProposition);
+		List<String> l = cpGenerator.getCompositeProposition(lProposition);
 		
 		Template template = new TemplateFactory().getTemplate(templateName, qProposition);
 		String formula = template.generateFormula(p, q, r, l);
