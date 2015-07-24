@@ -18,16 +18,9 @@ public abstract class CompositeProposition {
 	protected static final String CLOSE_P = ")";
 
 	// Template Method Pattern
-	public String generateLTLFormulaString(String letter, int count) {
-		return generateLTLString(letter, count);
-	}
-
-	// Template Method Pattern
 	public List<String> generateLTLFormulaArray(String letter, int count) {
 		return generateLTLArray(letter, count);
 	}
-
-	protected abstract String generateLTLString(String letter, int count);
 
 	protected abstract List<String> generateLTLArray(String letter, int count);
 

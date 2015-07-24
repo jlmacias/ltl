@@ -8,27 +8,6 @@ public class ConsecutiveC extends CompositeProposition {
 	//"(p1 ^ X(p2 ^ X(p3)))";
 
 	@Override
-	public String generateLTLString(String letter, int count) {
-		StringBuilder formula = new StringBuilder();
-		StringBuilder intermediateString = new StringBuilder();
-		String closingParens = "";
-
-		for (int i = 1; i <= count; i++) {
-			intermediateString.setLength(0);
-			intermediateString.append(OPEN_P).append(letter).append(i);
-			formula.append(intermediateString);
-
-			if (i < count) {
-				formula.append(AND).append(NEXT);
-			}
-
-			closingParens = closingParens + CLOSE_P;
-		}
-
-		return formula.append(closingParens).toString();
-	}
-
-	@Override
 	public List<String> generateLTLArray(String letter, int count) {
 		List<String> output = new ArrayList<String>();
 		StringBuilder intermediateString = new StringBuilder();
@@ -48,6 +27,7 @@ public class ConsecutiveC extends CompositeProposition {
 		}
 
 		output.add(closingParens);
+
 		return output;
 	}
 
