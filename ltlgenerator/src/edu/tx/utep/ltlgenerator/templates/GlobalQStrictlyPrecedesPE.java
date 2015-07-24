@@ -20,7 +20,7 @@ public class GlobalQStrictlyPrecedesPE extends Template {
 		String[] splitCP = Input_P_Proposition.split("_");
 		String letter = splitCP[0].toLowerCase();            //this code cluster is used to create parallelInverse cp            
 		String countS = splitCP[2];
-		List<String> parallelInverse = cpGenerator.getCompositeProposition2(letter + "_ParallelInverse_" + countS);
+		List<String> parallelInverse = cpGenerator.getCompositeProposition(letter + "_ParallelInverse_" + countS);
         
 		String formula = template;
 		List<String> parallelInverse_X_PH = new ArrayList<String>();
