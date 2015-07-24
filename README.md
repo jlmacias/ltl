@@ -1,4 +1,4 @@
-# Used Design Patterns
+# Used Design Patterns (1)
 ### Factory Method
 ltl/ltlgenerator/src/edu/tx/utep/ltlgenerator/factories
 
