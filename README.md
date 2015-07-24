@@ -1,22 +1,2 @@
-# Refactoring
-
-### Organizing Data (starts on page 162)
-1. (Jennifer) Change Bidirectional Association to Unidirectional
-2. (Jennifer) Replace Magic Number with Symbolic Constant
-3. (Elvijs) Encapsulate Field
-4. (Elvijs) Encapsulate Collection
-5. (Jose) Replace Record with Data Class
-6. (Jose) Replace Type Code with Class
-
-### Making Method Calls Simpler (starts on page 249)
-7. (Robert) Encapsulate Downcast
-8. (Robert) Replace Error Code with Exception
-9. (Juan) Replace Exception with Test 
-
-### Dealing with Generalization (starts on page 280)
-10. (Juan) Form Template Method
-11. (Oscar) Replace Inheritance with Delegation
-12. (Oscar) Replace Delegation with Inheritance
-
 # How To Use Github
 https://www.youtube.com/watch?v=DR7MLaAKcUk&index=1&list=PLfdtiltiRHWFEbt9V04NrbmksLV4Pdf3j
