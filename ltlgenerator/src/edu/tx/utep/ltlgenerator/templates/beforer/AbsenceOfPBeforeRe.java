@@ -18,7 +18,7 @@ public class AbsenceOfPBeforeRe extends Template {
 		String pinverse = String.join("", getParallelInverse(pProposition));
 		String rString = String.join("", r);
 		String rhString = String.join("", rh);
-		
+
 		List<String> notRh = rh;
 		notRh.add(0, "!");
 

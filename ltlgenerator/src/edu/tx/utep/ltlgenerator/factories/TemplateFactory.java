@@ -2,11 +2,7 @@ package edu.tx.utep.ltlgenerator.factories;
 
 import edu.tx.utep.ltlgenerator.templates.AfterL;
 import edu.tx.utep.ltlgenerator.templates.Template;
-import edu.tx.utep.ltlgenerator.templates.beforer.AbsenceOfPBeforeRe;
-import edu.tx.utep.ltlgenerator.templates.beforer.ExistenceOfPBeforeRc;
-import edu.tx.utep.ltlgenerator.templates.beforer.ExistenceOfPBeforeRe;
-import edu.tx.utep.ltlgenerator.templates.beforer.QPrecedesPcBeforeRc;
-import edu.tx.utep.ltlgenerator.templates.beforer.QPrecedesPcBeforeRe;
+import edu.tx.utep.ltlgenerator.templates.beforer.*;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalAbsenceOfP;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalExistanceOfP;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPCPlus;
@@ -48,6 +44,9 @@ public class TemplateFactory {
 		// return new GlobalQStrictlyPrecedesPC();
 
 		// Before R
+		if (templateName.equals("AbsenceOfPBeforeRc"))
+			return new AbsenceOfPBeforeRc();
+
 		if (templateName.equals("AbsenceOfPBeforeRe"))
 			return new AbsenceOfPBeforeRe();
 
