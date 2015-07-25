@@ -10,6 +10,8 @@ import org.junit.runners.Suite;
 	AndLGeneratorTest.class,
 	AndMinusLGeneratorTest.class,
 	GlobalTemplateTest.class,
+	BeforeRTemplateTest.class,
+	AfterLTemplateTest.class,
 })
 
 public class ZTestSuite {
