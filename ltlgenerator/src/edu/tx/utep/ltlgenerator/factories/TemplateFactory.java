@@ -14,6 +14,7 @@ import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPCStar;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPEPlus;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPEStar;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQRespondsToP;
+import edu.tx.utep.ltlgenerator.templates.global.GlobalQStrictlyPrecedesPC;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQStrictlyPrecedesPE;
 
 // Factory Pattern
@@ -36,6 +37,9 @@ public class TemplateFactory {
 
 		if (templateName.equals("GlobalQPrecedesPC"))
 			return getGlobalQPrecedesPC(qProposition);
+
+		if (templateName.equals("GlobalQStrictlyPrecedesPC"))
+			return new GlobalQStrictlyPrecedesPC();
 
 		if (templateName.equals("GlobalQStrictlyPrecedesPE"))
 			return new GlobalQStrictlyPrecedesPE();
