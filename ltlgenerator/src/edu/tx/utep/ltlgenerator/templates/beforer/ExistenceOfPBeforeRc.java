@@ -1,6 +1,8 @@
-package edu.tx.utep.ltlgenerator.templates;
+package edu.tx.utep.ltlgenerator.templates.beforer;
 
 import java.util.List;
+
+import edu.tx.utep.ltlgenerator.templates.Template;
 
 public class ExistenceOfPBeforeRc extends Template {
 

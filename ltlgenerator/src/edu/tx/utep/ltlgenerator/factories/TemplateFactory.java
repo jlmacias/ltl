@@ -1,18 +1,17 @@
 package edu.tx.utep.ltlgenerator.factories;
 
-import edu.tx.utep.ltlgenerator.templates.AbsenceOfPBeforeRc;
-import edu.tx.utep.ltlgenerator.templates.AbsenceOfPBeforeRe;
-import edu.tx.utep.ltlgenerator.templates.ExistenceOfPBeforeRc;
-import edu.tx.utep.ltlgenerator.templates.ExistenceOfPBeforeRe;
-import edu.tx.utep.ltlgenerator.templates.GlobalAbsenceOfP;
-import edu.tx.utep.ltlgenerator.templates.GlobalExistanceOfP;
-import edu.tx.utep.ltlgenerator.templates.GlobalQPrecedesPCPlus;
-import edu.tx.utep.ltlgenerator.templates.GlobalQPrecedesPCStar;
-import edu.tx.utep.ltlgenerator.templates.GlobalQPrecedesPEPlus;
 import edu.tx.utep.ltlgenerator.templates.GlobalQPrecedesPEStar;
-import edu.tx.utep.ltlgenerator.templates.GlobalQRespondsToP;
-import edu.tx.utep.ltlgenerator.templates.QPrecedesPcBeforeRe;
 import edu.tx.utep.ltlgenerator.templates.Template;
+import edu.tx.utep.ltlgenerator.templates.beforer.AbsenceOfPBeforeRe;
+import edu.tx.utep.ltlgenerator.templates.beforer.ExistenceOfPBeforeRc;
+import edu.tx.utep.ltlgenerator.templates.beforer.ExistenceOfPBeforeRe;
+import edu.tx.utep.ltlgenerator.templates.beforer.QPrecedesPcBeforeRe;
+import edu.tx.utep.ltlgenerator.templates.global.GlobalAbsenceOfP;
+import edu.tx.utep.ltlgenerator.templates.global.GlobalExistanceOfP;
+import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPCPlus;
+import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPCStar;
+import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPEPlus;
+import edu.tx.utep.ltlgenerator.templates.global.GlobalQRespondsToP;
 
 // Factory Pattern
 public class TemplateFactory {
@@ -42,9 +41,6 @@ public class TemplateFactory {
 			else
 				return new GlobalQPrecedesPCPlus();
 		}
-
-		if (templateName.equals("AbsenceOfPBeforeRc"))
-			return new AbsenceOfPBeforeRc();
 
 		if (templateName.equals("AbsenceOfPBeforeRe"))
 			return new AbsenceOfPBeforeRe();
