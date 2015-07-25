@@ -3,6 +3,7 @@ package edu.tx.utep.ltlgenerator.factories;
 import edu.tx.utep.ltlgenerator.templates.GlobalAbsenceOfP;
 import edu.tx.utep.ltlgenerator.templates.GlobalExistanceOfP;
 import edu.tx.utep.ltlgenerator.templates.GlobalQRespondsToP;
+import edu.tx.utep.ltlgenerator.templates.GlobalQPrecedesPCPlus;
 import edu.tx.utep.ltlgenerator.templates.GlobalQPrecedesPCStar;
 import edu.tx.utep.ltlgenerator.templates.Template;
 
