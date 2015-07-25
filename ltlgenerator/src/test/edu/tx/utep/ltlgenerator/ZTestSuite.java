@@ -9,6 +9,7 @@ import org.junit.runners.Suite;
 	AndRGeneratorTest.class,
 	AndLGeneratorTest.class,
 	AndMinusLGeneratorTest.class,
+	GlobalTemplateTest.class,
 })
 
 public class ZTestSuite {
