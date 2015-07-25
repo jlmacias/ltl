@@ -32,7 +32,7 @@ public class GlobalTemplateTest {
 	@Test
 	public void testGlobalQPrecedesPCPlus() throws Exception {
 		String output = ltlGenerator.generateLTLFormula("GlobalQPrecedesPC", "P_ParallelC_3", "Q_ConsecutiveC_3", "", "");
-		assertEquals("!((!([q1 & [(!p1 ^ !p2 ^ !p3)]] ^ X([q2 & [(!p1 ^ !p2 ^ !p3)]] ^ X(q3)))) U (p1 ^ p2 ^ p3))", output);
+		assertEquals("!((!(([q1 & [!(p1 ^ p2 ^ p3)]] ^ X([q2 & [!(p1 ^ p2 ^ p3)]] ^ X(q3))))) U (p1 ^ p2 ^ p3))", output);
 	}
 
 	// Q can be anything BUT AtLeastOneC or ParallelC, and P has to be event type
