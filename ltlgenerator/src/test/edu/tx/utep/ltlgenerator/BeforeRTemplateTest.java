@@ -32,13 +32,13 @@ public class BeforeRTemplateTest {
 	@Test
 	public void testExistenceOfPBeforeRc() throws Exception {
 		String output = ltlGenerator.generateLTLFormula("ExistenceOfPBeforeRc", "P_ConsecutiveC_4", "", "R_ParallelC_3", "");
-		assertEquals("!((![[(p1 ^ !p2 ^ !p3 ^ !p4 ^ X(p2 ^ !p3 ^ !p4 ^ X(p3 ^ !p4 ^ X(p4))))] & [!(r1 ^ r2 ^ r3)]]) U (r1 ^ r2 ^ r3))", output);
+		assertEquals("!((![[(p1 ^ X(p2 ^ X(p3 ^ X(p4))))] & [!(r1 ^ r2 ^ r3)]]) U (r1 ^ r2 ^ r3))", output);
 	}
 
 	@Test
 	public void testExistenceOfPBeforeRe() throws Exception {
 		String output = ltlGenerator.generateLTLFormula("ExistenceOfPBeforeRe", "P_ConsecutiveC_4", "", "R_ParallelC_3", "");
-		assertEquals("(F(r1 ^ r2 ^ r3)) -> ((!(((!r1 ^ !r2 ^ !r3) ^ X((r1 ^ r2 ^ r3)))) U [[(p1 ^ !p2 ^ !p3 ^ !p4 ^ X(p2 ^ !p3 ^ !p4 ^ X(p3 ^ !p4 ^ X(p4))))] & [!(r1 ^ r2 ^ r3)]]", output);
+		assertEquals("(F(r1 ^ r2 ^ r3)) -> ((!(((!r1 ^ !r2 ^ !r3) ^ X((r1 ^ r2 ^ r3)))) U [[(p1 ^ X(p2 ^ X(p3 ^ X(p4))))] & [!(r1 ^ r2 ^ r3)]]", output);
 	}
 
 	

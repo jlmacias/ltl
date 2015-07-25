@@ -11,8 +11,8 @@ public class AbsenceOfPBeforeRe extends Template {
 	public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {
 		String formula = template;
 		List<String> r = getCompositeProposition(rProposition);
+		List<String> p = getCompositeProposition(pProposition);
 		List<String> rh = getHProposition(rProposition);
-		List<String> p = getHProposition(pProposition);
 		String pinverse = String.join("", getParallelInverse(pProposition));
 		String rString = String.join("", r);
 		String rhString = String.join("", rh);

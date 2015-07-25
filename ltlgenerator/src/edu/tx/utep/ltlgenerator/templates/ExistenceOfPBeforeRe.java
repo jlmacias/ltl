@@ -10,7 +10,7 @@ public class ExistenceOfPBeforeRe extends Template {
 	public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {
 		String formula = template;
 		List<String> r = getCompositeProposition(rProposition);
-		List<String> p = getHProposition(pProposition);
+		List<String> p = getCompositeProposition(pProposition);
 		List<String> rh = getHProposition(rProposition);
 		String rinverse = String.join("", getParallelInverse(rProposition));
 		String rString = String.join("", r);

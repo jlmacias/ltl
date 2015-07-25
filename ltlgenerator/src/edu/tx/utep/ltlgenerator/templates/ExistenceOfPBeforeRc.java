@@ -10,7 +10,7 @@ public class ExistenceOfPBeforeRc extends Template {
 	public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {
 		String formula = template;
 		List<String> r = getCompositeProposition(rProposition);
-		List<String> p = getHProposition(pProposition);
+		List<String> p = getCompositeProposition(pProposition);
 		String rString = String.join("", r);
 		
 		List<String> notR = r;
