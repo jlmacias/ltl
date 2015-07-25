@@ -2,14 +2,9 @@ package test.edu.tx.utep.ltlgenerator;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.List;
-
 import org.junit.Test;
 
-import edu.tx.utep.ltlgenerator.CPGenerator;
 import edu.tx.utep.ltlgenerator.LTLGenerator;
-import edu.tx.utep.ltlgenerator.OperatorGenerator;
-import edu.tx.utep.ltlgenerator.factories.OperatorFactory;
 
 public class BeforeRTemplateTest {
 
@@ -41,17 +36,10 @@ public class BeforeRTemplateTest {
 		assertEquals("(F(r1 ^ r2 ^ r3)) -> ((!(((!r1 ^ !r2 ^ !r3) ^ X((r1 ^ r2 ^ r3)))) U [[(p1 ^ X(p2 ^ X(p3 ^ X(p4))))] & [!(r1 ^ r2 ^ r3)]]", output);
 	}
 
-	
-	private static final String ANDR = OperatorFactory.AND_R;
-	private static final String AND_MINUSL = OperatorFactory.AND_MINUS_L;
-	private static final String ANDL = OperatorFactory.AND_L;
-	private CPGenerator cpGenerator = new CPGenerator();
-	private OperatorGenerator operatorGenerator = new OperatorGenerator();
 	@Test
-	public void testAtLeastOneE() throws Exception {
-		List<String> leftSides = cpGenerator.getCompositeProposition("P_ConsecutiveC_3");
-		List<String> rightSides = cpGenerator.getCompositeProposition("R_ParallelC_3");
-		//System.out.println(operatorGenerator.getAndedPropositions(ANDR, leftSides, rightSides));
+	public void testQPrecedesPcBeforeRe() throws Exception {
+		String output = ltlGenerator.generateLTLFormula("QPrecedesPcBeforeRe", "P_ConsecutiveC_4", "Q_ConsecutiveE_2", "R_ParallelC_3", "");
+		assertEquals("(F(r1 ^ r2 ^ r3)) -> (((![[(p1 ^ X(p2 ^ X(p3 ^ X(p4))))] & [!(r1 ^ r2 ^ r3)]]) U ([(!q1 ^ !q2) & [!(p1 ^ X(p2 ^ X(p3 ^ X(p4))))]] ^ ([(!q1 ^ !q2) & [!(p1 ^ X(p2 ^ X(p3 ^ X(p4))))]] U ([q1 ^ !q2 & [!(p1 ^ X(p2 ^ X(p3 ^ X(p4))))]] ^ X(q2))) v (((!r1 ^ !r2 ^ !r3)) ^ X(r1 ^ r2 ^ r3)))))", output);
 	}
 
 }
