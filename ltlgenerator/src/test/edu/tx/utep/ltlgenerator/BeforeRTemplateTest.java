@@ -42,4 +42,10 @@ public class BeforeRTemplateTest {
 		assertEquals("(F(r1 ^ r2 ^ r3)) -> (((![[(p1 ^ X(p2 ^ X(p3 ^ X(p4))))] & [!(r1 ^ r2 ^ r3)]]) U ([(!q1 ^ !q2) & [!(p1 ^ X(p2 ^ X(p3 ^ X(p4))))]] ^ ([(!q1 ^ !q2) & [!(p1 ^ X(p2 ^ X(p3 ^ X(p4))))]] U ([q1 ^ !q2 & [!(p1 ^ X(p2 ^ X(p3 ^ X(p4))))]] ^ X(q2))) v (((!r1 ^ !r2 ^ !r3)) ^ X(r1 ^ r2 ^ r3)))))", output);
 	}
 
+	@Test
+	public void testQPrecedesPcBeforeRc() throws Exception {
+		String output = ltlGenerator.generateLTLFormula("QPrecedesPcBeforeRc", "P_ConsecutiveC_4", "Q_ConsecutiveE_2", "R_ParallelC_3", "");
+		assertEquals("(F(r1 ^ r2 ^ r3)) -> ((![[(p1 ^ X(p2 ^ X(p3 ^ X(p4))))] & [!(r1 ^ r2 ^ r3)]])) U ([(!q1 ^ !q2) & [!(p1 ^ X(p2 ^ X(p3 ^ X(p4))))]] ^ ([(!q1 ^ !q2) & [!(p1 ^ X(p2 ^ X(p3 ^ X(p4))))]] U ([q1 ^ !q2 & [!(p1 ^ X(p2 ^ X(p3 ^ X(p4))))]] ^ X(q2))) v (r1 ^ r2 ^ r3))))", output);
+	}
+
 }
