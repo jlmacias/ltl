@@ -3,7 +3,7 @@ package edu.tx.utep.ltlgenerator.templates;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GlobalQPrecedesPeOnlyAp extends Template {
+public class GlobalQPrecedesPEStar extends Template {
   
 	/*
 	 * rTemplate will be used for the right side of the & operator
