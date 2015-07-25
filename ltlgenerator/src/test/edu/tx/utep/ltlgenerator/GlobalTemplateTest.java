@@ -72,10 +72,4 @@ public class GlobalTemplateTest {
 		assertEquals("!((!([(!q1 ^ !q2 ^ !q3) & [!(!p1 ^ !p2 ^ !p3) ^ ((!p1 ^ !p2 ^ !p3) U (p1 ^ !p2 ^ !p3 ^ ((!p2 ^ !p3) U (p2 ^ !p3 ^ ((!p3) U (p3))))))]] ^ ([(!q1 ^ !q2 ^ !q3) & [!(!p1 ^ !p2 ^ !p3) ^ ((!p1 ^ !p2 ^ !p3) U (p1 ^ !p2 ^ !p3 ^ ((!p2 ^ !p3) U (p2 ^ !p3 ^ ((!p3) U (p3))))))]] U ([q1 ^ !q2 ^ !q3 & [!(!p1 ^ !p2 ^ !p3) ^ ((!p1 ^ !p2 ^ !p3) U (p1 ^ !p2 ^ !p3 ^ ((!p2 ^ !p3) U (p2 ^ !p3 ^ ((!p3) U (p3))))))]] ^ X([q2 ^ !q3 & [!(!p1 ^ !p2 ^ !p3) ^ ((!p1 ^ !p2 ^ !p3) U (p1 ^ !p2 ^ !p3 ^ ((!p2 ^ !p3) U (p2 ^ !p3 ^ ((!p3) U (p3))))))]] ^ X(q3)))))) U (!p1 ^ !p2 ^ !p3) ^ ((!p1 ^ !p2 ^ !p3) U (p1 ^ !p2 ^ !p3 ^ ((!p2 ^ !p3) U (p2 ^ !p3 ^ ((!p3) U (p3)))))))", output);
 	}
 
-	@Test
-	public void testGlobalQPrecedesPEAtLeastOneCAndParallelC() throws Exception {
-		String output = ltlGenerator.generateLTLFormula("GlobalQPrecedesPC", "P_AtLeastOneC_3", "Q_ParallelC_3", "", "");
-		assertEquals("!((!([(q1 ^ q2 ^ q3) & [!((!p1 ^ !p2 ^ !p3) ^ X(p1 v p2 v p3))]])) U (((!p1 ^ !p2 ^ !p3) ^ X(p1 v p2 v p3))))", output);
-	}
-
 }
