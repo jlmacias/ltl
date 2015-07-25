@@ -2,9 +2,10 @@ package edu.tx.utep.ltlgenerator.factories;
 
 import edu.tx.utep.ltlgenerator.templates.GlobalAbsenceOfP;
 import edu.tx.utep.ltlgenerator.templates.GlobalExistanceOfP;
-import edu.tx.utep.ltlgenerator.templates.GlobalQRespondsToP;
 import edu.tx.utep.ltlgenerator.templates.GlobalQPrecedesPCPlus;
 import edu.tx.utep.ltlgenerator.templates.GlobalQPrecedesPCStar;
+import edu.tx.utep.ltlgenerator.templates.GlobalQPrecedesPEPlus;
+import edu.tx.utep.ltlgenerator.templates.GlobalQRespondsToP;
 import edu.tx.utep.ltlgenerator.templates.Template;
 
 // Factory Pattern
@@ -20,9 +21,8 @@ public class TemplateFactory {
 		if (templateName.equals("GlobalQRespondsToP"))
 			return new GlobalQRespondsToP();
 	
-// This one was giving me an error, so I just commented it out. Roberto Fierro.
-//		if (templateName.equals("GlobalQPrecedesPEPlus"))
-//        		return new GlobalQPrecedesPEPlus();
+		if (templateName.equals("GlobalQPrecedesPEPlus"))
+        		return new GlobalQPrecedesPEPlus();
 		
 		if (templateName.equals("GlobalQPrecedesPC")) {
 			Boolean isOfTypeStar = ( qProposition.contains("Q_AtLeastOneC") || qProposition.contains("Q_ParallelC") );
