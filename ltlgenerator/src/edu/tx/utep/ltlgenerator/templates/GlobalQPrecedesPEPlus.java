@@ -72,19 +72,19 @@ public class GlobalQPrecedesPEPlus extends Template {
         assert !lastEntry.equals(")");
         // EventualE ends with ...^ !q3 ^ ((!q3) U (q3))))))
         if (lastEntry.endsWith("))))))")) {
-            return String.join("", new CPGenerator().getCompositeProposition2("P_EventualH_" + n));
+            return String.join("", new CPGenerator().getCompositeProposition("P_EventualH_" + n));
         }
         // ConsecutiveE ends with ...^ X(q2 ^ !q3 ^ X(q3))))
         else if (lastEntry.endsWith("))))")) {
-            return String.join("", new CPGenerator().getCompositeProposition2("P_ConsecutiveH_" + n));
+            return String.join("", new CPGenerator().getCompositeProposition("P_ConsecutiveH_" + n));
         }
 
         // else it can be AtLeastOneE or ParallelE which are the same
         else {
             if (lastEntryLong.length() < 8) {
-                return String.join("", new CPGenerator().getCompositeProposition2("P_ParallelH_" + n));
+                return String.join("", new CPGenerator().getCompositeProposition("P_ParallelH_" + n));
             } else {
-                return String.join("", new CPGenerator().getCompositeProposition2("P_AtLeastOneH_" + n));
+                return String.join("", new CPGenerator().getCompositeProposition("P_AtLeastOneH_" + n));
             }
 
         }
