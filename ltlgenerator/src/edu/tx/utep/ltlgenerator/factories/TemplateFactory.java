@@ -17,6 +17,9 @@ public class TemplateFactory {
 		
 		if (templateName.equals("GlobalQRespondsToP"))
 			return new GlobalQRespondsToP();
+			
+		if (templateName.equals("GlobalQPrecedesPEPlus"))
+        		return new GlobalQPrecedesPEPlus();
 
 		return null;
 	}
