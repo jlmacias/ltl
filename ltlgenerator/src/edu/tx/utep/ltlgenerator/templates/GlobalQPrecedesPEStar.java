@@ -1,18 +1,18 @@
 package edu.tx.utep.ltlgenerator.templates;
 
-import edu.tx.utep.ltlgenerator.factories.OperatorFactory;
-
 import java.util.List;
 
 public class GlobalQPrecedesPEStar extends Template {
-    private static String template = "!((!(Q andMinusL !(parallelInverse ^ XPH))) U (parallelInverse ^ XPH))";
-    private static final String AND_MINUSL = OperatorFactory.AND_MINUS_L;
 
-    @Override
-    public String generateFormula(List<String> p, List<String> q, List<String> r, List<String> l) {
-        String formula = template;
+	private static String template = "";
 
+	@Override
+	public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {
+		String formula = template;
+		List<String> q = getCompositeProposition(qProposition);
+		List<String> ph = getHProposition(pProposition);
+		String pinverse = String.join("", getParallelInverse(pProposition));
 
-        return null;
-    }
+		return formula;
+	}
 }
