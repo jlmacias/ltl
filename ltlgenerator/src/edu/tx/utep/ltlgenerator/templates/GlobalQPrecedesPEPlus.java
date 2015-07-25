@@ -18,7 +18,6 @@ public class GlobalQPrecedesPEPlus extends Template {
 
         List<String> rightSide = new ArrayList<String>();
         rightSide.add("!(Pi ^ X(Ph))");
-      //  String tom = operatorGenerator.getAndedPropositions(AND_MINUS_L, q, rightSide);
         formula = formula.replace("(Q &-l !(Pi ^ X(Ph)))", operatorGenerator.getAndedPropositions(AND_MINUS_L, q, rightSide));
 
         //replace the Ph's
