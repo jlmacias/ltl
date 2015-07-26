@@ -4,7 +4,7 @@ import edu.tx.utep.ltlgenerator.templates.AfterL;
 import edu.tx.utep.ltlgenerator.templates.Template;
 import edu.tx.utep.ltlgenerator.templates.beforer.*;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalAbsenceOfP;
-import edu.tx.utep.ltlgenerator.templates.global.GlobalExistanceOfP;
+import edu.tx.utep.ltlgenerator.templates.global.GlobalExistenceOfP;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPCPlus;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPCStar;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPEPlus;
@@ -22,8 +22,8 @@ public class TemplateFactory {
 		if (templateName.equals("GlobalAbsenceOfP"))
 			return new GlobalAbsenceOfP();
 
-		if (templateName.equals("GlobalExistanceOfP"))
-			return new GlobalExistanceOfP();
+		if (templateName.equals("GlobalExistenceOfP"))
+			return new GlobalExistenceOfP();
 
 		if (templateName.equals("GlobalQRespondsToP"))
 			return new GlobalQRespondsToP();
@@ -40,8 +40,8 @@ public class TemplateFactory {
 		if (templateName.equals("GlobalQStrictlyPrecedesPE"))
 			return new GlobalQStrictlyPrecedesPE();
 
-		// if (templateName.equals("GlobalQStrictlyPrecedesPC"))
-		// return new GlobalQStrictlyPrecedesPC();
+		 if (templateName.equals("GlobalQStrictlyPrecedesPC"))
+		 return new GlobalQStrictlyPrecedesPC();
 
 		// Before R
 		if (templateName.equals("AbsenceOfPBeforeRc"))
@@ -66,8 +66,8 @@ public class TemplateFactory {
 		if (templateName.equals("AbsenceOfPAfterL"))
 			return new AfterL(new GlobalAbsenceOfP());
 
-		if (templateName.equals("ExistanceOfPAfterL"))
-			return new AfterL(new GlobalExistanceOfP());
+		if (templateName.equals("ExistenceOfPAfterL"))
+			return new AfterL(new GlobalExistenceOfP());
 
 		if (templateName.equals("QRespondsToPAfterL"))
 			return new AfterL(new GlobalQRespondsToP());

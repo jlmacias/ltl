@@ -4,7 +4,7 @@ import java.util.List;
 
 import edu.tx.utep.ltlgenerator.templates.Template;
 
-public class GlobalExistanceOfP extends Template {
+public class GlobalExistenceOfP extends Template {
 
 	private static String template = "FP";
 

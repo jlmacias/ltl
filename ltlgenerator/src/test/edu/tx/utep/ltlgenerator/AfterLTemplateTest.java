@@ -20,8 +20,8 @@ public class AfterLTemplateTest {
 	}
 	
 	@Test
-	public void testExistanceOfPAfterL() throws Exception {
-		String output = ltlGenerator.generateLTLFormula("ExistanceOfPAfterL", "P_AtLeastOneC_4", "", "", "L_ConsecutiveC_3");
+	public void testExistenceOfPAfterL() throws Exception {
+		String output = ltlGenerator.generateLTLFormula("ExistenceOfPAfterL", "P_AtLeastOneC_4", "", "", "L_ConsecutiveC_3");
 		assertEquals("!((!(l1 ^ X(l2 ^ X(l3)))) U (l1 ^ X(l2 ^ X([l3 & [!(F(p1 v p2 v p3 v p4))]]))))", output);
 	}
 	
