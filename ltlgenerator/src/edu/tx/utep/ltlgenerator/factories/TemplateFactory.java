@@ -62,6 +62,9 @@ public class TemplateFactory {
 		if (templateName.equals("QPrecedesPcBeforeRe"))
 			return new QPrecedesPcBeforeRe();
 
+		if (templateName.equals("QStrictlyPrecedesPcBeforeRc"))
+			return new QStrictlyPrecedesPcBeforeRc();
+
 		// After L
 		if (templateName.equals("AbsenceOfPAfterL"))
 			return new AfterL(new GlobalAbsenceOfP());

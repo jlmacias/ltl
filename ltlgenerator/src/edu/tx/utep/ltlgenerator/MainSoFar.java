@@ -8,7 +8,7 @@ public class MainSoFar {
 //		System.out.println(ltlGenerator.generateLTLFormula("GlobalAbsenceOfP", "Q_AtLeastOneC_5", "", "", ""));
 //		System.out.println(ltlGenerator.generateLTLFormula("GlobalQPrecedesPE", "P_AtLeastOneC_3", "Q_ParallelC_3", "", ""));
 
-		System.out.println(ltlGenerator.generateLTLFormula("AbsenceOfPBeforeRc", "P_AtLeastOneC_3", "", "R_ParallelC_3", ""));
+		System.out.println(ltlGenerator.generateLTLFormula("QPrecedesPcBeforeRc", "P_ConsecutiveC_4", "Q_ConsecutiveE_2", "R_ParallelC_3", ""));
 
 	}
 
