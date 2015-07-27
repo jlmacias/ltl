@@ -1,7 +1,5 @@
 package edu.tx.utep.ltlgenerator;
 
-import edu.tx.utep.ltlgenerator.operators.Operator;
-
 import java.util.List;
 
 public class MainSoFar {
@@ -17,14 +15,10 @@ public class MainSoFar {
 		List<String> rH = cpGenerator.getCompositeProposition("R_ParallelH_3");
 		List<String> rInverse = cpGenerator.getCompositeProposition("R_ParallelInverse_3");
 
-		OperatorGenerator og = new OperatorGenerator();
-//		String andedRqp = og.getAndedPropositions("andR", q, p);
-//		System.out.println(andedRqp);
-
 		LTLGenerator ltlGenerator = new LTLGenerator();
-//		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPcBeforeRc", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
-//		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPeBeforeRc", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
-//		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPcBeforeRe", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
+		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPcBeforeRc", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
+		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPeBeforeRc", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
+		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPcBeforeRe", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
 		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPeBeforeRe", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
 
 	}

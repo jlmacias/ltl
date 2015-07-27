@@ -24,12 +24,12 @@ public class QStrictlyPrecedesPcBeforeRe extends Template {
         List<String> notRh = rH;
         notRh.add(0, "!");
         String andedP = operatorGenerator.getAndedPropositions(AND_R, p, notRh);
-        formula = formula.replace("(P &r !RH)", andedP);
+        formula = formula.replace("P &r !RH", andedP);
 
         List<String> notP = p;
-        notRh.add(0, "!");
+        notP.add(0, "!");
         String andedQ = operatorGenerator.getAndedPropositions(AND_R, q, notP);
-        formula = formula.replace("(Q &r !P)", andedQ);
+        formula = formula.replace("Q &r !P", andedQ);
 
         formula = formula.replace("rInverse", rInverse);
         formula = formula.replace("RH", rHString);

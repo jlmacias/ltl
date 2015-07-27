@@ -24,14 +24,13 @@ public class QStrictlyPrecedesPeBeforeRe extends Template {
 
         List<String> notRH = rH;
         notRH.add(0, "!");
+        String andedPH = operatorGenerator.getAndedPropositions(AND_R, pH, notRH);
+        formula = formula.replace("PH &r !RH", andedPH);
+
         List<String> notPH = pH;
         notPH.add(0, "!");
-
-        String andedPH = operatorGenerator.getAndedPropositions(AND_R, pH, notRH);
-        formula = formula.replace("(PH &r !RH)", andedPH);
-
         String andedQ = operatorGenerator.getAndedPropositions(AND_R, q, notPH);
-        formula = formula.replace("(Q &r !PH)", andedQ);
+        formula = formula.replace("Q &r !PH", andedQ);
 
         formula = formula.replace("pInverse", pInverse);
         formula = formula.replace("rInverse", rInverse);

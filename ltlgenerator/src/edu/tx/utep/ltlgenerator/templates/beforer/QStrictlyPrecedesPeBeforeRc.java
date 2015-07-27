@@ -22,13 +22,12 @@ public class QStrictlyPrecedesPeBeforeRc extends Template {
         notR.add(0, "!");
         String notRString = String.join("", notR);
         String andedPH = operatorGenerator.getAndedPropositions(AND_R, pH, notR);
-        formula = formula.replace("(PH &r !R)", andedPH);
+        formula = formula.replace("PH &r !R", andedPH);
 
         List<String> notpH = pH;
-        notR.add(0, "!");
+        notpH.add(0, "!");
         String andedQ = operatorGenerator.getAndedPropositions(AND_R, q, notpH);
-        andedQ = andedQ.replace("& [", "& [!");
-        formula = formula.replace("(Q &r !PH)", andedQ);
+        formula = formula.replace("Q &r !PH", andedQ);
 
         formula = formula.replace("pInverse", pInverse);
         formula = formula.replace("!R", notRString);
