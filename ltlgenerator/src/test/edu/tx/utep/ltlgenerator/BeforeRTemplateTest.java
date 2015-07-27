@@ -93,7 +93,19 @@ public class BeforeRTemplateTest {
 	@Test
 	public void testQStrictlyPrecedesPeBeforeRc() throws Exception {
 		String output = ltlGenerator.generateLTLFormula("QStrictlyPrecedesPeBeforeRc", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", "");
-		assertEquals("(F(r1 ^ r2 ^ r3)) -> ((!((!p1 ^ !p2 ^ !p3) ^ !(r1 ^ r2 ^ r3) ^ X[[(p1 ^ !p2 ^ !p3 ^ X(p2 ^ !p3 ^ X(p3)))] & [!(r1 ^ r2 ^ r3)]])) U ([[(!q1 ^ !q2 ^ !q3) ^ ((!q1 ^ !q2 ^ !q3) U (q1 ^ !q2 ^ !q3 ^ ((!q2 ^ !q3) U (q2 ^ !q3 ^ ((!q3) U (q3))))))] & [(p1 ^ !p2 ^ !p3 ^ X(p2 ^ !p3 ^ X(p3)))]] v (r1 ^ r2 ^ r3)))", output);
+		assertEquals("(F(r1 ^ r2 ^ r3)) -> ((!((!p1 ^ !p2 ^ !p3) ^ !(r1 ^ r2 ^ r3) ^ X[[(p1 ^ !p2 ^ !p3 ^ X(p2 ^ !p3 ^ X(p3)))] & [!(r1 ^ r2 ^ r3)]])) U ([[(!q1 ^ !q2 ^ !q3) ^ ((!q1 ^ !q2 ^ !q3) U (q1 ^ !q2 ^ !q3 ^ ((!q2 ^ !q3) U (q2 ^ !q3 ^ ((!q3) U (q3))))))] & [!(p1 ^ !p2 ^ !p3 ^ X(p2 ^ !p3 ^ X(p3)))]] v (r1 ^ r2 ^ r3)))", output);
+	}
+
+	@Test
+		 public void testQStrictlyPrecedesPcBeforeRe() throws Exception {
+		String output = ltlGenerator.generateLTLFormula("QStrictlyPrecedesPcBeforeRe", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", "");
+		assertEquals("(F(r1 ^ r2 ^ r3)) -> (((![[(p1 ^ X(p2 ^ X(p3)))] & [!(r1 ^ r2 ^ r3)]]) U ([[(!q1 ^ !q2 ^ !q3) ^ ((!q1 ^ !q2 ^ !q3) U (q1 ^ !q2 ^ !q3 ^ ((!q2 ^ !q3) U (q2 ^ !q3 ^ ((!q3) U (q3))))))] & [(p1 ^ X(p2 ^ X(p3)))]] v ((!r1 ^ !r2 ^ !r3) ^ X(r1 ^ r2 ^ r3)))))", output);
+	}
+
+	@Test
+	public void testQStrictlyPrecedesPeBeforeRe() throws Exception {
+		String output = ltlGenerator.generateLTLFormula("QStrictlyPrecedesPeBeforeRe", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", "");
+		assertEquals("", "");
 	}
 
 }

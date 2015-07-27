@@ -6,8 +6,8 @@ import java.util.List;
 
 public class QStrictlyPrecedesPeBeforeRe extends Template {
 
-    private static String template = "(FR) -> ((!((pInverse) ^ !RH ^ X(PH &r !RH))) U ((Q &r !PH) v ((rInverse) ^ XRH)))";
-                                    // (FR) -> ((!((pInverse) ^ !RH ^ X(PH &r !RH))) U ((Q &r !PH) v ((rInverse) ^ XRH)))
+    private static String template = "(FR) -> ((!(pInverse ^ !RH ^ X(PH &r !RH))) U ((Q &r !PH) v (rInverse ^ XRH)))";
+                                    // (FR) -> ((!(pInverse ^ !RH ^ X(PH &r !RH))) U ((Q &r !PH) v (rInverse ^ XRH)))
 
     @Override
     public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {

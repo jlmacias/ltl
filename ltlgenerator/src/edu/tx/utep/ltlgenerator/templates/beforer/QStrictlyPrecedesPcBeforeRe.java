@@ -6,8 +6,8 @@ import java.util.List;
 
 public class QStrictlyPrecedesPcBeforeRe extends Template {
 
-    private static String template = "(FR) -> (((!(P &r !RH)) U ((Q &r !P) v ((rInverse) ^ XRH))))";
-                                    // (FR) -> (((!(P &r !RH)) U ((Q &r !P) v ((rInverse) ^ XRH))))
+    private static String template = "(FR) -> (((!(P &r !RH)) U ((Q &r !P) v (rInverse ^ XRH))))";
+                                    // (FR) -> (((!(P &r !RH)) U ((Q &r !P) v (rInverse ^ XRH))))
 
     @Override
     public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {
