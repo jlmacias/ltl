@@ -23,7 +23,7 @@ public class TemplateFactory {
 			return new GlobalAbsenceOfP();
 		}
 
-		if (templateName.equals("GlobalExistanceOfP")){
+		if (templateName.equals("GlobalExistenceOfP")){
 			return new GlobalExistenceOfP();
 		}
 
@@ -91,13 +91,25 @@ public class TemplateFactory {
 		if (templateName.equals("QRespondsToPBeforeRe")){
 			return new QRespondsToPBeforeRe();
 		}
+
+		if (templateName.equals("QStrictlyPrecedesPcBeforeRc"))
+			return new QStrictlyPrecedesPcBeforeRc();
+
+		if (templateName.equals("QStrictlyPrecedesPeBeforeRc"))
+			return new QStrictlyPrecedesPeBeforeRc();
+
+		if (templateName.equals("QStrictlyPrecedesPcBeforeRe"))
+			return new QStrictlyPrecedesPcBeforeRe();
+
+		if (templateName.equals("QStrictlyPrecedesPeBeforeRe"))
+			return new QStrictlyPrecedesPeBeforeRe();
 		
 		// After L
 		if (templateName.equals("AbsenceOfPAfterL")){
 			return new AfterL(new GlobalAbsenceOfP());
 		}
 
-		if (templateName.equals("ExistanceOfPAfterL")){
+		if (templateName.equals("ExistenceOfPAfterL")){
 			return new AfterL(new GlobalExistenceOfP());
 		}
 

@@ -84,4 +84,10 @@ public class BeforeRTemplateTest {
 		assertEquals("!((!(((!r1 ^ !r2 ^ !r3) ^ ((!r1 ^ !r2 ^ !r3) U (r1 ^ !r2 ^ !r3 ^ ((!r2 ^ !r3) U (r2 ^ !r3 ^ ((!r3) U (r3))))))) ^ X((r1 ^ !r2 ^ !r3 ^ ((!r2 ^ !r3) U (r2 ^ !r3 ^ ((!r3) U (r3)))))))) U ([[(!p1 ^ !p2 ^ !p3) ^ ((!p1 ^ !p2 ^ !p3) U (p1 ^ p2 ^ p3))] & [!(r1 ^ !r2 ^ !r3 ^ ((!r2 ^ !r3) U (r2 ^ !r3 ^ ((!r3) U (r3) & [((!([[(!q1 ^ !q2 ^ !q3) ^ ((!q1 ^ !q2 ^ !q3) U (q1 ^ !q2 ^ !q3 ^ ((!q2 ^ !q3) U (q2 ^ !q3 ^ ((!q3) U (q3))))))] & [!(r1 ^ !r2 ^ !r3 ^ ((!r2 ^ !r3) U (r2 ^ !r3 ^ ((!r3) U (r3)))))]])) U (r1 ^ !r2 ^ !r3 ^ ((!r2 ^ !r3) U (r2 ^ !r3 ^ ((!r3) U (r3))))) )]))))]]))", output);
 	}
 
+	@Test
+	public void testQStrictlyPrecedesPcBeforeRc() throws Exception {
+		String output = ltlGenerator.generateLTLFormula("QStrictlyPrecedesPcBeforeRc", "P_ParallelE_3", "Q_EventualE_3", "R_EventualE_3", "");
+		assertEquals("", output);
+	}
+
 }
