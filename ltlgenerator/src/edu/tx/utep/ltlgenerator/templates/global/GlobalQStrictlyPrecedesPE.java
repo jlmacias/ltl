@@ -6,30 +6,21 @@ import java.util.List;
 
 public class GlobalQStrictlyPrecedesPE extends Template {
 
-	// "!((!(Q &R !(!p1 ^......^!pn ^ X PH))) U (!p1 ^ ...^ !pn ^ X PH))"
-	private static String template = "!((!(Q &R !(PARALLEINVERSE ^ X PH))) U (PARALLELINVERSE ^ X PH))";
+	private static String template = "!((!(Q &r !(pInverse ^ XPH))) U (pInverse ^ XPH))";
 
 	@Override
 	public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {
-		List<String> q = getCompositeProposition(qProposition);
-		List<String> ph = getHProposition(pProposition);
-		List<String> pinverse = getParallelInverse(pProposition);
-
 		String formula = template;
-		List<String> parallelInverse_X_PH = new ArrayList<String>();
-		parallelInverse_X_PH.addAll(pinverse);
-		parallelInverse_X_PH.add(" ^ X");
-		parallelInverse_X_PH.addAll(ph);
+		List<String> q = getCompositeProposition(qProposition);
+		List<String> pH = getHProposition(pProposition);
+		String pInverse = String.join("", getParallelInverse(pProposition));
 
-		List<String> NotParallelInverse_X_PH = new ArrayList<String>();
-		NotParallelInverse_X_PH.add(0, "!(");
-		NotParallelInverse_X_PH.addAll(parallelInverse_X_PH);
-		NotParallelInverse_X_PH.add(")");
+		List<String> rightSide = new ArrayList<String>();
+		rightSide.add("!(pInverse ^ XPH)");
+		formula = formula.replace("Q &r !(pInverse ^ XPH)", operatorGenerator.getAndedPropositions(AND_R, q, rightSide));
 
-		String andedQP = operatorGenerator.getAndedPropositions(AND_R, q, NotParallelInverse_X_PH);
-		formula = formula.replace("Q &R !(PARALLEINVERSE ^ X PH)", andedQP);
-		String pInverse_X_PH = String.join("", parallelInverse_X_PH);
-		formula = formula.replace("PARALLELINVERSE ^ X PH", pInverse_X_PH);
+		formula = formula.replace("PH", String.join("", pH));
+		formula = formula.replace("pInverse", pInverse);
 
 		return formula;
 	}
