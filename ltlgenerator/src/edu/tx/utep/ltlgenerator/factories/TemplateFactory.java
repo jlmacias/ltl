@@ -146,11 +146,40 @@ public class TemplateFactory {
 		}
 
 		// Between L and Rc
+		// 1. Absence Of P
 		if (templateName.equals("AbsenceOfPBetweenLAndRc")){
 			return new BetweenLAndRc(new GlobalAbsenceOfP());
 		}
 
+		// 2. Existence Of P
+		if (templateName.equals("ExistenceOfPBetweenLAndRc")){
+			return new BetweenLAndRc(new GlobalExistenceOfP());
+		}
 
+		// 3. Q Precedes Pc
+		if (templateName.equals("QPrecedesPcBetweenLAndRc")){
+			return new BetweenLAndRc(getGlobalQPrecedesPC(qProposition));
+		}
+
+		// 4. Q Precedes Pe
+		if (templateName.equals("QPrecedesPeBetweenLAndRc")){
+			return new BetweenLAndRc(getGlobalQPrecedesPE(qProposition));
+		}
+
+		// 5. Q Strictly Precedes Pc
+		if (templateName.equals("QStrictlyPrecedesPcBetweenLAndRc")){
+			return new BetweenLAndRc(new GlobalQStrictlyPrecedesPC());
+		}
+
+		// 6. Q Strictly Precedes Pe
+		if (templateName.equals("QStrictlyPrecedesPeBetweenLAndRc")){
+			return new BetweenLAndRc(new GlobalQStrictlyPrecedesPE());
+		}
+
+		// 7. Q Responds to P Between L And Rc
+		if (templateName.equals("QRespondsToPBetweenLAndRc")){
+			return new BetweenLAndRc(new GlobalQRespondsToP());
+		}
 
 		// Between L and Re
 
