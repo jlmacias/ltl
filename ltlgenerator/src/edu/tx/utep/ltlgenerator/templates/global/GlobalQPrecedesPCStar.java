@@ -13,12 +13,11 @@ public class GlobalQPrecedesPCStar extends Template {
 		String formula = template;
 		List<String> p = getCompositeProposition(pProposition);
 		List<String> q = getCompositeProposition(qProposition);
+		String pString = String.join("", p);
+		String qString = String.join("", q);
 
-		String notQ = "!" + String.join("", q);
-		String jointP = String.join("", p);
-
-		formula = formula.replace("!Q", notQ);
-		formula = formula.replace("P", jointP);
+		formula = formula.replace("Q", qString);
+		formula = formula.replace("P", pString);
 
 		return formula;
 	}

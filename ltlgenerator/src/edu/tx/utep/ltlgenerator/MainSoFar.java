@@ -17,7 +17,7 @@ public class MainSoFar {
 
 		LTLGenerator ltlGenerator = new LTLGenerator();
 
-		System.out.println(ltlGenerator.generateLTLFormula("GlobalQPrecedesPEStar", "P_ParallelC_3", "Q_AtLeastOneC_3", "", ""));
+		System.out.println(ltlGenerator.generateLTLFormula("GlobalQPrecedesPCStar", "P_ParallelC_3", "Q_AtLeastOneC_3", "", ""));
 
 //		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPcBeforeRc", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
 //		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPeBeforeRc", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
