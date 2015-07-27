@@ -14,8 +14,6 @@ public class QStrictlyPrecedesPcBeforeRc extends Template {
         List<String> p = getCompositeProposition(pProposition);
         List<String> q = getCompositeProposition(qProposition);
         String rString = String.join("", r);
-        String pString = String.join("", p);
-        String qString = String.join("", q);
 
         List<String> notR = r;
         notR.add(0, "!");
@@ -28,8 +26,6 @@ public class QStrictlyPrecedesPcBeforeRc extends Template {
         formula = formula.replace("(Q &r !P)", andedQ);
 
         formula = formula.replace("R", rString);
-        formula = formula.replace("P", pString);
-        formula = formula.replace("Q", qString);
 
         return formula;
     }
