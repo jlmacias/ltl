@@ -14,9 +14,13 @@ public class GlobalQPrecedesPEStar extends Template {
 		String formula = template;
 		List<String> q = getCompositeProposition(qProposition);
 		List<String> pH = getHProposition(pProposition);
+		String pHString = String.join("", pH);
+		String qString = String.join("", q);
 		String pInverse = String.join("", getParallelInverse(pProposition));
 
-		formula.replace("pInverse", pInverse);
+		formula = formula.replace("pInverse", pInverse);
+		formula = formula.replace("PH", pHString);
+		formula = formula.replace("Q", qString);
 
 		return formula;
 	}

@@ -90,4 +90,10 @@ public class GlobalTemplateTest {
 		assertEquals("!((!([(q1 v q2 v q3 v q4) & [!((!p1 ^ !p2 ^ !p3) ^ X(p1 ^ !p2 ^ !p3 ^ X(p2 ^ !p3 ^ X(p3))))]])) U ((!p1 ^ !p2 ^ !p3) ^ X(p1 ^ !p2 ^ !p3 ^ X(p2 ^ !p3 ^ X(p3)))))", output);
 	}
 
+	@Test
+	public void testGlobalQPrecedesPEStar() throws Exception {
+		String output = ltlGenerator.generateLTLFormula("GlobalQPrecedesPEStar", "P_ParallelC_3", "Q_AtLeastOneC_3", "", "");
+		assertEquals("!((!((q1 v q2 v q3) ^ !((!p1 ^ !p2 ^ !p3) ^ X(p1 ^ p2 ^ p3)))) U ((!p1 ^ !p2 ^ !p3) ^ X(p1 ^ p2 ^ p3) ^ !(q1 v q2 v q3)))", output);
+	}
+
 }
