@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ParallelE extends CompositeProposition {
 
-	private static String cpFormula = OPEN_P + CPT_NOT_AND + CLOSE_P + AND + OPEN_P + OPEN_P + CPT_NOT_AND + CLOSE_P + UNTIL + OPEN_P + CPT_AND + CLOSE_P + CLOSE_P;
+	//private static String cpFormula = OPEN_P + CPT_NOT_AND + CLOSE_P + AND + OPEN_P + OPEN_P + CPT_NOT_AND + CLOSE_P + UNTIL + OPEN_P + CPT_AND + CLOSE_P + CLOSE_P;
 
 	@Override
 	public List<String> generateLTLArray(String letter, int count) {

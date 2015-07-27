@@ -1,8 +1,8 @@
 package edu.tx.utep.ltlgenerator.templates.global;
 
-import edu.tx.utep.ltlgenerator.templates.Template;
-import java.util.ArrayList;
 import java.util.List;
+
+import edu.tx.utep.ltlgenerator.templates.Template;
 
 public class GlobalQStrictlyPrecedesPC extends Template {
 

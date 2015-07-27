@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ParallelInverse extends CompositeProposition {
 
-	private static String cpFormula = OPEN_P + CPT_NOT_AND + CLOSE_P;
+	//private static String cpFormula = OPEN_P + CPT_NOT_AND + CLOSE_P;
 
 	@Override
 	public List<String> generateLTLArray(String letter, int count) {
