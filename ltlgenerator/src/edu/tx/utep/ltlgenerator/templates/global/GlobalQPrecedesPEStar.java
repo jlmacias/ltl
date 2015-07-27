@@ -1,6 +1,5 @@
 package edu.tx.utep.ltlgenerator.templates.global;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import edu.tx.utep.ltlgenerator.templates.Template;
