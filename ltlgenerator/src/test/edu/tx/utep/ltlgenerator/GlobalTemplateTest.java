@@ -59,12 +59,6 @@ public class GlobalTemplateTest {
 		assertEquals("!((!([(q1 v q2 v q3) & [!((p1 v p2 v p3 v p4))]])) U (p1 v p2 v p3 v p4))", output);
 	}
 
-	@Test         //Q can be anything, PE has to be any Event type CP only, the formula uses same P-CP of H type
-	public void testGlobalQStrictlyPrecedesPE() throws Exception {
-		String output = ltlGenerator.generateLTLFormula("GlobalQStrictlyPrecedesPE", "P_AtLeastOneE_3", "Q_ParallelC_4", "", "");
-		assertEquals("!((!([(q1 ^ q2 ^ q3 ^ q4) & [!((!p1 ^ !p2 ^ !p3) ^ X(p1 v p2 v p3))]])) U ((!p1 ^ !p2 ^ !p3) ^ X(p1 v p2 v p3)))", output);
-	}
-
 	@Test         //Test # 2 of GlobalQStrictlyPrecedesPE()
 	public void test2GlobalQStrictlyPrecedesPE() throws Exception {
 		String output = ltlGenerator.generateLTLFormula("GlobalQStrictlyPrecedesPE", "P_ConsecutiveE_3", "Q_AtLeastOneH_4", "", "");
@@ -87,6 +81,12 @@ public class GlobalTemplateTest {
 	public void testGlobalQPrecedesPEPlus() throws Exception {
 		String output = ltlGenerator.generateLTLFormula("GlobalQPrecedesPCStar", "P_EventualC_3", "Q_ConsecutiveE_3", "", "");
 		assertEquals("!((!(!q1 ^ !q2 ^ !q3) ^ ((!q1 ^ !q2 ^ !q3) U (q1 ^ !q2 ^ !q3 ^ X(q2 ^ !q3 ^ X(q3))))) U ((p1 ^ X(!p2 U (p2 ^ X(!p3 U (p3))))) ^ !(!q1 ^ !q2 ^ !q3) ^ ((!q1 ^ !q2 ^ !q3) U (q1 ^ !q2 ^ !q3 ^ X(q2 ^ !q3 ^ X(q3))))))", output);
+	}
+
+	@Test
+	public void testGlobalQStrictlyPrecedesPE() throws Exception {
+		String output = ltlGenerator.generateLTLFormula("GlobalQPrecedesPCStar", "P_EventualC_3", "Q_ConsecutiveE_3", "", "");
+		assertEquals("!((!([[(!q1 ^ !q2 ^ !q3) ^ ((!q1 ^ !q2 ^ !q3) U (q1 ^ !q2 ^ !q3 ^ X(q2 ^ !q3 ^ X(q3))))] & [!((!p1 ^ !p2 ^ !p3) ^ X(p1 ^ !p2 ^ !p3 ^ ((!p2 ^ !p3) U (p2 ^ !p3 ^ ((!p3) U (p3))))))]])) U ((!p1 ^ !p2 ^ !p3) ^ X(p1 ^ !p2 ^ !p3 ^ ((!p2 ^ !p3) U (p2 ^ !p3 ^ ((!p3) U (p3)))))))", output);
 	}
 
 }
