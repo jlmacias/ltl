@@ -28,6 +28,8 @@ public class MainSoFar {
 
 		System.out.println();
 
+		System.out.println(ltlGenerator.generateLTLFormula("QRespondsToPBetweenLAndRc", "P_ConsecutiveC_2", "Q_ParallelC_2", "R_AtLeastOneC_2", "L_ParallelC_2"));
+
 		// AfterLUntilRc
 //		System.out.println("1. " + ltlGenerator.generateLTLFormula("AbsenceOfPBetweenLAndRe", "P_AtLeastOneC_3", "", "R_ParallelC_3", "L_ConsecutiveC_3"));
 	}
