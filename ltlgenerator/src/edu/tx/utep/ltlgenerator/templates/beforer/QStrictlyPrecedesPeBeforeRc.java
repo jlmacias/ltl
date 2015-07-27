@@ -12,10 +12,10 @@ public class QStrictlyPrecedesPeBeforeRc extends Template {
     public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {
         String formula = template;
 
-        String pInverse = String.join("", getParallelInverse(pProposition));
-        List<String> pH = getHProposition(pProposition);
         List<String> r = getCompositeProposition(rProposition);
         List<String> q = getCompositeProposition(qProposition);
+        List<String> pH = getHProposition(pProposition);
+        String pInverse = String.join("", getParallelInverse(pProposition));
         String rString = String.join("", r);
 
         List<String> notR = r;

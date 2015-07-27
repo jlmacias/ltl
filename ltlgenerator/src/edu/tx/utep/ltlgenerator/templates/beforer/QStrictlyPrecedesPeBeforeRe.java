@@ -21,7 +21,7 @@ public class QStrictlyPrecedesPeBeforeRe extends Template {
         String rInverse = String.join("", getParallelInverse(rProposition));
         String rHString = String.join("", rH);
         String rString = String.join("", r);
-        
+
         List<String> notRH = rH;
         notRH.add(0, "!");
         List<String> notPH = pH;
