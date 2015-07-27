@@ -151,12 +151,12 @@ public class TemplateFactory {
 
 		// 3. Q Precedes Pc
 		if (templateName.equals("QPrecedesPcBetweenLAndRc")){
-			return new BetweenLAndRc(getQPrecedesPC(qProposition));
+			return new BetweenLAndRc(new QPrecedesPcBeforeRc());
 		}
 
 		// 4. Q Precedes Pe
 		if (templateName.equals("QPrecedesPeBetweenLAndRc")){
-			return new BetweenLAndRc(getQPrecedesPE(qProposition));
+			return new BetweenLAndRc(new QPrecedesPeBeforeRc());
 		}
 
 		// 5. Q Strictly Precedes Pc
@@ -187,12 +187,12 @@ public class TemplateFactory {
 
 		// 3. Q Precedes Pc
 		if (templateName.equals("QPrecedesPcBetweenLAndRe")){
-			return new BetweenLAndRe(getQPrecedesPC(qProposition));
+			return new BetweenLAndRe(new QPrecedesPcBeforeRe());
 		}
 
 		// 4. Q Precedes Pe
 		if (templateName.equals("QPrecedesPeBetweenLAndRe")){
-			return new BetweenLAndRe(getQPrecedesPE(qProposition));
+			return new BetweenLAndRe(new QPrecedesPeBeforeRe());
 		}
 
 		// 5. Q Strictly Precedes Pc
@@ -235,19 +235,4 @@ public class TemplateFactory {
 			return new GlobalQPrecedesPCPlus();
 	}
 
-	private Template getQPrecedesPE(String qProposition) {
-		boolean isOfTypeStar = (qProposition.contains("Q_AtLeastOneC") || qProposition.contains("Q_ParallelC"));
-		if (isOfTypeStar)
-			return new QPrecedesPeBeforeRc();
-		else
-			return new QPrecedesPeBeforeRe();
-	}
-
-	private Template getQPrecedesPC(String qProposition) {
-		boolean isOfTypeStar = (qProposition.contains("Q_AtLeastOneC") || qProposition.contains("Q_ParallelC"));
-		if (isOfTypeStar)
-			return new QPrecedesPcBeforeRc();
-		else
-			return new QPrecedesPcBeforeRe();
-	}
 }
