@@ -6,7 +6,7 @@ import java.util.List;
 public class AfterL extends Template {
 
 	private String template = "!((!L) U (L &l !Pg))";
-	private Template globalTemplate; 
+	private Template globalTemplate;
 	
 	public AfterL(Template globalTemplate){
 		this.globalTemplate = globalTemplate;

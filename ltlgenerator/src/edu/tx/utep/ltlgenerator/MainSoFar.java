@@ -9,6 +9,8 @@ public class MainSoFar {
 		CPGenerator cpGenerator = new CPGenerator();
 		LTLGenerator ltlGenerator = new LTLGenerator();
 
+		System.out.println(ltlGenerator.generateLTLFormula("AbsenceOfPBetweenLAndRc", "P_AtLeastOneC_3", "", "R_ParallelC_3", "L_ConsecutiveC_3"));
+
 	}
 
 }

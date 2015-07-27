@@ -3,6 +3,7 @@ package edu.tx.utep.ltlgenerator.factories;
 import edu.tx.utep.ltlgenerator.templates.AfterL;
 import edu.tx.utep.ltlgenerator.templates.Template;
 import edu.tx.utep.ltlgenerator.templates.beforer.*;
+import edu.tx.utep.ltlgenerator.templates.between.BetweenLAndRc;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalAbsenceOfP;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalExistenceOfP;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPCPlus;
@@ -143,6 +144,15 @@ public class TemplateFactory {
 		if (templateName.equals("GlobalQPrecedesPeAfterL")) {
 			return new AfterL(getGlobalQPrecedesPE(qProposition));
 		}
+
+		// Between L and Rc
+		if (templateName.equals("AbsenceOfPBetweenLAndRc")){
+			return new BetweenLAndRc(new GlobalAbsenceOfP());
+		}
+
+
+
+		// Between L and Re
 
 		return null;
 	}
