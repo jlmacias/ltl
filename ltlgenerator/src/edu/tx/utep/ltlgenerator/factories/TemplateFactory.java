@@ -19,76 +19,98 @@ public class TemplateFactory {
 	public Template getTemplate(String templateName, String qProposition) {
 
 		// Global
-		if (templateName.equals("GlobalAbsenceOfP"))
+		if (templateName.equals("GlobalAbsenceOfP")){
 			return new GlobalAbsenceOfP();
+		}
 
-		if (templateName.equals("GlobalExistenceOfP"))
+		if (templateName.equals("GlobalExistanceOfP")){
 			return new GlobalExistenceOfP();
+		}
 
-		if (templateName.equals("GlobalQRespondsToP"))
+		if (templateName.equals("GlobalQRespondsToP")){
 			return new GlobalQRespondsToP();
+		}
 
-		if (templateName.equals("GlobalQPrecedesPE"))
+		if (templateName.equals("GlobalQPrecedesPE")){
 			return getGlobalQPrecedesPE(qProposition);
+		}
 
-		if (templateName.equals("GlobalQPrecedesPC"))
+		if (templateName.equals("GlobalQPrecedesPC")){
 			return getGlobalQPrecedesPC(qProposition);
+		}
 
-		if (templateName.equals("GlobalQStrictlyPrecedesPC"))
+		if (templateName.equals("GlobalQStrictlyPrecedesPC")){
 			return new GlobalQStrictlyPrecedesPC();
+		}
 
-		if (templateName.equals("GlobalQStrictlyPrecedesPE"))
+		if (templateName.equals("GlobalQStrictlyPrecedesPE")){
 			return new GlobalQStrictlyPrecedesPE();
+		}
 
-		 if (templateName.equals("GlobalQStrictlyPrecedesPC"))
-		 return new GlobalQStrictlyPrecedesPC();
-
+		if (templateName.equals("GlobalQStrictlyPrecedesPC")){
+			return new GlobalQStrictlyPrecedesPC();
+		}
+		
 		// Before R
-		if (templateName.equals("AbsenceOfPBeforeRc"))
+		if (templateName.equals("AbsenceOfPBeforeRc")){
 			return new AbsenceOfPBeforeRc();
+		}
 
-		if (templateName.equals("AbsenceOfPBeforeRe"))
+		if (templateName.equals("AbsenceOfPBeforeRe")){
 			return new AbsenceOfPBeforeRe();
+		}
 
-		if (templateName.equals("ExistenceOfPBeforeRc"))
+		if (templateName.equals("ExistenceOfPBeforeRc")){
 			return new ExistenceOfPBeforeRc();
+		}
 
-		if (templateName.equals("ExistenceOfPBeforeRe"))
+		if (templateName.equals("ExistenceOfPBeforeRe")){
 			return new ExistenceOfPBeforeRe();
+		}
 
-		if (templateName.equals("QPrecedesPcBeforeRc"))
+		if (templateName.equals("QPrecedesPcBeforeRc")){
 			return new QPrecedesPcBeforeRc();
+		}
 
-		if (templateName.equals("QPrecedesPcBeforeRe"))
+		if (templateName.equals("QPrecedesPcBeforeRe")){
 			return new QPrecedesPcBeforeRe();
-
-		if (templateName.equals("QStrictlyPrecedesPcBeforeRc"))
-			return new QStrictlyPrecedesPcBeforeRc();
-
-		if (templateName.equals("QStrictlyPrecedesPeBeforeRc"))
-			return new QStrictlyPrecedesPeBeforeRc();
-
-		if (templateName.equals("QStrictlyPrecedesPcBeforeRe"))
-			return new QStrictlyPrecedesPcBeforeRe();
-
-		if (templateName.equals("QStrictlyPrecedesPeBeforeRe"))
-			return new QStrictlyPrecedesPeBeforeRe();
-
+		}
+		
+		if (templateName.equals("QPrecedesPeBeforeRc")){
+			return new QPrecedesPeBeforeRc();
+		}
+		
+		if (templateName.equals("QPrecedesPeBeforeRe")){
+			return new QPrecedesPeBeforeRe();
+		}
+		
+		if (templateName.equals("QRespondsToPBeforeRc")){
+			return new QRespondsToPBeforeRc();
+		}
+		
+		if (templateName.equals("QRespondsToPBeforeRe")){
+			return new QRespondsToPBeforeRe();
+		}
+		
 		// After L
-		if (templateName.equals("AbsenceOfPAfterL"))
+		if (templateName.equals("AbsenceOfPAfterL")){
 			return new AfterL(new GlobalAbsenceOfP());
+		}
 
-		if (templateName.equals("ExistenceOfPAfterL"))
+		if (templateName.equals("ExistanceOfPAfterL")){
 			return new AfterL(new GlobalExistenceOfP());
+		}
 
-		if (templateName.equals("QRespondsToPAfterL"))
+		if (templateName.equals("QRespondsToPAfterL")){
 			return new AfterL(new GlobalQRespondsToP());
+		}
 
 		// if (templateName.equals("QStrictlyPrecedesPcAfterL"))
 		// return new AfterL(new GlobalQStrictlyPrecedesPc());
 
-		if (templateName.equals("QStrictlyPrecedesPeAfterL"))
+		if (templateName.equals("QStrictlyPrecedesPeAfterL")){
 			return new AfterL(new GlobalQStrictlyPrecedesPE());
+		}
 
 		if (templateName.equals("GlobalQPrecedesPcAfterL")) {
 			return new AfterL(getGlobalQPrecedesPC(qProposition));

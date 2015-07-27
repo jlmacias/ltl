@@ -5,12 +5,14 @@ import java.util.List;
 import edu.tx.utep.ltlgenerator.CPGenerator;
 import edu.tx.utep.ltlgenerator.OperatorGenerator;
 import edu.tx.utep.ltlgenerator.factories.OperatorFactory;
+import edu.tx.utep.ltlgenerator.operators.AndLForBeforeR;
 
 public abstract class Template {
 
 	public abstract String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition);
 	protected OperatorGenerator operatorGenerator = new OperatorGenerator();
 	protected CPGenerator cpGenerator = new CPGenerator();
+	protected AndLForBeforeR andLForBeforeR = new  AndLForBeforeR();
 
 	protected static final String AND_L = OperatorFactory.AND_L;
 	protected static final String AND_R = OperatorFactory.AND_R;
