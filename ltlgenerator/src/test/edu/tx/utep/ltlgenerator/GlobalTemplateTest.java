@@ -55,14 +55,14 @@ public class GlobalTemplateTest {
 
 	@Test
 	public void testGlobalQStrictlyPrecedesPC() throws Exception {
-		String output = ltlGenerator.generateLTLFormula("GlobalQStrictlyPrecedesPC", "P_AtLeastOneC_4", "Q_AtLeastOneH_3", "", "");
-		assertEquals("!((!([(q1 v q2 v q3) & [!((p1 v p2 v p3 v p4))]])) U (p1 v p2 v p3 v p4))", output);
+		String output = ltlGenerator.generateLTLFormula("GlobalQStrictlyPrecedesPC", "P_ConsecutiveE_3", "Q_AtLeastOneH_4", "", "");
+		assertEquals("!((!([[(q1 v q2 v q3 v q4)] & [!(!p1 ^ !p2 ^ !p3) ^ ((!p1 ^ !p2 ^ !p3) U (p1 ^ !p2 ^ !p3 ^ X(p2 ^ !p3 ^ X(p3))))]])) U (!p1 ^ !p2 ^ !p3) ^ ((!p1 ^ !p2 ^ !p3) U (p1 ^ !p2 ^ !p3 ^ X(p2 ^ !p3 ^ X(p3)))))", output);
 	}
 
-	@Test         //Test # 2 of GlobalQStrictlyPrecedesPE()
-	public void test2GlobalQStrictlyPrecedesPE() throws Exception {
+	@Test
+	public void testGlobalQStrictlyPrecedesPE() throws Exception {
 		String output = ltlGenerator.generateLTLFormula("GlobalQStrictlyPrecedesPE", "P_ConsecutiveE_3", "Q_AtLeastOneH_4", "", "");
-		assertEquals("!((!([(q1 v q2 v q3 v q4) & [!((!p1 ^ !p2 ^ !p3) ^ X(p1 ^ !p2 ^ !p3 ^ X(p2 ^ !p3 ^ X(p3))))]])) U ((!p1 ^ !p2 ^ !p3) ^ X(p1 ^ !p2 ^ !p3 ^ X(p2 ^ !p3 ^ X(p3)))))", output);
+		assertEquals("!((!([[(q1 v q2 v q3 v q4)] & [!((!p1 ^ !p2 ^ !p3) ^ X(p1 ^ !p2 ^ !p3 ^ X(p2 ^ !p3 ^ X(p3))))]])) U ((!p1 ^ !p2 ^ !p3) ^ X(p1 ^ !p2 ^ !p3 ^ X(p2 ^ !p3 ^ X(p3)))))", output);
 	}
 
 	@Test
@@ -84,9 +84,9 @@ public class GlobalTemplateTest {
 	}
 
 	@Test
-	public void testGlobalQStrictlyPrecedesPE() throws Exception {
-		String output = ltlGenerator.generateLTLFormula("GlobalQPrecedesPCStar", "P_EventualC_3", "Q_ConsecutiveE_3", "", "");
-		assertEquals("!((!([[(!q1 ^ !q2 ^ !q3) ^ ((!q1 ^ !q2 ^ !q3) U (q1 ^ !q2 ^ !q3 ^ X(q2 ^ !q3 ^ X(q3))))] & [!((!p1 ^ !p2 ^ !p3) ^ X(p1 ^ !p2 ^ !p3 ^ ((!p2 ^ !p3) U (p2 ^ !p3 ^ ((!p3) U (p3))))))]])) U ((!p1 ^ !p2 ^ !p3) ^ X(p1 ^ !p2 ^ !p3 ^ ((!p2 ^ !p3) U (p2 ^ !p3 ^ ((!p3) U (p3)))))))", output);
+	public void testGlobalQPrecedesPEStar2() throws Exception {
+		String output = ltlGenerator.generateLTLFormula("GlobalQPrecedesPEStar", "P_EventualC_2", "Q_ConsecutiveE_2", "", "");
+		assertEquals("!((!((!q1 ^ !q2) ^ ((!q1 ^ !q2) U (q1 ^ !q2 ^ X(q2))) ^ !((!p1 ^ !p2) ^ X(p1 ^ !p2 ^ ((!p2) U (p2)))))) U ((!p1 ^ !p2) ^ X(p1 ^ !p2 ^ ((!p2) U (p2))) ^ !(!q1 ^ !q2) ^ ((!q1 ^ !q2) U (q1 ^ !q2 ^ X(q2)))))", output);
 	}
 
 }

@@ -19,8 +19,8 @@ public class GlobalQStrictlyPrecedesPE extends Template {
 		rightSide.add("!(pInverse ^ XPH)");
 		formula = formula.replace("Q &r !(pInverse ^ XPH)", operatorGenerator.getAndedPropositions(AND_R, q, rightSide));
 
-		formula = formula.replace("PH", String.join("", pH));
 		formula = formula.replace("pInverse", pInverse);
+		formula = formula.replace("PH", String.join("", pH));
 
 		return formula;
 	}
