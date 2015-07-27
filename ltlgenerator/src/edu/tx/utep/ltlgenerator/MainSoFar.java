@@ -26,6 +26,10 @@ public class MainSoFar {
 		System.out.println("6. " + ltlGenerator.generateLTLFormula("QStrictlyPrecedesPeBetweenLAndRe", "P_AtLeastOneC_3", "Q_ParallelE_3", "R_ParallelC_3", "L_ConsecutiveC_3"));
 		System.out.println("7. " + ltlGenerator.generateLTLFormula("QRespondsToPBetweenLAndRe", "P_AtLeastOneC_3", "Q_ParallelE_3", "R_ParallelC_3", "L_ConsecutiveC_3"));
 
+		System.out.println();
+
+		// AfterLUntilRc
+//		System.out.println("1. " + ltlGenerator.generateLTLFormula("AbsenceOfPBetweenLAndRe", "P_AtLeastOneC_3", "", "R_ParallelC_3", "L_ConsecutiveC_3"));
 	}
 
 }
