@@ -13,18 +13,19 @@ public class QStrictlyPrecedesPeBeforeRe extends Template {
     public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {
         String formula = template;
 
-        String pInverse = String.join("", getParallelInverse(pProposition));
         List<String> r = getCompositeProposition(rProposition);
-        List<String> rH = getHProposition(rProposition);
-        List<String> notRH = rH;
-        notRH.add(0, "!");
-        List<String> pH = getHProposition(pProposition);
         List<String> q = getCompositeProposition(qProposition);
-        List<String> notPH = pH;
-        notPH.add(0, "!");
+        List<String> rH = getHProposition(rProposition);
+        List<String> pH = getHProposition(pProposition);
+        String pInverse = String.join("", getParallelInverse(pProposition));
         String rInverse = String.join("", getParallelInverse(rProposition));
         String rHString = String.join("", rH);
         String rString = String.join("", r);
+        
+        List<String> notRH = rH;
+        notRH.add(0, "!");
+        List<String> notPH = pH;
+        notPH.add(0, "!");
 
         String andedPH = operatorGenerator.getAndedPropositions(AND_R, pH, notRH);
         formula = formula.replace("(PH &r !RH)", andedPH);
