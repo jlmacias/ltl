@@ -27,13 +27,13 @@ public class TemplateFactory {
 			return new GlobalExistenceOfP();
 		}
 
-//		if (templateName.equals("GlobalQPrecedesPE")){
-//			return getGlobalQPrecedesPE(qProposition);
-//		}
+		if (templateName.equals("GlobalQPrecedesPE")){
+			return getGlobalQPrecedesPE(qProposition);
+		}
 
-//		if (templateName.equals("GlobalQPrecedesPC")){
-//			return getGlobalQPrecedesPC(qProposition);
-//		}
+		if (templateName.equals("GlobalQPrecedesPC")){
+			return getGlobalQPrecedesPC(qProposition);
+		}
 
 		if (templateName.equals("GlobalQPrecedesPCPlus")){
 			return new GlobalQPrecedesPCPlus();
