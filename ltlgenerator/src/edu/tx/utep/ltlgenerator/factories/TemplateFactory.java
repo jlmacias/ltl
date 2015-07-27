@@ -4,6 +4,7 @@ import edu.tx.utep.ltlgenerator.templates.AfterL;
 import edu.tx.utep.ltlgenerator.templates.Template;
 import edu.tx.utep.ltlgenerator.templates.beforer.*;
 import edu.tx.utep.ltlgenerator.templates.between.BetweenLAndRc;
+import edu.tx.utep.ltlgenerator.templates.between.BetweenLAndRe;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalAbsenceOfP;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalExistenceOfP;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPCPlus;
@@ -182,6 +183,40 @@ public class TemplateFactory {
 		}
 
 		// Between L and Re
+		// 1. Absence Of P
+		if (templateName.equals("AbsenceOfPBetweenLAndRe")){
+			return new BetweenLAndRe(new GlobalAbsenceOfP());
+		}
+
+		// 2. Existence Of P
+		if (templateName.equals("ExistenceOfPBetweenLAndRe")){
+			return new BetweenLAndRe(new GlobalExistenceOfP());
+		}
+
+		// 3. Q Precedes Pc
+		if (templateName.equals("QPrecedesPcBetweenLAndRe")){
+			return new BetweenLAndRe(getGlobalQPrecedesPC(qProposition));
+		}
+
+		// 4. Q Precedes Pe
+		if (templateName.equals("QPrecedesPeBetweenLAndRe")){
+			return new BetweenLAndRe(getGlobalQPrecedesPE(qProposition));
+		}
+
+		// 5. Q Strictly Precedes Pc
+		if (templateName.equals("QStrictlyPrecedesPcBetweenLAndRe")){
+			return new BetweenLAndRe(new GlobalQStrictlyPrecedesPC());
+		}
+
+		// 6. Q Strictly Precedes Pe
+		if (templateName.equals("QStrictlyPrecedesPeBetweenLAndRe")){
+			return new BetweenLAndRe(new GlobalQStrictlyPrecedesPE());
+		}
+
+		// 7. Q Responds to P Between L And Rc
+		if (templateName.equals("QRespondsToPBetweenLAndRe")){
+			return new BetweenLAndRe(new GlobalQRespondsToP());
+		}
 
 		return null;
 	}
