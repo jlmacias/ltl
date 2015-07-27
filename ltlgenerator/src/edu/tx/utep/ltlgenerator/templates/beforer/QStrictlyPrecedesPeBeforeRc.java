@@ -5,7 +5,7 @@ import edu.tx.utep.ltlgenerator.templates.Template;
 
 public class QStrictlyPrecedesPeBeforeRc extends Template {
 
-    private static String template = "(FR) -> ((!((pInverse) ^ !R ^ X(PH &r !R))) U ((Q &r !(PH)) v R))";
+    private static String template = "(FR) -> ((!(pInverse ^ !R ^ X(PH &r !R))) U ((Q &r !(PH)) v R))";
                                     // (FR) -> ((!((pInverse) ^ !R ^ X(PH &r !R))) U ((Q &r !(PH)) v R))
 
     @Override
