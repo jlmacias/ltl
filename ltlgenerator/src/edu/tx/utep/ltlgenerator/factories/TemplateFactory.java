@@ -27,16 +27,32 @@ public class TemplateFactory {
 			return new GlobalExistenceOfP();
 		}
 
+//		if (templateName.equals("GlobalQPrecedesPE")){
+//			return getGlobalQPrecedesPE(qProposition);
+//		}
+
+//		if (templateName.equals("GlobalQPrecedesPC")){
+//			return getGlobalQPrecedesPC(qProposition);
+//		}
+
+		if (templateName.equals("GlobalQPrecedesPCPlus")){
+			return new GlobalQPrecedesPCPlus();
+		}
+
+		if (templateName.equals("GlobalQPrecedesPCStar")){
+			return new GlobalQPrecedesPCStar();
+		}
+
+		if (templateName.equals("GlobalQPrecedesPEPlus")){
+			return new GlobalQPrecedesPEPlus();
+		}
+
+		if (templateName.equals("GlobalQPrecedesPEStar")){
+			return new GlobalQPrecedesPEStar();
+		}
+
 		if (templateName.equals("GlobalQRespondsToP")){
 			return new GlobalQRespondsToP();
-		}
-
-		if (templateName.equals("GlobalQPrecedesPE")){
-			return getGlobalQPrecedesPE(qProposition);
-		}
-
-		if (templateName.equals("GlobalQPrecedesPC")){
-			return getGlobalQPrecedesPC(qProposition);
 		}
 
 		if (templateName.equals("GlobalQStrictlyPrecedesPC")){
@@ -45,10 +61,6 @@ public class TemplateFactory {
 
 		if (templateName.equals("GlobalQStrictlyPrecedesPE")){
 			return new GlobalQStrictlyPrecedesPE();
-		}
-
-		if (templateName.equals("GlobalQStrictlyPrecedesPC")){
-			return new GlobalQStrictlyPrecedesPC();
 		}
 		
 		// Before R

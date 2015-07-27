@@ -16,10 +16,13 @@ public class MainSoFar {
 		List<String> rInverse = cpGenerator.getCompositeProposition("R_ParallelInverse_3");
 
 		LTLGenerator ltlGenerator = new LTLGenerator();
-		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPcBeforeRc", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
-		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPeBeforeRc", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
-		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPcBeforeRe", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
-		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPeBeforeRe", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
+
+		System.out.println(ltlGenerator.generateLTLFormula("GlobalQPrecedesPEStar", "P_ConsecutiveC_3", "Q_EventualE_3", "", ""));
+
+//		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPcBeforeRc", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
+//		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPeBeforeRc", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
+//		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPcBeforeRe", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
+//		System.out.println(ltlGenerator.generateLTLFormula("QStrictlyPrecedesPeBeforeRe", "P_ConsecutiveC_3", "Q_EventualE_3", "R_ParallelH_3", ""));
 
 	}
 
