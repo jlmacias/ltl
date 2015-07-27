@@ -5,7 +5,8 @@ import edu.tx.utep.ltlgenerator.templates.Template;
 
 public class QStrictlyPrecedesPcBeforeRc extends Template {
 
-    private static String template = "(FR) -> (((!(P &r !R)) U ((Q &r !P) v R))";
+    private static String template = "(FR) -> ((!(P &r !R)) U ((Q &r !P) v R))";
+                                    // (FR) -> ((!(P &r !R)) U ((Q &r !P) v R))
 
     @Override
     public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {

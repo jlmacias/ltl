@@ -30,7 +30,7 @@ public class QStrictlyPrecedesPeBeforeRe extends Template {
         formula = formula.replace("(PH &r !RH)", andedPH);
 
         String andedQ = operatorGenerator.getAndedPropositions(AND_R, q, notPH);
-        formula = formula.replace("(PH &r !RH)", andedQ);
+        formula = formula.replace("(Q &r !PH)", andedQ);
 
         formula = formula.replace("pInverse", pInverse);
         formula = formula.replace("rInverse", rInverse);
