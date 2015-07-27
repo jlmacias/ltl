@@ -19,7 +19,6 @@ public class QStrictlyPrecedesPcBeforeRc extends Template {
 
         List<String> notR = r;
         notR.add(0, "!");
-        String notRString = String.join("", notR);
         String andedP = operatorGenerator.getAndedPropositions(AND_R, p, notR);
         formula = formula.replace("(P &r !R)", andedP);
 
@@ -28,7 +27,6 @@ public class QStrictlyPrecedesPcBeforeRc extends Template {
         String andedQ = operatorGenerator.getAndedPropositions(AND_R, q, notP);
         formula = formula.replace("(Q &r !P)", andedQ);
 
-        formula = formula.replace("!R", notRString);
         formula = formula.replace("R", rString);
         formula = formula.replace("P", pString);
         formula = formula.replace("Q", qString);
