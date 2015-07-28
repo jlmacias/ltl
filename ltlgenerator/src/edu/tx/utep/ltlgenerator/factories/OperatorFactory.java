@@ -1,5 +1,6 @@
 package edu.tx.utep.ltlgenerator.factories;
 
+import edu.tx.utep.ltlgenerator.exceptions.OperatorNotFoundException;
 import edu.tx.utep.ltlgenerator.operators.AndL;
 import edu.tx.utep.ltlgenerator.operators.AndMinusL;
 import edu.tx.utep.ltlgenerator.operators.AndR;
@@ -12,7 +13,7 @@ public class OperatorFactory {
 	public static final String AND_L = "andL";
 	public static final String AND_MINUS_L = "andMinusL";
 
-	public Operator getOperatorClass(String andType) {
+	public Operator getOperatorClass(String andType) throws OperatorNotFoundException {
 		switch (andType) {
 		case AND_R:
 			return new AndR();
@@ -21,7 +22,7 @@ public class OperatorFactory {
 		case AND_MINUS_L:
 			return new AndMinusL();
 		default:
-			return null;
+			throw new OperatorNotFoundException(andType);
 		}
 	}
 

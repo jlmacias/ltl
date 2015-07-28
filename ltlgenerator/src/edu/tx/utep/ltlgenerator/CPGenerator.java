@@ -3,6 +3,7 @@ package edu.tx.utep.ltlgenerator;
 import java.util.List;
 
 import edu.tx.utep.ltlgenerator.cps.CompositeProposition;
+import edu.tx.utep.ltlgenerator.exceptions.CPNotFoundException;
 import edu.tx.utep.ltlgenerator.factories.CPFactory;
 
 public class CPGenerator {
@@ -17,10 +18,15 @@ public class CPGenerator {
 		String countS = splitCP[2];
 		int count = Integer.parseInt(countS);
 
-		CompositeProposition cpClass = new CPFactory().getCPClass(cpName);
+		CompositeProposition cpClass;
+		try {
+			cpClass = new CPFactory().getCPClass(cpName);
 		if (cpClass != null)
 			return cpClass.generateLTLFormulaArray(letter, count);
 
+		} catch (CPNotFoundException e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 

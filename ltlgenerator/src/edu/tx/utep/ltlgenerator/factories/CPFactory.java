@@ -1,11 +1,25 @@
 package edu.tx.utep.ltlgenerator.factories;
 
-import edu.tx.utep.ltlgenerator.cps.*;
+import edu.tx.utep.ltlgenerator.cps.AtLeastOneC;
+import edu.tx.utep.ltlgenerator.cps.AtLeastOneE;
+import edu.tx.utep.ltlgenerator.cps.AtLeastOneH;
+import edu.tx.utep.ltlgenerator.cps.CompositeProposition;
+import edu.tx.utep.ltlgenerator.cps.ConsecutiveC;
+import edu.tx.utep.ltlgenerator.cps.ConsecutiveE;
+import edu.tx.utep.ltlgenerator.cps.ConsecutiveH;
+import edu.tx.utep.ltlgenerator.cps.EventualC;
+import edu.tx.utep.ltlgenerator.cps.EventualE;
+import edu.tx.utep.ltlgenerator.cps.EventualH;
+import edu.tx.utep.ltlgenerator.cps.ParallelC;
+import edu.tx.utep.ltlgenerator.cps.ParallelE;
+import edu.tx.utep.ltlgenerator.cps.ParallelH;
+import edu.tx.utep.ltlgenerator.cps.ParallelInverse;
+import edu.tx.utep.ltlgenerator.exceptions.CPNotFoundException;
 
 // Factory Pattern
 public class CPFactory {
 
-	public CompositeProposition getCPClass(String cpName) {
+	public CompositeProposition getCPClass(String cpName) throws CPNotFoundException {
 		if (cpName.equals("AtLeastOneC"))
 			return new AtLeastOneC();
 
@@ -45,7 +59,7 @@ public class CPFactory {
 		if (cpName.equals("ParallelInverse"))
 			return new ParallelInverse();
 
-		return null;
+		throw new CPNotFoundException(cpName);
 	}
 
 
