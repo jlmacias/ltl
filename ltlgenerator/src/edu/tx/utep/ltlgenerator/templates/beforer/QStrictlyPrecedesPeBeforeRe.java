@@ -1,13 +1,24 @@
 package edu.tx.utep.ltlgenerator.templates.beforer;
 
-import edu.tx.utep.ltlgenerator.templates.Template;
-
 import java.util.List;
+
+import edu.tx.utep.ltlgenerator.OutputCharacters;
+import edu.tx.utep.ltlgenerator.templates.Template;
 
 public class QStrictlyPrecedesPeBeforeRe extends Template {
 
-    private static String template = "(FR) -> ((!(pInverse ^ !RH ^ X(PH &r !RH))) U ((Q &r !PH) v (rInverse ^ XRH)))";
-                                    // (FR) -> ((!(pInverse ^ !RH ^ X(PH &r !RH))) U ((Q &r !PH) v (rInverse ^ XRH)))
+	// Ph &r !Rh
+	private static String phAndNotRh = "Ph &r " + OutputCharacters.NOT + "Rh";
+
+	// Q &r !Ph
+	private static String qAndNotPh = "Q &r " + OutputCharacters.NOT + "Ph";
+
+	// (FR) -> ((!(Pi ^ !Rh ^ X(Ph &r !Rh))) U ((Q &r !Ph) v (Ri ^ XRh)))
+	private static String template = OutputCharacters.OPEN_P + OutputCharacters.EVENTUALLY + "R" + OutputCharacters.CLOSE_P + " -> " +
+			OutputCharacters.OPEN_P + OutputCharacters.OPEN_P + OutputCharacters.NOT + OutputCharacters.OPEN_P + "Pi" + OutputCharacters.AND + OutputCharacters.NOT + "Rh" +
+			OutputCharacters.AND + OutputCharacters.NEXT + OutputCharacters.OPEN_P + phAndNotRh + OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P + 
+			OutputCharacters.UNTIL + OutputCharacters.OPEN_P + OutputCharacters.OPEN_P + qAndNotPh + OutputCharacters.CLOSE_P + OutputCharacters.OR + OutputCharacters.OPEN_P + "Ri" + 
+			OutputCharacters.AND + OutputCharacters.NEXT + "Rh" + OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P;
 
     @Override
     public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {
@@ -23,18 +34,18 @@ public class QStrictlyPrecedesPeBeforeRe extends Template {
         String rString = String.join("", r);
 
         List<String> notRH = rH;
-        notRH.add(0, "!");
+        notRH.add(0, OutputCharacters.NOT);
         String andedPH = operatorGenerator.getAndedPropositions(AND_R, pH, notRH);
-        formula = formula.replace("PH &r !RH", andedPH);
+        formula = formula.replace(phAndNotRh, andedPH);
 
         List<String> notPH = pH;
-        notPH.add(0, "!");
+        notPH.add(0, OutputCharacters.NOT);
         String andedQ = operatorGenerator.getAndedPropositions(AND_R, q, notPH);
-        formula = formula.replace("Q &r !PH", andedQ);
+        formula = formula.replace(qAndNotPh, andedQ);
 
-        formula = formula.replace("pInverse", pInverse);
-        formula = formula.replace("rInverse", rInverse);
-        formula = formula.replace("RH", rHString);
+        formula = formula.replace("Pi", pInverse);
+        formula = formula.replace("Ri", rInverse);
+        formula = formula.replace("Rh", rHString);
         formula = formula.replace("R", rString);
 
         return formula;
