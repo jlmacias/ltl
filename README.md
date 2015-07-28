@@ -1,4 +1,4 @@
-# Applied Design Patterns (233)
+# Applied Design Patterns (2)
 ### Factory Method
 ltl/ltlgenerator/src/edu/tx/utep/ltlgenerator/factories
 
