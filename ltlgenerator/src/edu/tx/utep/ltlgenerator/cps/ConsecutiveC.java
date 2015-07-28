@@ -3,9 +3,11 @@ package edu.tx.utep.ltlgenerator.cps;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.tx.utep.ltlgenerator.OutputCharacters;
+
 public class ConsecutiveC extends CompositeProposition {
 
-	//"(p1 ^ X(p2 ^ X(p3)))";
+	// "(p1 ^ X(p2 ^ X(p3)))";
 
 	@Override
 	public List<String> generateLTLArray(String letter, int count) {
@@ -15,15 +17,15 @@ public class ConsecutiveC extends CompositeProposition {
 
 		for (int i = 1; i <= count; i++) {
 			intermediateString.setLength(0);
-			intermediateString.append(OPEN_P).append(letter).append(i);
+			intermediateString.append(OutputCharacters.OPEN_P).append(letter).append(i);
 			output.add(intermediateString.toString());
 
 			if (i < count) {
-				output.add(AND);
-				output.add(NEXT);
+				output.add(OutputCharacters.AND);
+				output.add(OutputCharacters.NEXT);
 			}
 
-			closingParens = closingParens + CLOSE_P;
+			closingParens = closingParens + OutputCharacters.CLOSE_P;
 		}
 
 		output.add(closingParens);

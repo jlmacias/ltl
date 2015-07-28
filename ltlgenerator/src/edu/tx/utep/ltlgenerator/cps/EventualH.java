@@ -3,6 +3,8 @@ package edu.tx.utep.ltlgenerator.cps;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.tx.utep.ltlgenerator.OutputCharacters;
+
 public class EventualH extends CompositeProposition {
 
 	// (p1 ^ !p2 ^ !p3 ^ !p4 ^ ((!p2 ^ !p3 ^ !p4) U (p2 ^ !p3 ^ !p4 ^ ((!p3 ^ !p4) U (p3 ^ !p4 ^ (!p4 U p4))))))
@@ -14,19 +16,19 @@ public class EventualH extends CompositeProposition {
 		String closingParentheses = "";
 
 		for (int n = 1; n < count; n++) {
-			output.add(OPEN_P + letter + n + AND + generateProposition(CPT_NOT_AND, letter, n + 1, count));
-			output.add(AND);
-			output.add(OPEN_P);
-			output.add(OPEN_P + generateProposition(CPT_NOT_AND, letter, n + 1, count) + CLOSE_P);
+			output.add(OutputCharacters.OPEN_P + letter + n + OutputCharacters.AND + generateProposition(CPT_NOT_AND, letter, n + 1, count));
+			output.add(OutputCharacters.AND);
+			output.add(OutputCharacters.OPEN_P);
+			output.add(OutputCharacters.OPEN_P + generateProposition(CPT_NOT_AND, letter, n + 1, count) + OutputCharacters.CLOSE_P);
 
 			if (n + 1 < count) {
-				output.add(UNTIL);
+				output.add(OutputCharacters.UNTIL);
 			} else {
-				output.add(UNTIL);
-				output.add(OPEN_P + letter + ++n);
-                closingParentheses += CLOSE_P;
+				output.add(OutputCharacters.UNTIL);
+				output.add(OutputCharacters.OPEN_P + letter + ++n);
+				closingParentheses += OutputCharacters.CLOSE_P;
 				for (int i = 1; i < count; i++) {
-					closingParentheses += (CLOSE_P + CLOSE_P);
+					closingParentheses += (OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P);
 				}
 			}
 		}
