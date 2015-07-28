@@ -12,7 +12,7 @@ public class AbsenceOfPBeforeRe extends Template {
 	private static String pAndNotRh = "P &r " + OutputCharacters.NOT + "Rh";
 
 	// (FR) -> !((!((Pi) ^ X(Rh))) U (P &r !Rh))
-	private static String template = OutputCharacters.OPEN_P + OutputCharacters.EVENTUALLY + "R" + OutputCharacters.CLOSE_P + " -> " +
+	private static String template = OutputCharacters.OPEN_P + OutputCharacters.EVENTUALLY + "R" + OutputCharacters.CLOSE_P + OutputCharacters.IMPLY +
 			OutputCharacters.NOT + OutputCharacters.OPEN_P + OutputCharacters.OPEN_P + OutputCharacters.NOT + OutputCharacters.OPEN_P + OutputCharacters.OPEN_P + 
 			"Pi" + OutputCharacters.CLOSE_P + OutputCharacters.AND + OutputCharacters.NEXT + OutputCharacters.OPEN_P + "Rh" + OutputCharacters.CLOSE_P + 
 			OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P + OutputCharacters.UNTIL + OutputCharacters.OPEN_P + pAndNotRh + OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P;

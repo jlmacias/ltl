@@ -12,7 +12,7 @@ public class GlobalQRespondsToP extends Template {
 	private static String pAndFQ =  "P &l " + OutputCharacters.EVENTUALLY + "Q";
 
 	// G(P -> (P &l FQ)))
-	private static String template = OutputCharacters.ALWAYS + OutputCharacters.OPEN_P + "P -> " + OutputCharacters.OPEN_P + pAndFQ + OutputCharacters.CLOSE_P + 
+	private static String template = OutputCharacters.ALWAYS + OutputCharacters.OPEN_P + "P" + OutputCharacters.IMPLY + OutputCharacters.OPEN_P + pAndFQ + OutputCharacters.CLOSE_P + 
 			OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P;
 
 	@Override

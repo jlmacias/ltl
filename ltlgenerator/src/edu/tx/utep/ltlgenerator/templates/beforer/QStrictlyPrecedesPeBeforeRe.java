@@ -14,7 +14,7 @@ public class QStrictlyPrecedesPeBeforeRe extends Template {
 	private static String qAndNotPh = "Q &r " + OutputCharacters.NOT + "Ph";
 
 	// (FR) -> ((!(Pi ^ !Rh ^ X(Ph &r !Rh))) U ((Q &r !Ph) v (Ri ^ XRh)))
-	private static String template = OutputCharacters.OPEN_P + OutputCharacters.EVENTUALLY + "R" + OutputCharacters.CLOSE_P + " -> " +
+	private static String template = OutputCharacters.OPEN_P + OutputCharacters.EVENTUALLY + "R" + OutputCharacters.CLOSE_P + OutputCharacters.IMPLY +
 			OutputCharacters.OPEN_P + OutputCharacters.OPEN_P + OutputCharacters.NOT + OutputCharacters.OPEN_P + "Pi" + OutputCharacters.AND + OutputCharacters.NOT + "Rh" +
 			OutputCharacters.AND + OutputCharacters.NEXT + OutputCharacters.OPEN_P + phAndNotRh + OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P + 
 			OutputCharacters.UNTIL + OutputCharacters.OPEN_P + OutputCharacters.OPEN_P + qAndNotPh + OutputCharacters.CLOSE_P + OutputCharacters.OR + OutputCharacters.OPEN_P + "Ri" + 

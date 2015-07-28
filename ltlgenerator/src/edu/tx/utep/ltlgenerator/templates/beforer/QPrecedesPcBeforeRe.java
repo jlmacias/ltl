@@ -14,7 +14,7 @@ public class QPrecedesPcBeforeRe extends Template {
 	private static String qAndNotP = "Q &-l " + OutputCharacters.NOT + "P";
 
 	// (FR) -> (((!(P &r !Rh)) U ((Q &-l !P) v ((Ri) ^ XRh))))
-	private static String template = OutputCharacters.OPEN_P + OutputCharacters.EVENTUALLY + "R" + OutputCharacters.CLOSE_P + " -> " +
+	private static String template = OutputCharacters.OPEN_P + OutputCharacters.EVENTUALLY + "R" + OutputCharacters.CLOSE_P + OutputCharacters.IMPLY +
 			OutputCharacters.OPEN_P + OutputCharacters.OPEN_P + OutputCharacters.OPEN_P + OutputCharacters.NOT + OutputCharacters.OPEN_P + pAndNotRh + 
 			OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P + 
 			OutputCharacters.UNTIL + OutputCharacters.OPEN_P + OutputCharacters.OPEN_P + qAndNotP + OutputCharacters.CLOSE_P + 

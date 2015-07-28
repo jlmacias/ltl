@@ -11,6 +11,7 @@ public abstract class OutputCharacters {
 	public static final String CLOSE_P = ")";
 	public static final String ALWAYS = "G";
 	public static final String EVENTUALLY = "F";
+	public static final String IMPLY = " -> ";
 
 	// for the operators
 	public static final String O_AND = " & ";
