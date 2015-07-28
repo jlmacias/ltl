@@ -2,11 +2,13 @@ package edu.tx.utep.ltlgenerator.templates.global;
 
 import java.util.List;
 
+import edu.tx.utep.ltlgenerator.OutputCharacters;
 import edu.tx.utep.ltlgenerator.templates.Template;
 
 public class GlobalExistenceOfP extends Template {
 
-	private static String template = "FP";
+	// "FP";
+	private static String template = OutputCharacters.EVENTUALLY + "P";
 
 	@Override
 	public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {

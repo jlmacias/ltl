@@ -2,11 +2,13 @@ package edu.tx.utep.ltlgenerator.templates.global;
 
 import java.util.List;
 
+import edu.tx.utep.ltlgenerator.OutputCharacters;
 import edu.tx.utep.ltlgenerator.templates.Template;
 
 public class GlobalAbsenceOfP extends Template {
 
-	private static String template = "G!P";
+	// "G!P";
+	private static String template = OutputCharacters.ALWAYS + OutputCharacters.NOT + "P";
 
 	@Override
 	public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {

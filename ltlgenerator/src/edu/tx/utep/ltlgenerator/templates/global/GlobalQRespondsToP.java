@@ -3,11 +3,17 @@ package edu.tx.utep.ltlgenerator.templates.global;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.tx.utep.ltlgenerator.OutputCharacters;
 import edu.tx.utep.ltlgenerator.templates.Template;
 
 public class GlobalQRespondsToP extends Template {
 
-	private static String template = "G(P -> (P &l FQ)))";
+	// P &l FQ
+	private static String pAndFQ =  "P &l " + OutputCharacters.EVENTUALLY + "Q";
+
+	// G(P -> (P &l FQ)))
+	private static String template = OutputCharacters.ALWAYS + OutputCharacters.OPEN_P + "P -> " + OutputCharacters.OPEN_P + pAndFQ + OutputCharacters.CLOSE_P + 
+			OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P;
 
 	@Override
 	public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {
@@ -17,12 +23,13 @@ public class GlobalQRespondsToP extends Template {
 		String pString = String.join("", p);
 
 		List<String> rightSideQ = new ArrayList<String>();
-		rightSideQ.add("F(");
+		rightSideQ.add(OutputCharacters.EVENTUALLY);
+		rightSideQ.add(OutputCharacters.OPEN_P);
 		rightSideQ.addAll(q);
-		rightSideQ.add(")");
+		rightSideQ.add(OutputCharacters.CLOSE_P);
 
 		String andedPQ = operatorGenerator.getAndedPropositions(AND_L, p, rightSideQ);
-		formula = formula.replace("P &l FQ", andedPQ);
+		formula = formula.replace(pAndFQ, andedPQ);
 		formula = formula.replace("P", pString);
 
 		return formula;

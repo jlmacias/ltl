@@ -2,11 +2,17 @@ package edu.tx.utep.ltlgenerator.templates.global;
 
 import java.util.List;
 
+import edu.tx.utep.ltlgenerator.OutputCharacters;
 import edu.tx.utep.ltlgenerator.templates.Template;
 
 public class GlobalQStrictlyPrecedesPC extends Template {
 
-    private static String template = "!((!(Q &r !P)) U P)";
+	   // Q &r !P
+	   private static String qAndNotP = "Q &r " + OutputCharacters.NOT + "P";
+	   
+	   // !((!(Q &r !P)) U P)
+	   private static String template = OutputCharacters.NOT + OutputCharacters.OPEN_P + OutputCharacters.OPEN_P + OutputCharacters.NOT + OutputCharacters.OPEN_P + 
+			   qAndNotP + OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P + OutputCharacters.UNTIL + "P" + OutputCharacters.CLOSE_P;
 
     @Override
     public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {
@@ -16,9 +22,9 @@ public class GlobalQStrictlyPrecedesPC extends Template {
         String pString = String.join("", p);
 
         List<String> notP = p;
-        notP.add(0, "!");
+        notP.add(0, OutputCharacters.NOT);
 
-        formula = formula.replace("Q &r !P", operatorGenerator.getAndedPropositions(AND_R, q, notP));
+        formula = formula.replace(qAndNotP, operatorGenerator.getAndedPropositions(AND_R, q, notP));
         formula = formula.replace("P", pString);
 
         return formula;
