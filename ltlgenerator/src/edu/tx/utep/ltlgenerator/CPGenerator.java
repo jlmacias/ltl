@@ -1,5 +1,7 @@
 package edu.tx.utep.ltlgenerator;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import edu.tx.utep.ltlgenerator.cps.CompositeProposition;
@@ -21,13 +23,12 @@ public class CPGenerator {
 		CompositeProposition cpClass;
 		try {
 			cpClass = new CPFactory().getCPClass(cpName);
-		if (cpClass != null)
 			return cpClass.generateLTLFormulaArray(letter, count);
 
 		} catch (CPNotFoundException e) {
 			e.printStackTrace();
+			return new ArrayList<String>(Arrays.asList(e.getMessage()));
 		}
-		return null;
 	}
 
 }
