@@ -2,7 +2,9 @@ package edu.tx.utep.ltlgenerator.operators;
 
 import java.util.List;
 
-public class AndL extends Operator {
+import edu.tx.utep.ltlgenerator.OutputCharacters;
+
+public class AndL implements Operator {
 
 	@Override
 	public String andCPs(List<String> leftSides, String rightSide) {
@@ -12,8 +14,8 @@ public class AndL extends Operator {
 		String lastCp = leftSides.get(indexOfLastCP);
 		String newLast = "";
 
-		if (lastCp.indexOf("(") == 0) {
-			if (lastCp.indexOf(")") == -1) {
+		if (lastCp.indexOf(OutputCharacters.OPEN_P) == 0) {
+			if (lastCp.indexOf(OutputCharacters.CLOSE_P) == -1) {
 				newLast = getNewLastCP(lastCp, true, rightSide);
 			} else {
 				newLast = getNewLastCP(lastCp, false, rightSide);
@@ -29,10 +31,10 @@ public class AndL extends Operator {
 	private String getNewLastCP(String lastCp, boolean hasOpenParen, String rightSide) {
 		String newLastCp = lastCp;
 		if (hasOpenParen) {
-			newLastCp = lastCp.substring(0, 1) + OPEN_P + lastCp.substring(1, lastCp.length());
-			return newLastCp + AND + rightSide + CLOSE_P;
+			newLastCp = lastCp.substring(0, 1) + OutputCharacters.O_OPEN_P + lastCp.substring(1, lastCp.length());
+			return newLastCp + OutputCharacters.O_AND + rightSide + OutputCharacters.O_CLOSE_P;
 		} else {
-			return OPEN_P + lastCp + AND + rightSide + CLOSE_P;
+			return OutputCharacters.O_OPEN_P + lastCp + OutputCharacters.O_AND + rightSide + OutputCharacters.O_CLOSE_P;
 		}
 	}
 }
