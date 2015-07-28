@@ -1,7 +1,9 @@
-package edu.tx.utep.ltlgenerator.templates;
+package edu.tx.utep.ltlgenerator.templates.afterl;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import edu.tx.utep.ltlgenerator.templates.Template;
 
 public class AfterL extends Template {
 

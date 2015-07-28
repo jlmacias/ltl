@@ -1,4 +1,4 @@
-package edu.tx.utep.ltlgenerator.templates.until;
+package edu.tx.utep.ltlgenerator.templates.afterl;
 
 import edu.tx.utep.ltlgenerator.templates.Template;
 

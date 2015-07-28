@@ -1,8 +1,9 @@
 package edu.tx.utep.ltlgenerator.factories;
 
 import edu.tx.utep.ltlgenerator.exceptions.TemplateNotFoundException;
-import edu.tx.utep.ltlgenerator.templates.AfterL;
 import edu.tx.utep.ltlgenerator.templates.Template;
+import edu.tx.utep.ltlgenerator.templates.afterl.AfterL;
+import edu.tx.utep.ltlgenerator.templates.afterl.AfterLUntilRc;
 import edu.tx.utep.ltlgenerator.templates.beforer.AbsenceOfPBeforeRc;
 import edu.tx.utep.ltlgenerator.templates.beforer.AbsenceOfPBeforeRe;
 import edu.tx.utep.ltlgenerator.templates.beforer.ExistenceOfPBeforeRc;
@@ -28,7 +29,6 @@ import edu.tx.utep.ltlgenerator.templates.global.GlobalQPrecedesPEStar;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQRespondsToP;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQStrictlyPrecedesPC;
 import edu.tx.utep.ltlgenerator.templates.global.GlobalQStrictlyPrecedesPE;
-import edu.tx.utep.ltlgenerator.templates.until.AfterLUntilRc;
 
 // Factory Pattern
 public class TemplateFactory {
