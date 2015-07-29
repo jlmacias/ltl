@@ -35,52 +35,154 @@ public class TemplateFactory {
 
 	public Template getTemplate(String templateName, String qProposition) throws TemplateNotFoundException {
 
-		// Global
-		if (templateName.equals("GlobalAbsenceOfP")) {
-			return new GlobalAbsenceOfP();
+		if (templateName.contains("Global"))
+			return getGlobalTemplate(templateName, qProposition);
+
+		if (templateName.contains("BeforeR"))
+			return getBeforeRTemplate(templateName);
+
+		if (templateName.contains("BetweenLAndRc"))
+			return getBetweenLandRcTemplate(templateName);
+
+		if (templateName.contains("BetweenLAndRe"))
+			return getBetweenLAndRe(templateName);
+
+		if (templateName.contains("AfterLUntilRc"))
+			return getAfterLUntilRc(templateName);
+
+		if (templateName.contains("AfterLUntilRe"))
+			return getAfterLUntilRe(templateName);
+
+		if (templateName.contains("AfterL"))
+			return getAfterLTemplate(templateName, qProposition);
+
+		throw new TemplateNotFoundException(templateName);
+	}
+
+	private Template getAfterLUntilRe(String templateName) throws TemplateNotFoundException {
+		throw new TemplateNotFoundException(templateName);
+	}
+
+	private Template getAfterLUntilRc(String templateName) throws TemplateNotFoundException {
+		// 1. Absence Of P
+		if (templateName.equals("AbsenceOfPAfterLUntilRc")) {
+			return new AfterLUntilRc(new GlobalAbsenceOfP(), new AbsenceOfPBeforeRc());
 		}
 
-		if (templateName.equals("GlobalExistenceOfP")) {
-			return new GlobalExistenceOfP();
+		throw new TemplateNotFoundException(templateName);
+	}
+
+	private Template getBetweenLAndRe(String templateName) throws TemplateNotFoundException {
+		// 1. Absence Of P
+		if (templateName.equals("AbsenceOfPBetweenLAndRe")) {
+			return new BetweenLAndRe(new AbsenceOfPBeforeRe());
 		}
 
-		if (templateName.equals("GlobalQPrecedesPE")) {
-			return getGlobalQPrecedesPE(qProposition);
+		// 2. Existence Of P
+		if (templateName.equals("ExistenceOfPBetweenLAndRe")) {
+			return new BetweenLAndRe(new ExistenceOfPBeforeRe());
 		}
 
-		if (templateName.equals("GlobalQPrecedesPC")) {
-			return getGlobalQPrecedesPC(qProposition);
+		// 3. Q Precedes Pc
+		if (templateName.equals("QPrecedesPcBetweenLAndRe")) {
+			return new BetweenLAndRe(new QPrecedesPcBeforeRe());
 		}
 
-		if (templateName.equals("GlobalQPrecedesPCPlus")) {
-			return new GlobalQPrecedesPCPlus();
+		// 4. Q Precedes Pe
+		if (templateName.equals("QPrecedesPeBetweenLAndRe")) {
+			return new BetweenLAndRe(new QPrecedesPeBeforeRe());
 		}
 
-		if (templateName.equals("GlobalQPrecedesPCStar")) {
-			return new GlobalQPrecedesPCStar();
+		// 5. Q Strictly Precedes Pc
+		if (templateName.equals("QStrictlyPrecedesPcBetweenLAndRe")) {
+			return new BetweenLAndRe(new QStrictlyPrecedesPcBeforeRe());
 		}
 
-		if (templateName.equals("GlobalQPrecedesPEPlus")) {
-			return new GlobalQPrecedesPEPlus();
+		// 6. Q Strictly Precedes Pe
+		if (templateName.equals("QStrictlyPrecedesPeBetweenLAndRe")) {
+			return new BetweenLAndRe(new QStrictlyPrecedesPeBeforeRe());
 		}
 
-		if (templateName.equals("GlobalQPrecedesPEStar")) {
-			return new GlobalQPrecedesPEStar();
+		// 7. Q Responds to P Between L And Rc
+		if (templateName.equals("QRespondsToPBetweenLAndRe")) {
+			return new BetweenLAndRe(new QRespondsToPBeforeRe());
 		}
 
-		if (templateName.equals("GlobalQRespondsToP")) {
-			return new GlobalQRespondsToP();
+		throw new TemplateNotFoundException(templateName);
+	}
+
+	private Template getBetweenLandRcTemplate(String templateName) throws TemplateNotFoundException {
+		// 1. Absence Of P
+		if (templateName.equals("AbsenceOfPBetweenLAndRc")) {
+			return new BetweenLAndRc(new AbsenceOfPBeforeRc());
 		}
 
-		if (templateName.equals("GlobalQStrictlyPrecedesPC")) {
-			return new GlobalQStrictlyPrecedesPC();
+		// 2. Existence Of P
+		if (templateName.equals("ExistenceOfPBetweenLAndRc")) {
+			return new BetweenLAndRc(new ExistenceOfPBeforeRc());
 		}
 
-		if (templateName.equals("GlobalQStrictlyPrecedesPE")) {
-			return new GlobalQStrictlyPrecedesPE();
+		// 3. Q Precedes Pc
+		if (templateName.equals("QPrecedesPcBetweenLAndRc")) {
+			return new BetweenLAndRc(new QPrecedesPcBeforeRc());
 		}
 
-		// Before R
+		// 4. Q Precedes Pe
+		if (templateName.equals("QPrecedesPeBetweenLAndRc")) {
+			return new BetweenLAndRc(new QPrecedesPeBeforeRc());
+		}
+
+		// 5. Q Strictly Precedes Pc
+		if (templateName.equals("QStrictlyPrecedesPcBetweenLAndRc")) {
+			return new BetweenLAndRc(new QStrictlyPrecedesPcBeforeRc());
+		}
+
+		// 6. Q Strictly Precedes Pe
+		if (templateName.equals("QStrictlyPrecedesPeBetweenLAndRc")) {
+			return new BetweenLAndRc(new QStrictlyPrecedesPeBeforeRc());
+		}
+
+		// 7. Q Responds to P Between L And Rc
+		if (templateName.equals("QRespondsToPBetweenLAndRc")) {
+			return new BetweenLAndRc(new QRespondsToPBeforeRc());
+		}
+
+		throw new TemplateNotFoundException(templateName);
+	}
+
+	private Template getAfterLTemplate(String templateName, String qProposition) throws TemplateNotFoundException {
+		if (templateName.equals("AbsenceOfPAfterL")) {
+			return new AfterL(new GlobalAbsenceOfP());
+		}
+
+		if (templateName.equals("ExistenceOfPAfterL")) {
+			return new AfterL(new GlobalExistenceOfP());
+		}
+
+		if (templateName.equals("QRespondsToPAfterL")) {
+			return new AfterL(new GlobalQRespondsToP());
+		}
+
+		if (templateName.equals("QStrictlyPrecedesPcAfterL")) {
+			return new AfterL(new GlobalQStrictlyPrecedesPC());
+		}
+
+		if (templateName.equals("QStrictlyPrecedesPeAfterL")) {
+			return new AfterL(new GlobalQStrictlyPrecedesPE());
+		}
+
+		if (templateName.equals("GlobalQPrecedesPcAfterL")) {
+			return new AfterL(getGlobalQPrecedesPC(qProposition));
+		}
+
+		if (templateName.equals("GlobalQPrecedesPeAfterL")) {
+			return new AfterL(getGlobalQPrecedesPE(qProposition));
+		}
+
+		throw new TemplateNotFoundException(templateName);
+	}
+
+	private Template getBeforeRTemplate(String templateName) throws TemplateNotFoundException {
 		if (templateName.equals("AbsenceOfPBeforeRc")) {
 			return new AbsenceOfPBeforeRc();
 		}
@@ -137,111 +239,52 @@ public class TemplateFactory {
 			return new QStrictlyPrecedesPeBeforeRe();
 		}
 
-		// After L
-		if (templateName.equals("AbsenceOfPAfterL")) {
-			return new AfterL(new GlobalAbsenceOfP());
+		throw new TemplateNotFoundException(templateName);
+	}
+
+	private Template getGlobalTemplate(String templateName, String qProposition) throws TemplateNotFoundException {
+		if (templateName.equals("GlobalAbsenceOfP")) {
+			return new GlobalAbsenceOfP();
 		}
 
-		if (templateName.equals("ExistenceOfPAfterL")) {
-			return new AfterL(new GlobalExistenceOfP());
+		if (templateName.equals("GlobalExistenceOfP")) {
+			return new GlobalExistenceOfP();
 		}
 
-		if (templateName.equals("QRespondsToPAfterL")) {
-			return new AfterL(new GlobalQRespondsToP());
+		if (templateName.equals("GlobalQPrecedesPE")) {
+			return getGlobalQPrecedesPE(qProposition);
 		}
 
-		if (templateName.equals("QStrictlyPrecedesPcAfterL")) {
-			return new AfterL(new GlobalQStrictlyPrecedesPC());
+		if (templateName.equals("GlobalQPrecedesPC")) {
+			return getGlobalQPrecedesPC(qProposition);
 		}
 
-		if (templateName.equals("QStrictlyPrecedesPeAfterL")) {
-			return new AfterL(new GlobalQStrictlyPrecedesPE());
+		if (templateName.equals("GlobalQPrecedesPCPlus")) {
+			return new GlobalQPrecedesPCPlus();
 		}
 
-		if (templateName.equals("GlobalQPrecedesPcAfterL")) {
-			return new AfterL(getGlobalQPrecedesPC(qProposition));
+		if (templateName.equals("GlobalQPrecedesPCStar")) {
+			return new GlobalQPrecedesPCStar();
 		}
 
-		if (templateName.equals("GlobalQPrecedesPeAfterL")) {
-			return new AfterL(getGlobalQPrecedesPE(qProposition));
+		if (templateName.equals("GlobalQPrecedesPEPlus")) {
+			return new GlobalQPrecedesPEPlus();
 		}
 
-		// Between L and Rc
-		// 1. Absence Of P
-		if (templateName.equals("AbsenceOfPBetweenLAndRc")) {
-			return new BetweenLAndRc(new AbsenceOfPBeforeRc());
+		if (templateName.equals("GlobalQPrecedesPEStar")) {
+			return new GlobalQPrecedesPEStar();
 		}
 
-		// 2. Existence Of P
-		if (templateName.equals("ExistenceOfPBetweenLAndRc")) {
-			return new BetweenLAndRc(new ExistenceOfPBeforeRc());
+		if (templateName.equals("GlobalQRespondsToP")) {
+			return new GlobalQRespondsToP();
 		}
 
-		// 3. Q Precedes Pc
-		if (templateName.equals("QPrecedesPcBetweenLAndRc")) {
-			return new BetweenLAndRc(new QPrecedesPcBeforeRc());
+		if (templateName.equals("GlobalQStrictlyPrecedesPC")) {
+			return new GlobalQStrictlyPrecedesPC();
 		}
 
-		// 4. Q Precedes Pe
-		if (templateName.equals("QPrecedesPeBetweenLAndRc")) {
-			return new BetweenLAndRc(new QPrecedesPeBeforeRc());
-		}
-
-		// 5. Q Strictly Precedes Pc
-		if (templateName.equals("QStrictlyPrecedesPcBetweenLAndRc")) {
-			return new BetweenLAndRc(new QStrictlyPrecedesPcBeforeRc());
-		}
-
-		// 6. Q Strictly Precedes Pe
-		if (templateName.equals("QStrictlyPrecedesPeBetweenLAndRc")) {
-			return new BetweenLAndRc(new QStrictlyPrecedesPeBeforeRc());
-		}
-
-		// 7. Q Responds to P Between L And Rc
-		if (templateName.equals("QRespondsToPBetweenLAndRc")) {
-			return new BetweenLAndRc(new QRespondsToPBeforeRc());
-		}
-
-		// Between L and Re
-		// 1. Absence Of P
-		if (templateName.equals("AbsenceOfPBetweenLAndRe")) {
-			return new BetweenLAndRe(new AbsenceOfPBeforeRe());
-		}
-
-		// 2. Existence Of P
-		if (templateName.equals("ExistenceOfPBetweenLAndRe")) {
-			return new BetweenLAndRe(new ExistenceOfPBeforeRe());
-		}
-
-		// 3. Q Precedes Pc
-		if (templateName.equals("QPrecedesPcBetweenLAndRe")) {
-			return new BetweenLAndRe(new QPrecedesPcBeforeRe());
-		}
-
-		// 4. Q Precedes Pe
-		if (templateName.equals("QPrecedesPeBetweenLAndRe")) {
-			return new BetweenLAndRe(new QPrecedesPeBeforeRe());
-		}
-
-		// 5. Q Strictly Precedes Pc
-		if (templateName.equals("QStrictlyPrecedesPcBetweenLAndRe")) {
-			return new BetweenLAndRe(new QStrictlyPrecedesPcBeforeRe());
-		}
-
-		// 6. Q Strictly Precedes Pe
-		if (templateName.equals("QStrictlyPrecedesPeBetweenLAndRe")) {
-			return new BetweenLAndRe(new QStrictlyPrecedesPeBeforeRe());
-		}
-
-		// 7. Q Responds to P Between L And Rc
-		if (templateName.equals("QRespondsToPBetweenLAndRe")) {
-			return new BetweenLAndRe(new QRespondsToPBeforeRe());
-		}
-
-		// After L until Rc
-		// 1. Absence Of P
-		if (templateName.equals("AbsenceOfPAfterLUntilRc")) {
-			return new AfterLUntilRc(new GlobalAbsenceOfP(), new AbsenceOfPBeforeRc());
+		if (templateName.equals("GlobalQStrictlyPrecedesPE")) {
+			return new GlobalQStrictlyPrecedesPE();
 		}
 
 		throw new TemplateNotFoundException(templateName);
