@@ -14,6 +14,6 @@ public class GlobalAbsenceOfP extends Template {
 	public String generateFormula(String pProposition, String qProposition, String rProposition, String lProposition) {
 		String formula = template;
 		List<String> p = getCompositeProposition(pProposition);
-		return formula.replace("P", String.join("", p));
+		return formula.replace("P", "(" + String.join("", p) + ")");
 	}
 }
