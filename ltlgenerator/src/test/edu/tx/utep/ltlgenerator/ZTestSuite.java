@@ -7,7 +7,6 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
 	AfterLTemplateTest.class,
 	AndLGeneratorTest.class,
-	//AndLListGeneratorTest.class,
 	AndMinusLGeneratorTest.class,
 	AndRGeneratorTest.class,
 	BeforeRTemplateTest.class,

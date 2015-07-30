@@ -171,11 +171,11 @@ public class TemplateFactory {
 			return new AfterL(new GlobalQStrictlyPrecedesPE());
 		}
 
-		if (templateName.equals("GlobalQPrecedesPcAfterL")) {
+		if (templateName.equals("QPrecedesPcAfterL")) {
 			return new AfterL(getGlobalQPrecedesPC(qProposition));
 		}
 
-		if (templateName.equals("GlobalQPrecedesPeAfterL")) {
+		if (templateName.equals("QPrecedesPeAfterL")) {
 			return new AfterL(getGlobalQPrecedesPE(qProposition));
 		}
 

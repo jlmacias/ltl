@@ -1,11 +1,10 @@
-package edu.tx.utep.ltlgenerator.templates.until;
-
-
-import edu.tx.utep.ltlgenerator.templates.Template;
+package edu.tx.utep.ltlgenerator.templates.afterl;
 
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import edu.tx.utep.ltlgenerator.templates.Template;
 
 
 public class AfterLUntilRe extends Template {

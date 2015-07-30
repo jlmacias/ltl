@@ -13,7 +13,7 @@ public class GlobalTemplateTest {
 	@Test
 	public void testGlobalAbsenceOfP() throws Exception {
 		String output = ltlGenerator.generateLTLFormula("GlobalAbsenceOfP", "P_AtLeastOneC_4", "", "", "");
-		assertEquals("G!(p1 v p2 v p3 v p4)", output);
+		assertEquals("G!((p1 v p2 v p3 v p4))", output);
 	}
 
 	@Test
