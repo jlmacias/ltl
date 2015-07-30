@@ -14,6 +14,8 @@ import org.junit.runners.Suite;
 	BetweenLAndReTest.class,
 	CPGeneratorTest.class,
 	GlobalTemplateTest.class,
+        AfterLUntilRTest.class
+
 })
 
 public class ZTestSuite {
