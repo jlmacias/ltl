@@ -41,7 +41,7 @@ public class AfterLUntilRc extends Template {
         formula = formula.replace(L_AndL_NotR, andedL1);
 
         List<String> rSide = new ArrayList<>();
-        rSide.add(PRString + " ^ ((!F" + getCompositeProposition(rProposition) + ") -> " + PGString + ")))");
+        rSide.add(PRString + OutputCharacters.AND + OutputCharacters.OPEN_P + OutputCharacters.OPEN_P + OutputCharacters.NOT + OutputCharacters.EVENTUALLY + getCompositeProposition(rProposition) + OutputCharacters.CLOSE_P + OutputCharacters.IMPLY + PGString + OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P);
         String andedL2 = operatorGenerator.getAndedPropositions(AND_L, getCompositeProposition(lProposition), rSide);
         formula = formula.replace(L_AndL_rightSide, andedL2);
 
