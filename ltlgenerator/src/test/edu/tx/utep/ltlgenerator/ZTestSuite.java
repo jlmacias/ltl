@@ -6,6 +6,7 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
 	AfterLTemplateTest.class,
+    AfterLUntilRTest.class,
 	AndLGeneratorTest.class,
 	AndMinusLGeneratorTest.class,
 	AndRGeneratorTest.class,
@@ -14,8 +15,6 @@ import org.junit.runners.Suite;
 	BetweenLAndReTest.class,
 	CPGeneratorTest.class,
 	GlobalTemplateTest.class,
-        AfterLUntilRTest.class
-
 })
 
 public class ZTestSuite {
