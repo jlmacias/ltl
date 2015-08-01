@@ -77,7 +77,7 @@ public class TemplateFactory {
 		}
 
 		// 4. Q Precedes Pe Before Re
-		if (templateName.equals("QPrecedesPeAfterLUntilRc")) {
+		if (templateName.equals("QPrecedesPeAfterLUntilRe")) {
 			return new AfterLUntilRe(getGlobalQPrecedesPE(qProposition), new QPrecedesPeBeforeRe());
 		}
 
