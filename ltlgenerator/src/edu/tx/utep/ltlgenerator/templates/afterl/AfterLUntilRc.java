@@ -1,5 +1,6 @@
 package edu.tx.utep.ltlgenerator.templates.afterl;
 
+import edu.tx.utep.ltlgenerator.OutputCharacters;
 import edu.tx.utep.ltlgenerator.templates.Template;
 
 import java.util.ArrayList;
@@ -7,7 +8,19 @@ import java.util.List;
 
 public class AfterLUntilRc extends Template {
 
-    private String template = "G((L &l !R) -> (L &l ((PR ^ ((!FR) -> PG)))))";
+    // (L &l !R)
+    private static String L_AndL_NotR = OutputCharacters.OPEN_P + "L &l " + OutputCharacters.NOT + "R" + OutputCharacters.CLOSE_P;
+
+    // ((PR ^ (!FR) -> PG))
+    private static String rightSide = OutputCharacters.OPEN_P + OutputCharacters.OPEN_P + "PR" + OutputCharacters.AND +
+            OutputCharacters.OPEN_P + OutputCharacters.NOT + OutputCharacters.EVENTUALLY + "R" + OutputCharacters.NOT + "R" + OutputCharacters.CLOSE_P + OutputCharacters.IMPLY + "PG" + OutputCharacters.CLOSE_P + OutputCharacters.CLOSE_P;
+
+    // (L &l rightSide)
+    private static String L_AndL_rightSide = OutputCharacters.OPEN_P + "L &l " + rightSide + OutputCharacters.CLOSE_P;
+
+    // G(L_AndL_NotR -> (L &l rightSide))
+    private static String template = OutputCharacters.ALWAYS + OutputCharacters.OPEN_P + L_AndL_NotR + L_AndL_rightSide;
+
     private Template globalTemplate;
     private Template beforeRTemplate;
 
@@ -21,26 +34,19 @@ public class AfterLUntilRc extends Template {
         String formula = template;
         String PRString = beforeRTemplate.generateFormula(pProposition, qProposition, rProposition, lProposition);
         String PGString = globalTemplate.generateFormula(pProposition, qProposition, rProposition, lProposition);
-        List<String> l = getCompositeProposition(lProposition);
-        List<String> r = getCompositeProposition(rProposition);
-        String lString = String.join("", l);
-        String rString = String.join("", r);
 
-        List<String> notR = new ArrayList<String>();
-        notR.add("!" + rString);
-        String andedL1 = operatorGenerator.getAndedPropositions(AND_L, l, notR);
-        formula = formula.replace("(L &l !R)", andedL1);
+        List<String> notR = new ArrayList<>();
+        notR.add(OutputCharacters.NOT + getCompositeProposition(rProposition));
+        String andedL1 = operatorGenerator.getAndedPropositions(AND_L, getCompositeProposition(lProposition), notR);
+        formula = formula.replace(L_AndL_NotR, andedL1);
 
-        List<String> PR = new ArrayList<String>();
-        PR.add(PRString);
-        List<String> rightSide = new ArrayList<>();
-        rightSide.add(PRString + " ^ ((!F" + rString + ") -> " + PGString + ")))");
+        List<String> rSide = new ArrayList<>();
+        rSide.add(PRString + " ^ ((!F" + getCompositeProposition(rProposition) + ") -> " + PGString + ")))");
+        String andedL2 = operatorGenerator.getAndedPropositions(AND_L, getCompositeProposition(lProposition), rSide);
+        formula = formula.replace(L_AndL_rightSide, andedL2);
 
-        String andedL2 = operatorGenerator.getAndedPropositions(AND_L, l, rightSide);
-        formula = formula.replace("L &l ((PR ^ ((!FR) -> PG)))", andedL2);
-
-        formula = formula.replace("R", rString);
-        formula = formula.replace("L", lString);
+        formula = formula.replace("R", String.join("", getCompositeProposition(rProposition)));
+        formula = formula.replace("L", String.join("", getCompositeProposition(lProposition)));
 
         return formula;
     }
