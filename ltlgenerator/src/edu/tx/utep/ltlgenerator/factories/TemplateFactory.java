@@ -52,7 +52,7 @@ public class TemplateFactory {
 			return getAfterLUntilRc(templateName, qProposition);
 
 		if (templateName.contains("AfterLUntilRe"))
-			return getAfterLUntilRe(templateName);
+			return getAfterLUntilRe(templateName, qProposition);
 
 		if (templateName.contains("AfterL"))
 			return getAfterLTemplate(templateName, qProposition);
@@ -60,7 +60,42 @@ public class TemplateFactory {
 		throw new TemplateNotFoundException(templateName);
 	}
 
-	private Template getAfterLUntilRe(String templateName) throws TemplateNotFoundException {
+	private Template getAfterLUntilRe(String templateName, String qProposition) throws TemplateNotFoundException {
+		// 1. Absence Of P
+		if (templateName.equals("AbsenceOfPAfterLUntilRe")) {
+			return new AfterLUntilRe(new GlobalAbsenceOfP(), new AbsenceOfPBeforeRe());
+		}
+
+		// 2. Existence Of P
+		if (templateName.equals("ExistenceOfPAfterLUntilRe")) {
+			return new AfterLUntilRe(new GlobalExistenceOfP(), new ExistenceOfPBeforeRe());
+		}
+
+		// 3. Q Precedes Pc Before Re
+		if (templateName.equals("QPrecedesPcAfterLUntilRe")) {
+			return new AfterLUntilRe(getGlobalQPrecedesPE(qProposition), new QPrecedesPcBeforeRe());
+		}
+
+		// 4. Q Precedes Pe Before Re
+		if (templateName.equals("QPrecedesPeAfterLUntilRc")) {
+			return new AfterLUntilRe(getGlobalQPrecedesPE(qProposition), new QPrecedesPeBeforeRe());
+		}
+
+		// 5. Q Strictly Precedes Pc Before Re
+		if (templateName.equals("QStrictlyPrecedesPcAfterLUntilRe")) {
+			return new AfterLUntilRe(new GlobalQStrictlyPrecedesPC(), new QStrictlyPrecedesPcBeforeRe());
+		}
+
+		// 6. Q Strictly Precedes Pe Before Re
+		if (templateName.equals("QStrictlyPrecedesPeAfterLUntilRe")) {
+			return new AfterLUntilRe(new GlobalQStrictlyPrecedesPE(), new QStrictlyPrecedesPeBeforeRe());
+		}
+
+		// 7. Q Responds to P
+		if (templateName.equals("QRespondsToPAfterLUntilRe")) {
+			return new AfterLUntilRe(new GlobalQRespondsToP(), new QRespondsToPBeforeRe());
+		}
+
 		throw new TemplateNotFoundException(templateName);
 	}
 
