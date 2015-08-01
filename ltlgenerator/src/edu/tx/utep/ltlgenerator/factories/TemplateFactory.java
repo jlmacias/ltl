@@ -4,6 +4,7 @@ import edu.tx.utep.ltlgenerator.exceptions.TemplateNotFoundException;
 import edu.tx.utep.ltlgenerator.templates.Template;
 import edu.tx.utep.ltlgenerator.templates.afterl.AfterL;
 import edu.tx.utep.ltlgenerator.templates.afterl.AfterLUntilRc;
+import edu.tx.utep.ltlgenerator.templates.afterl.AfterLUntilRe;
 import edu.tx.utep.ltlgenerator.templates.beforer.AbsenceOfPBeforeRc;
 import edu.tx.utep.ltlgenerator.templates.beforer.AbsenceOfPBeforeRe;
 import edu.tx.utep.ltlgenerator.templates.beforer.ExistenceOfPBeforeRc;
@@ -48,7 +49,7 @@ public class TemplateFactory {
 			return getBetweenLAndRe(templateName);
 
 		if (templateName.contains("AfterLUntilRc"))
-			return getAfterLUntilRc(templateName);
+			return getAfterLUntilRc(templateName, qProposition);
 
 		if (templateName.contains("AfterLUntilRe"))
 			return getAfterLUntilRe(templateName);
@@ -63,10 +64,40 @@ public class TemplateFactory {
 		throw new TemplateNotFoundException(templateName);
 	}
 
-	private Template getAfterLUntilRc(String templateName) throws TemplateNotFoundException {
+	private Template getAfterLUntilRc(String templateName, String qProposition) throws TemplateNotFoundException {
 		// 1. Absence Of P
 		if (templateName.equals("AbsenceOfPAfterLUntilRc")) {
 			return new AfterLUntilRc(new GlobalAbsenceOfP(), new AbsenceOfPBeforeRc());
+		}
+
+		// 2. Existence Of P
+		if (templateName.equals("ExistenceOfPAfterLUntilRc")) {
+			return new AfterLUntilRc(new GlobalExistenceOfP(), new ExistenceOfPBeforeRc());
+		}
+
+		// 3. Q Precedes Pc Before Rc
+		if (templateName.equals("QPrecedesPcAfterLUntilRc")) {
+			return new AfterLUntilRc(getGlobalQPrecedesPC(qProposition), new QPrecedesPcBeforeRc());
+		}
+
+		// 4. Q Precedes Pe Before Rc
+		if (templateName.equals("QPrecedesPeAfterLUntilRc")) {
+			return new AfterLUntilRc(getGlobalQPrecedesPE(qProposition), new QPrecedesPeBeforeRc());
+		}
+
+		// 5. Q Strictly Precedes Pc Before Rc
+		if (templateName.equals("QStrictlyPrecedesPcAfterLUntilRc")) {
+			return new AfterLUntilRc(new GlobalQStrictlyPrecedesPC(), new QStrictlyPrecedesPcBeforeRc());
+		}
+
+		// 6. Q Strictly Precedes Pe Before Rc
+		if (templateName.equals("QStrictlyPrecedesPeAfterLUntilRc")) {
+			return new AfterLUntilRc(new GlobalQStrictlyPrecedesPE(), new QStrictlyPrecedesPeBeforeRc());
+		}
+
+		// 7. Q Responds to P
+		if (templateName.equals("QRespondsToPAfterLUntilRc")) {
+			return new AfterLUntilRc(new GlobalQRespondsToP(), new QRespondsToPBeforeRc());
 		}
 
 		throw new TemplateNotFoundException(templateName);
@@ -103,7 +134,7 @@ public class TemplateFactory {
 			return new BetweenLAndRe(new QStrictlyPrecedesPeBeforeRe());
 		}
 
-		// 7. Q Responds to P Between L And Rc
+		// 7. Q Responds to P
 		if (templateName.equals("QRespondsToPBetweenLAndRe")) {
 			return new BetweenLAndRe(new QRespondsToPBeforeRe());
 		}
