@@ -15,6 +15,7 @@ public class LTLGenerator {
 			String formula = template.generateFormula(pProposition, qProposition, rProposition, lProposition);
 			// TODO return the cleaned up string once we're ready to turn this in
 			//return replaceOperatorStrings(formula);
+			// DEBUG to return with brackets and & symbol:
 			return formula;
 
 		} catch (TemplateNotFoundException e) {
