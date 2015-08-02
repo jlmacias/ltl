@@ -1,7 +1,7 @@
 package edu.tx.utep.ltlgenerator;
 
 import edu.tx.utep.ltlgenerator.inputoutput.LTLInputOutput;
-public class MainSoFar {
+public class RunInputOutput {
 
 	public static void main(String[] args) {
 		LTLInputOutput.processInput();
