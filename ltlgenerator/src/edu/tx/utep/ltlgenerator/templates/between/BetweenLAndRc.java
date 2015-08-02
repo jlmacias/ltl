@@ -34,7 +34,7 @@ public class BetweenLAndRc extends Template {
         List<String> r = getCompositeProposition(rProposition);
         String PRString = beforeRTemplate.generateFormula(pProposition, qProposition, rProposition, lProposition);
 
-        List<String> notR = a;
+        List<String> notR = r;
         notR.add(0, OutputCharacters.NOT);
 
         String andedL1 = operatorGenerator.getAndedPropositions(AND_L, l, notR);
