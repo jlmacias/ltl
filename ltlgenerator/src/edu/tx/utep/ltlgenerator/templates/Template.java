@@ -4,6 +4,7 @@ import java.util.List;
 
 import edu.tx.utep.ltlgenerator.CPGenerator;
 import edu.tx.utep.ltlgenerator.OperatorGenerator;
+import edu.tx.utep.ltlgenerator.OutputCharacters;
 import edu.tx.utep.ltlgenerator.factories.OperatorFactory;
 import edu.tx.utep.ltlgenerator.operators.AndLForBeforeR;
 
@@ -20,7 +21,8 @@ public abstract class Template {
 
 	// Template Factory Method
 	public String getLTLFormula(String pProposition, String qProposition, String rProposition, String lProposition){
-		return generateFormula(pProposition, qProposition, rProposition, lProposition);
+		String formula = generateFormula(pProposition, qProposition, rProposition, lProposition);
+		return replaceOperatorStrings(formula);
 	}
 
 	protected List<String> getCompositeProposition(String propositionName) {
@@ -41,4 +43,11 @@ public abstract class Template {
 		return cpGenerator.getCompositeProposition(hProposition.toString());
 	}
 	
+	private String replaceOperatorStrings(String formula) {
+		formula = formula.replace(OutputCharacters.O_AND, OutputCharacters.AND);
+		formula = formula.replace(OutputCharacters.O_CLOSE_P, OutputCharacters.CLOSE_P);
+		formula = formula.replace(OutputCharacters.O_OPEN_P, OutputCharacters.OPEN_P);
+		return formula;
+	}
+
 }
