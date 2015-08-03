@@ -6,7 +6,6 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
 	AfterLTemplateTest.class,
-    AfterLUntilRTest.class,
 	AndLGeneratorTest.class,
 	AndMinusLGeneratorTest.class,
 	AndRGeneratorTest.class,
