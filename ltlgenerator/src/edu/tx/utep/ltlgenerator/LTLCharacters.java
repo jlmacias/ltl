@@ -18,5 +18,6 @@ public abstract class LTLCharacters {
 	public static final String EVENTUALH = "EventualH";
 	public static final String EVENTUALE = "EventualE";
 	public static final String CP_SEPARATOR = "_";
+	public static final String EMPTY_CP_INDICATOR = "EMPTY";
 	
 }
