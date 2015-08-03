@@ -5,14 +5,14 @@ import java.util.List;
 import edu.tx.utep.ltlgenerator.OutputCharacters;
 
 public class AndR implements Operator {
-	
+
 	@Override
 	public String andCPs(List<String> leftSides, String rightSide) {
 		List<String> newLeftSides = leftSides;
 		String cpPart = "";
 		String newCpPart = "";
 		int endIndex = leftSides.size() > 2 ? leftSides.size() - 2 : 0;
-        
+
 		for (int i = 0; i <= endIndex; i++) {
 			cpPart = leftSides.get(i);
 			if (cpPart.indexOf("(") == 0 && cpPart.length() > 1) {
@@ -25,6 +25,7 @@ public class AndR implements Operator {
 				newLeftSides.set(i, newCpPart);
 			}
 		}
-		return String.join("", newLeftSides);	}
+		return String.join("", newLeftSides);
+	}
 
 }
