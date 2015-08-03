@@ -98,7 +98,7 @@ Q_ParallelE_2
 ----------------------------------
 Scope:AfterLUntilR
 Pattern:Precedence
-L_ConsecutiveT_2
+L_ConsecutiveE_2
 R_AtLeastOneE_2
 P_EventualC_2
 Q_ParallelE_2
