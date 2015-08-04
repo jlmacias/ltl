@@ -1,7 +1,0 @@
-Property1
-Scope:BetweenLandR
-CPL:EventualC(L)
-CPR:EventualC(R)
-Pattern:Precedence
-CPP:EventualC(P)
-CPQ:EventualC(Q)
